@@ -1,0 +1,25 @@
+{
+  "name": "noble",
+  "version": "1.0.0",
+  "description": "Custom Drupal 8 theme for Obermeyer.com",
+  "readme": "readme.md",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "drupal-sass-breakpoints": "^1.0.1",
+    "eyeglass": "^0.8.3",
+    "glob": "^5.0.15",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.1.0",
+    "grunt-scss-lint": "^0.3.8",
+    "grunt-svgmin": "^3.2.0",
+    "load-grunt-tasks": "^3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Wilson <jrwilson3@gmail.com>",
+  "license": "MIT"
+}

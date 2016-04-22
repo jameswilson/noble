@@ -1,0 +1,29 @@
+@import 'drupal-sass-breakpoints';
+
+// The Sass partial structure follows the 7-1 Pattern
+// with some exceptions for Drupalisms.
+// @see https://sass-guidelin.es/#the-7-1-pattern
+
+@import
+'util/colors',
+'util/variables',
+'util/mixins',
+
+'base/fonts',
+'base/reset',
+'base/elements',
+'base/forms',
+'base/buttons',
+'base/tabs',
+'base/messages',
+'util/helpers',
+'util/placeholders',
+
+'layout/grid',
+'layout/header',
+'layout/footer',
+
+'components/nav-top',
+'components/nav-primary',
+'components/nav-colophon',
+'components/nav-footer';
