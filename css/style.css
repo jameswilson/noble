@@ -243,4 +243,23 @@ textarea {
 
 .l-footer {
   background: #dde2e9;
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.l-footer nav ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.l-footer nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.block--footercopyright {
+  float: left;
 }

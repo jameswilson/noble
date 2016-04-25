@@ -64,6 +64,12 @@ function noble_theme_suggestions_node_alter(array &$suggestions, array $variable
  */
 function noble_preprocess_block(array &$variables) {
 
+  dpm($variables);
+  $variables['attributes']['class'][] = 'block';
+  // Create an HTML class based on the block ID.
+  if (!empty($variables['elements']['#id'])) {
+    $variables['attributes']['class'][] = 'block--' . $variables['elements']['#id'];
+  }
 }
 
 /**

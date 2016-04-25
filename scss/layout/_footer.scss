@@ -5,4 +5,23 @@
 
 .l-footer {
   background: $light-blue;
+  overflow: hidden;
+  padding: 8px 0;
+
+  nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.block--footercopyright {
+  float: left;
 }
