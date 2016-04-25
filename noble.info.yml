@@ -9,8 +9,11 @@ libraries:
 base theme: stable
 
 regions:
-  content: Content
-  header: Header
   top: Top
-  footer: Footer
+  header: Header
+  hero_area: Hero Area
+  content: Content
+  sidebar_first: Sidebar First
+  sidebar_second: Sidebar Second
   colophon: Colophon
+  footer: Footer
