@@ -1,4 +1,5 @@
 .l-contained {
+  @include clearfix;
   margin: 0 auto;
   max-width: $page-width;
 }

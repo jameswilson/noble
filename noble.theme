@@ -65,11 +65,9 @@ function noble_theme_suggestions_node_alter(array &$suggestions, array $variable
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_block(array &$variables) {
-  //dpm($variables);
-  $variables['attributes']['class'][] = 'block';
   // Create an HTML class based on the block ID.
   if (!empty($variables['elements']['#id'])) {
-    $variables['attributes']['class'][] = 'block--' . Html::cleanCssIdentifier($variables['elements']['#id']);
+    $variables['machine_name'] = Html::cleanCssIdentifier($variables['elements']['#id']);
   }
 }
 
@@ -149,4 +147,32 @@ function noble_theme_suggestions_details_alter(array &$suggestions, array $varia
  */
 function noble_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function noble_preprocess_menu(array &$variables) {
+  foreach ($variables['items'] as $key => &$item) {
+
+    // Create a class for each menu item based on the link item's key.
+    // Items of type Menu Config Link have keys with a colon to separate the
+    // bundle from the entity id, so we can special case this and use the
+    // machine name of the link as it is exported to code.
+    $class = $key;
+    if (substr_count($key, ':') === 1) {
+      list($bundle, $class) = explode(':', $key);
+    }
+    $class = str_replace('_', '-', $class);
+
+    // prepend 'menu-item--' to all classes, and if the class name starts with
+    // 'icon-' then add that as another stand-alone class.
+    if (strpos($class, 'icon-') !== FALSE) {
+      $class = $class . ' menu-item--' . $class;
+    } else {
+      $class = 'menu-item--' . $class;
+    }
+    $variables['items'][$key]['attributes']->addClass($class);
+    //dpm($variables);
+  }
 }

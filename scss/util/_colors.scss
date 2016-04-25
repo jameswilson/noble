@@ -1,4 +1,5 @@
 $graphite: #333;
+$light-graphite: #666;
 $white: #fff;
 
 $yellow: #ff0;
@@ -9,9 +10,10 @@ $light-gray: #efefef;
 
 $blue: #1b3e6a;
 $light-blue: #dde2e9;
+$light-light-blue: #d1d8e1;
 
-$base-font-color: $graphite;
+$base-font-color: $light-graphite;
+$heading-font-color: $graphite;
 $base-link-color: $blue;
-
 
 $border-color: $gray;

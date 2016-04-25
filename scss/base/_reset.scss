@@ -16,6 +16,7 @@ html {
 //
 body {
   color: $base-font-color;
+  line-height: 1.5;
   margin: 0; // 1
 }
 
@@ -180,10 +181,12 @@ sup {
 //  ==========================================================================
 
 //
-// Remove the border on images inside links in IE 10-.
+// 1. Remove the border on images inside links in IE 10-.
+// 2. Responsive images by default.
 //
 img {
-  border-style: none;
+  border-style: none; // 1
+  max-width: 100%; // 2
 }
 
 //

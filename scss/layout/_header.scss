@@ -1,3 +1,43 @@
 .l-top {
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $light-light-blue;
+}
+
+.l-header {
+  @include clearfix;
+  padding: 45px 0 60px;
+
+  .menu {
+    margin-top: 1.1em;
+    text-align: center;
+  }
+
+  .menu__toplevel,
+  .menu__sublevel,
+  .menu__item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__item {
+    display: inline-block;
+    padding: .2em;
+
+    a {
+      line-height: 22px;
+      padding: .4em .8em;
+    }
+  }
+}
+
+@include media('narrow') {
+  .block--branding {
+    float: left;
+    width: 45%;
+  }
+
+  .l-header .menu {
+    float: right;
+    width: 54%;
+  }
 }

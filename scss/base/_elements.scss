@@ -1,0 +1,28 @@
+a:link,
+a:visited {
+  color: $base-link-color;
+  opacity: 1;
+  text-decoration: none;
+  transition: opacity .2s ease-out;
+}
+
+a:hover,
+a:active,
+a:focus {
+  opacity: .8;
+}
+
+.active-trail .menu__item,
+.is-active:link,
+.is-active:visited {
+  color: $light-graphite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-font-color;
+}

@@ -1,0 +1,24 @@
+
+.menu-item--b2c-outfit-builder {
+  white-space: nowrap;
+
+  &,
+  &.is-active {
+    background: $blue;
+    border-radius: 3px;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &::after {
+    background-image: url('../images/icon-outfit-builder.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 1px .8em 0 4px;
+    vertical-align: top;
+    width: 21px;
+  }
+}

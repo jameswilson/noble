@@ -1,0 +1,143 @@
+.l-colophon {
+  background: $light-gray;
+  margin-top: 100px;
+  padding: 30px 0 70px;
+}
+
+.block--sitewidecontactform {
+  background: $light-blue;
+  box-sizing: border-box;
+  float: left;
+  margin: 20px 0;
+  padding: 30px 70px;
+  width: 100%;
+}
+
+.block__title--sitewidecontactform {
+  margin: 0 0 20px;
+}
+
+.menu--technology,
+.menu--customerservice,
+.menu--socialmedialinks,
+.menu--productscategory {
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+
+.menu--technology,
+.menu--customerservice,
+.menu--socialmedialinks,
+.menu--productscategory,
+.block--about-first-footer,
+.block--about-second-footer {
+  box-sizing: border-box;
+  float: left;
+  font-size: 15px;
+  margin: 50px 0 0;
+  width: 100%;
+}
+
+.menu__title--technology,
+.menu__title--customerservice,
+.menu__title--socialmedialinks,
+.menu__title--productscategory,
+.block__title--about-first-footer,
+.block__title--about-second-footer {
+  margin: 0 0 12px;
+  position: relative;
+}
+
+%colophon-long-title {
+  position: relative;
+
+  span {
+    background: $light-gray;
+    display: inline-block;
+    padding-right: 4px;
+    position: relative;
+  }
+
+  &::before {
+    background: $gray;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+.menu__title--technology,
+.block__title--about-first-footer,
+.block__title--about-second-footer {
+  @extend %colophon-long-title;
+}
+
+.menu--technology,
+.block--customerservice,
+.block--productscategory {
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@include media('narrow') {
+
+  .menu--socialmedialinks {
+    width: 25%;
+  }
+
+  .block--sitewidecontactform {
+    margin-top: -100px;
+    width: 75%;
+  }
+
+  .menu--customerservice {
+    clear: left;
+    width: 25%;
+  }
+
+  .menu--productscategory {
+    width: 25%;
+  }
+
+  .menu--technology {
+    width: 50%;
+
+    ul {
+      column-count: 2;
+    }
+  }
+
+  .block--about-first-footer {
+    clear: left;
+  }
+
+  .block--about-first-footer,
+  .block--about-second-footer {
+    width: 50%;
+  }
+
+  .menu--customerservice,
+  .menu--productscategory,
+  .block--about-first-footer {
+    padding-right: 3.5%;
+  }
+}
