@@ -76,6 +76,9 @@ linters:
     enabled: true
     max_depth: 3
 
+  SelectorFormat:
+    convention: hyphenated_BEM
+
   Shorthand:
     enabled: true
 
