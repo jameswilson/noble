@@ -260,6 +260,25 @@ textarea {
   padding: 0;
 }
 
-.block--footercopyright {
-  float: left;
+.block--footer-copyright {
+  text-align: center;
+}
+
+.footer__logo,
+.footer__copyright {
+  clear: both;
+  display: block;
+}
+
+@media all and (min-width: 560px) and (max-width: 850px) {
+  .block--footer-copyright {
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+  }
+  .footer__logo,
+  .footer__copyright {
+    clear: none;
+    display: inline-block;
+  }
 }

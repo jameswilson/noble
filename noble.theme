@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Component\Utility\Html;
+
 /**
  * @file
  * Functions to support theming in the noble theme.
@@ -63,12 +65,11 @@ function noble_theme_suggestions_node_alter(array &$suggestions, array $variable
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_block(array &$variables) {
-
-  dpm($variables);
+  //dpm($variables);
   $variables['attributes']['class'][] = 'block';
   // Create an HTML class based on the block ID.
   if (!empty($variables['elements']['#id'])) {
-    $variables['attributes']['class'][] = 'block--' . $variables['elements']['#id'];
+    $variables['attributes']['class'][] = 'block--' . Html::cleanCssIdentifier($variables['elements']['#id']);
   }
 }
 

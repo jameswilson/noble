@@ -22,6 +22,26 @@
   }
 }
 
-.block--footercopyright {
-  float: left;
+.block--footer-copyright {
+  text-align: center;
+}
+
+.footer__logo,
+.footer__copyright {
+  clear: both;
+  display: block;
+}
+
+@include media('narrow') {
+  .block--footer-copyright {
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  .footer__logo,
+  .footer__copyright {
+    clear: none;
+    display: inline-block;
+  }
 }
