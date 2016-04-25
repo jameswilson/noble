@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     // Watch for changes to SCSS files to pre- and post- process CSS.
     watch: {
       sass: {
-        files: ['scss/{,**/}*.scss', 'Gruntfile.js', '*.yml'],
+        files: ['scss/{,**/}*.scss', 'Gruntfile.js', '*.yml', '.scss-lint.yml'],
         tasks: ['scsslint:dist', 'sass:dist', 'autoprefixer:dist']
       },
       js: {
