@@ -1,0 +1,38 @@
+.cart__summary {
+  margin-left: 20px;
+}
+
+.cart__text,
+.cart__icon,
+.cart__count {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cart__text--anonymous,
+.cart__text--authenticated,
+.not-logged-in .cart__icon {
+  display: none;
+}
+
+.logged-in .cart__icon,
+.not-logged-in .cart__text--anonymous,
+.logged-in .cart__text--authenticated {
+  display: inline-block;
+}
+
+.not-logged-in .cart__icon {
+  background-image: url('../images/icon-shopping-bag.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 13px;
+}
+
+.cart__count {
+  background-color: $light-blue;
+  border-radius: .5em;
+  font-size: 13px;
+  line-height: 1em;
+  padding: 0 .3em;
+}

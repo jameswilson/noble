@@ -1,0 +1,63 @@
+.menu-item--b2b-logout {
+  white-space: nowrap;
+
+  &::after {
+    background-image: url('../images/icon-logout.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 1px 0 0 4px;
+    vertical-align: top;
+    width: 21px;
+  }
+}
+
+.menu-item--b2c-login {
+  white-space: nowrap;
+
+  &::after {
+    background-image: url('../images/icon-login.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 1px 0 0 4px;
+    vertical-align: top;
+    width: 21px;
+  }
+}
+
+.menu-item--b2b-order-history {
+  white-space: nowrap;
+
+  &::after {
+    background-image: url('../images/icon-order-history.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 1px 0 0 4px;
+    vertical-align: top;
+    width: 21px;
+  }
+}
+
+.menu-item--b2b-account {
+  white-space: nowrap;
+
+  &::after {
+    background-image: url('../images/icon-account.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 1px 0 0 4px;
+    vertical-align: top;
+    width: 21px;
+  }
+}

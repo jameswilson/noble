@@ -1,0 +1,22 @@
+<div{{ attributes}}>
+  <div class="cart__summary">
+    <a class="cart__link" href="{{ url }}" title="{{ count }} {{ item_text }}">
+      <span class="cart__text cart__text--anonymous">SHOPPING BAG</span>
+      <span class="cart__text cart__text--authenticated">CART</span>
+      <span class="cart__icon"></span>
+      <span class="cart__count">{{ count }}</span>
+    </a>
+  </div>
+  {% if content %}
+  <div class="cart-block__wrapper">
+    <div class="cart-block__contents">
+      <div class="cart-block__tems">
+        {{ content }}
+      </div>
+      <div class="cart-block__links">
+        {{ links }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>

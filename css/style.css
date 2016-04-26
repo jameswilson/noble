@@ -269,10 +269,6 @@ h6 {
   width: 100%;
 }
 
-.l-top {
-  border-bottom: 1px solid #d1d8e1;
-}
-
 .l-header {
   padding: 45px 0 60px;
 }
@@ -298,10 +294,11 @@ h6 {
 
 .l-header .menu__item {
   display: inline-block;
-  padding: .2em;
+  padding: 0 .2em;
 }
 
 .l-header .menu__item a {
+  display: inline-block;
   line-height: 22px;
   padding: .4em .8em;
 }
@@ -516,20 +513,199 @@ h6 {
   font-weight: normal;
 }
 
-.menu--account-menu ul,
-.menu--topbarb2c ul,
-.menu--topbarb2b ul {
+.l-top {
+  border-bottom: 1px solid #d1d8e1;
+  padding: 8px 0;
+  text-align: right;
+}
+
+.block--search,
+.block--shoppingcart,
+.menu--account-menu,
+.menu--topbarb2c,
+.menu--topbarb2b {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu--topbarb2c,
+.menu--topbarb2b {
+  font-size: 14px;
+}
+
+.menu__toplevel--top-bar-b2b,
+.menu__toplevel--top-bar-b2c {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.menu--account-menu li,
-.menu--topbarb2c li,
-.menu--topbarb2b li {
+.menu__item--top-bar-b2c,
+.menu__item--top-bar-b2b {
+  display: inline-block;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.menu__item--top-bar-b2c:first-child,
+.menu__item--top-bar-b2b:first-child {
+  float: left;
+  margin-left: 0;
+}
+
+.cart__summary {
+  margin-left: 20px;
+}
+
+.cart__text,
+.cart__icon,
+.cart__count {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cart__text--anonymous,
+.cart__text--authenticated,
+.not-logged-in .cart__icon {
+  display: none;
+}
+
+.logged-in .cart__icon,
+.not-logged-in .cart__text--anonymous,
+.logged-in .cart__text--authenticated {
+  display: inline-block;
+}
+
+.not-logged-in .cart__icon {
+  background-image: url("../images/icon-shopping-bag.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 13px;
+}
+
+.cart__count {
+  background-color: #dde2e9;
+  border-radius: .5em;
+  font-size: 13px;
+  line-height: 1em;
+  padding: 0 .3em;
+}
+
+.block--search {
+  margin-left: 20px;
+  position: relative;
+}
+
+.block--search .form-item {
+  margin-right: 30px;
+}
+
+.block--search .form-search {
+  font-size: 16px;
+  height: 24px;
+  line-height: normal;
+}
+
+.block--search .form-actions {
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+
+.block--search .form-submit {
+  background: #1b3e6a url("../images/icon-search-submit--header.svg") no-repeat 50% 50%;
+  border: 0;
+  display: block;
+  height: 24px;
+  text-indent: -9999px;
+  width: 24px;
+}
+
+.menu-item--b2b-logout {
+  white-space: nowrap;
+}
+
+.menu-item--b2b-logout::after {
+  background-image: url("../images/icon-logout.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: 1px 0 0 4px;
+  vertical-align: top;
+  width: 21px;
+}
+
+.menu-item--b2c-login {
+  white-space: nowrap;
+}
+
+.menu-item--b2c-login::after {
+  background-image: url("../images/icon-login.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: 1px 0 0 4px;
+  vertical-align: top;
+  width: 21px;
+}
+
+.menu-item--b2b-order-history {
+  white-space: nowrap;
+}
+
+.menu-item--b2b-order-history::after {
+  background-image: url("../images/icon-order-history.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: 1px 0 0 4px;
+  vertical-align: top;
+  width: 21px;
+}
+
+.menu-item--b2b-account {
+  white-space: nowrap;
+}
+
+.menu-item--b2b-account::after {
+  background-image: url("../images/icon-account.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: 1px 0 0 4px;
+  vertical-align: top;
+  width: 21px;
+}
+
+.block--breadcrumbs nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block--breadcrumbs nav li {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+.block--breadcrumbs nav li::after {
+  content: ' / ';
+}
+
+.block--breadcrumbs nav li:last-child {
+  content: '';
 }
 
 .menu-item--b2c-outfit-builder {
@@ -550,7 +726,7 @@ h6 {
   content: '';
   display: inline-block;
   height: 21px;
-  margin: 1px .8em 0 4px;
+  margin: 1px 0 0 4px;
   vertical-align: top;
   width: 21px;
 }
