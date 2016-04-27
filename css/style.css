@@ -549,6 +549,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .icon-facebook {
   background-image: url("../images/icon-facebook--blue.svg");
+  background-position: 0 50%;
+  width: 22px;
 }
 
 .icon-twitter {
