@@ -1,4 +1,5 @@
 .cart__summary {
+  font-size: 14px;
   margin-left: 20px;
 }
 
@@ -10,23 +11,28 @@
 }
 
 .cart__text--anonymous,
-.cart__text--authenticated,
-.not-logged-in .cart__icon {
+.cart__text--authenticated {
   display: none;
 }
 
-.logged-in .cart__icon,
 .not-logged-in .cart__text--anonymous,
 .logged-in .cart__text--authenticated {
   display: inline-block;
 }
 
-.not-logged-in .cart__icon {
-  background-image: url('../images/icon-shopping-bag.svg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  height: 17px;
-  width: 13px;
+.cart__icon {
+  height: 21px;
+  margin: 0 0 1px;
+  width: 1px;
+
+  .not-logged-in & {
+    background-image: url('../images/icon-shopping-bag.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 21px;
+    margin: 0 1px 1px;
+    width: 13px;
+  }
 }
 
 .cart__count {

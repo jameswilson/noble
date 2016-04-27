@@ -1,6 +1,44 @@
-.menu-item--b2b-logout {
+
+.menu--topbarb2c,
+.menu--topbarb2b {
+  font-size: 14px;
+}
+
+.menu__toplevel--top-bar-b2b,
+.menu__toplevel--top-bar-b2c {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item--top-bar-b2c,
+.menu__item--top-bar-b2b {
+  display: inline-block;
+  margin: 0 0 0 20px;
+  padding: 0;
   white-space: nowrap;
 
+  &:first-child {
+    float: left;
+    margin-left: 0;
+  }
+}
+
+.menu-item--b2c-store-locator {
+  &::before {
+    background-image: url('../images/icon-location.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 0 1px 1px;
+    vertical-align: top;
+    width: 21px;
+  }
+}
+
+.menu-item--b2b-logout {
   &::after {
     background-image: url('../images/icon-logout.svg');
     background-position: 50% 50%;
@@ -8,15 +46,13 @@
     content: '';
     display: inline-block;
     height: 21px;
-    margin: 1px 0 0 4px;
+    margin: 0 1px 1px;
     vertical-align: top;
     width: 21px;
   }
 }
 
 .menu-item--b2c-login {
-  white-space: nowrap;
-
   &::after {
     background-image: url('../images/icon-login.svg');
     background-position: 50% 50%;
@@ -24,15 +60,13 @@
     content: '';
     display: inline-block;
     height: 21px;
-    margin: 1px 0 0 4px;
+    margin: 0 1px 1px;
     vertical-align: top;
     width: 21px;
   }
 }
 
 .menu-item--b2b-order-history {
-  white-space: nowrap;
-
   &::after {
     background-image: url('../images/icon-order-history.svg');
     background-position: 50% 50%;
@@ -40,15 +74,13 @@
     content: '';
     display: inline-block;
     height: 21px;
-    margin: 1px 0 0 4px;
+    margin: 0 1px 1px;
     vertical-align: top;
     width: 21px;
   }
 }
 
 .menu-item--b2b-account {
-  white-space: nowrap;
-
   &::after {
     background-image: url('../images/icon-account.svg');
     background-position: 50% 50%;
@@ -56,7 +88,7 @@
     content: '';
     display: inline-block;
     height: 21px;
-    margin: 1px 0 0 4px;
+    margin: 0 1px 1px;
     vertical-align: top;
     width: 21px;
   }
