@@ -273,6 +273,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 .l-contained {
   margin: 0 auto;
   max-width: 1100px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .l-contained::after {
