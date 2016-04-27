@@ -258,6 +258,18 @@ h6 {
   color: #333;
 }
 
+input[type=submit] {
+  background: #1b3e6a;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  padding: .3em 1em;
+}
+
+input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
+  opacity: .8em;
+}
+
 .l-contained {
   margin: 0 auto;
   max-width: 1100px;
@@ -513,6 +525,10 @@ h6 {
     content: '';
     margin: 0;
   }
+}
+
+.menu__title {
+  font-weight: normal;
 }
 
 .block__title {
@@ -779,4 +795,19 @@ h6 {
   display: inline-block;
   margin: 0;
   padding: .3em .8em;
+}
+
+.block--sitewidecontactform .form-email {
+  border: 0;
+  box-sizing: border-box;
+  padding: .3em .8em;
+  width: 100%;
+}
+
+.block--sitewidecontactform .field--name-field-email-address {
+  display: inline-block;
+}
+
+.block--sitewidecontactform .form-actions {
+  display: inline-block;
 }

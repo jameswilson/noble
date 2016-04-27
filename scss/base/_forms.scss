@@ -1,0 +1,14 @@
+// scss-lint:disable QualifyingElement
+input[type=submit] {
+  background: $blue;
+  border: 0;
+  color: $white;
+  margin: 0;
+  padding: .3em 1em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: .8em;
+  }
+}
