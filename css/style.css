@@ -333,21 +333,26 @@ h6 {
   margin: 0 0 20px;
 }
 
-.menu--technology > ul,
-.menu--customerservice > ul,
-.menu--socialmedialinks > ul,
-.menu--productscategory > ul {
+.menu__toplevel--technology,
+.menu__toplevel--customer-service,
+.menu__toplevel--social-media-links,
+.menu__toplevel--products-category {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.menu--technology > ul li,
-.menu--customerservice > ul li,
-.menu--socialmedialinks > ul li,
-.menu--productscategory > ul li {
+.menu__item--technology,
+.menu__item--customer-service,
+.menu__item--products-category {
   display: block;
   margin: 0;
+  padding: 0;
+}
+
+.menu__item--social-media-links {
+  display: inline-block;
+  margin: 0 6px 0 0;
   padding: 0;
 }
 
@@ -416,6 +421,7 @@ h6 {
 
 @media all and (min-width: 560px) {
   .menu--socialmedialinks {
+    margin-top: 0;
     width: 25%;
   }
   .block--sitewidecontactform {
@@ -511,6 +517,34 @@ h6 {
 
 .block__title {
   font-weight: normal;
+}
+
+.icon-twitter,
+.icon-youtube,
+.icon-facebook,
+.icon-pinterest {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 31px;
+  text-indent: -9999px;
+  width: 35px;
+}
+
+.icon-facebook {
+  background-image: url("../images/icon-facebook--blue.svg");
+}
+
+.icon-twitter {
+  background-image: url("../images/icon-twitter--blue.svg");
+}
+
+.icon-pinterest {
+  background-image: url("../images/icon-pinterest--blue.svg");
+}
+
+.icon-youtube {
+  background-image: url("../images/icon-youtube--blue.svg");
 }
 
 .l-top {

@@ -1,0 +1,29 @@
+
+
+.icon-twitter,
+.icon-youtube,
+.icon-facebook,
+.icon-pinterest {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 31px;
+  text-indent: -9999px;
+  width: 35px;
+}
+
+.icon-facebook {
+  background-image: url('../images/icon-facebook--blue.svg');
+}
+
+.icon-twitter {
+  background-image: url('../images/icon-twitter--blue.svg');
+}
+
+.icon-pinterest {
+  background-image: url('../images/icon-pinterest--blue.svg');
+}
+
+.icon-youtube {
+  background-image: url('../images/icon-youtube--blue.svg');
+}

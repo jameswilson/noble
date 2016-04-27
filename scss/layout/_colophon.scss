@@ -17,23 +17,28 @@
   margin: 0 0 20px;
 }
 
-.menu--technology,
-.menu--customerservice,
-.menu--socialmedialinks,
-.menu--productscategory {
-  > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-  }
+.menu__toplevel--technology,
+.menu__toplevel--customer-service,
+.menu__toplevel--social-media-links,
+.menu__toplevel--products-category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.menu__item--technology,
+.menu__item--customer-service,
+.menu__item--products-category {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item--social-media-links {
+  display: inline-block;
+  margin: 0 6px 0 0;
+  padding: 0;
+}
 
 .menu--technology,
 .menu--customerservice,
@@ -101,6 +106,7 @@
 @include media('narrow') {
 
   .menu--socialmedialinks {
+    margin-top: 0;
     width: 25%;
   }
 
