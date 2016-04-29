@@ -1,7 +1,29 @@
+.skip-to-content {
+  background: $blue;
+  color: $white;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  height: 0%;
+  opacity: 0;
+  outline: none;
+  text-align: center;
+  top: -40px;
+  transform: top .4s ease-out;
+
+  &:focus {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .l-top {
   border-bottom: 1px solid $light-light-blue;
-  padding: 8px 0;
   text-align: right;
+}
+
+.l-contained--top {
+  padding: 8px 2%;
+  position: relative;
 }
 
 .block--search,
@@ -11,4 +33,8 @@
 .menu--topbarb2b {
   display: inline-block;
   vertical-align: middle;
+}
+
+.block--shoppingcart {
+  padding-right: 40px;
 }

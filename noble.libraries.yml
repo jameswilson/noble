@@ -4,3 +4,7 @@ global-styling:
     theme:
       css/style.css: {}
       css/print.css: { media: print }
+  js:
+    js/topbar-search.js: {}
+  dependencies:
+    - core/jquery

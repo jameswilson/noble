@@ -4,6 +4,22 @@
   font-size: 14px;
 }
 
+.l-top {
+  .menu__item a,
+  .cart__link {
+    display: inline-block;
+    opacity: 1;
+    transition: all .2s cubic-bezier(.645, .045, .355, 1);
+  }
+
+  &.searchopen .menu__item a,
+  &.searchopen .cart__link {
+    animation-timing-function: ease;
+    opacity: 0;
+    transform: scale3d(1, .65, 1);
+  }
+}
+
 .menu__toplevel--top-bar-b2b,
 .menu__toplevel--top-bar-b2c {
   list-style: none;
