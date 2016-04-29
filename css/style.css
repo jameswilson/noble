@@ -772,7 +772,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   white-space: nowrap;
 }
 
-.menu-item--b2c-outfit-builder, .menu-item--b2c-outfit-builder.is-active {
+.menu-item--b2c-outfit-builder:link, .menu-item--b2c-outfit-builder:visited, .menu-item--b2c-outfit-builder.is-active {
   background: #1b3e6a;
   border-radius: 3px;
   color: #fff;

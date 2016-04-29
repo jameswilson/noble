@@ -2,7 +2,8 @@
 .menu-item--b2c-outfit-builder {
   white-space: nowrap;
 
-  &,
+  &:link,
+  &:visited,
   &.is-active {
     background: $blue;
     border-radius: 3px;
