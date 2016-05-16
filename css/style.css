@@ -576,9 +576,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   outline: none;
   text-align: center;
   top: -40px;
-  -webkit-transform: top .4s ease-out;
-      -ms-transform: top .4s ease-out;
-          transform: top .4s ease-out;
+  -ms-transform: top .4s ease-out;
+      transform: top .4s ease-out;
 }
 
 .skip-to-content:focus {
@@ -611,7 +610,6 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .cart__summary {
   font-size: 14px;
-  margin-left: 20px;
 }
 
 .cart__text,
@@ -760,10 +758,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   opacity: 0;
   position: absolute;
   top: 2px;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  transition: -webkit-transform .3s ease-out .1s, opacity .2s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
   transition: transform .3s ease-out .1s, opacity .2s ease;
   width: 1px;
   z-index: 1;
@@ -772,31 +768,59 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 .searchopen .searchform__close-left {
   opacity: 1;
   right: 19px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  -ms-transform-origin: 0 100%;
+      transform-origin: 0 100%;
 }
 
 .searchopen .searchform__close-right {
   left: 18px;
   opacity: 1;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
 }
 
-.menu--topbarb2c,
-.menu--topbarb2b {
+.block--welcomedealertopbar {
+  float: left;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
-.l-top .menu__item a,
+.block--welcomedealertopbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.block--welcomedealertopbar ul li {
+  border-right: 1px solid #d1d8e1;
+  display: inline;
+  margin-right: 10px;
+}
+
+.block--welcomedealertopbar ul li:last-child {
+  border: 0;
+}
+
+.block--menu-cart-block {
+  font-size: 14px;
+  margin: 0 30px 0 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.block--menu-cart-block div {
+  display: inline-block;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.block--menu-cart-block div > a {
+  margin: 0 0 0 20px;
+}
+
 .l-top .cart__link {
   display: inline-block;
   opacity: 1;
@@ -805,35 +829,12 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .l-top.searchopen .menu__item a,
 .l-top.searchopen .cart__link {
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  animation-timing-function: ease;
   opacity: 0;
-  -webkit-transform: scale3d(1, 0.65, 1);
-          transform: scale3d(1, 0.65, 1);
+  transform: scale3d(1, 0.65, 1);
 }
 
-.menu__toplevel--top-bar-b2b,
-.menu__toplevel--top-bar-b2c {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu__item--top-bar-b2c,
-.menu__item--top-bar-b2b {
-  display: inline-block;
-  margin: 0 0 0 20px;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.menu__item--top-bar-b2c:first-child,
-.menu__item--top-bar-b2b:first-child {
-  float: left;
-  margin-left: 0;
-}
-
-.menu-item--b2c-store-locator::before {
+.menu-item-store-locator::before {
   background-image: url("../images/icon-location.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -845,7 +846,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   width: 21px;
 }
 
-.menu-item--b2b-logout::after {
+.menu-item-logout::after {
   background-image: url("../images/icon-logout.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -857,7 +858,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   width: 21px;
 }
 
-.menu-item--b2c-login::after {
+.menu-item-login::after {
   background-image: url("../images/icon-login.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -869,7 +870,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   width: 21px;
 }
 
-.menu-item--b2b-order-history::after {
+.menu-item-order-history::after {
   background-image: url("../images/icon-order-history.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -881,7 +882,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   width: 21px;
 }
 
-.menu-item--b2b-account::after {
+.menu-item-account::after {
   background-image: url("../images/icon-account.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
