@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ *
+ * Default theme implementation for products.
+ *
+ * Available variables:
+ * - content: Items for the content of the product.
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.title'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('title') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The product object.
+ * - url: The product URL.
+ *
+ * @ingroup themeable
+ */
+
+ @todo: Replace generic divs with proper layout items.
+ @note: James, I placed these here for quick prototyping, ready for you to replace :)
+#}
+<article{{ attributes }}>
+  <div style="width: 50%; float: left;">
+    <div>
+      {{ content.product_variation_field_style_number }}
+      {{ content.title }}
+      {{ content.product_variation_price }}
+      {{ content.variations }}
+      <a href="#">Find in Store</a>
+    </div>
+    <div>
+      {{ content.field_fit }}
+      <fieldset>
+        <legend>{% trans %}Product Details & Technology {% endtrans %}</legend>
+        {{ content.body }}
+      </fieldset>
+      <fieldset>
+        <legend>{% trans %}Product Features {% endtrans %}</legend>
+        {{ content.field_features_elements }}
+        {{ content.field_features_hood_collar_pocke }}
+        {{ content.field_features_pattern_design_lo }}
+        {{ content.field_features_reinforcement_con }}
+        {{ content.field_features_weatherproof_tech }}
+      </fieldset>
+    </div>
+  </div>
+  <div style="width: 50%; float: left;">
+    PLACEHOLDER FOR IMAGES
+  </div>
+  {#{{ content }}#}
+</article>
