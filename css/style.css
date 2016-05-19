@@ -576,8 +576,9 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   outline: none;
   text-align: center;
   top: -40px;
-  -ms-transform: top .4s ease-out;
-      transform: top .4s ease-out;
+  -webkit-transform: top .4s ease-out;
+      -ms-transform: top .4s ease-out;
+          transform: top .4s ease-out;
 }
 
 .skip-to-content:focus {
@@ -758,8 +759,10 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   opacity: 0;
   position: absolute;
   top: 2px;
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform .3s ease-out .1s, opacity .2s ease;
   transition: transform .3s ease-out .1s, opacity .2s ease;
   width: 1px;
   z-index: 1;
@@ -768,19 +771,23 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 .searchopen .searchform__close-left {
   opacity: 1;
   right: 19px;
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-  -ms-transform-origin: 0 100%;
-      transform-origin: 0 100%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 .searchopen .searchform__close-right {
   left: 18px;
   opacity: 1;
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-  -ms-transform-origin: 100% 100%;
-      transform-origin: 100% 100%;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 .block--welcomedealertopbar {
@@ -829,9 +836,11 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .l-top.searchopen .menu__item a,
 .l-top.searchopen .cart__link {
-  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
   opacity: 0;
-  transform: scale3d(1, 0.65, 1);
+  -webkit-transform: scale3d(1, 0.65, 1);
+          transform: scale3d(1, 0.65, 1);
 }
 
 .menu-item-store-locator::before {
