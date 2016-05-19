@@ -29,7 +29,7 @@
 <div{{ attributes }}>
   <div class="left-column">
     {% if left_oembed %}
-      {{ content.field_home_left_oembed_link }}
+      {{ elements.field_home_left_oembed_link }}
     {% else %}
       <picture>
         <source media="(min-width: 650px)" srcset="{{ left_desktop_uri }}">
@@ -37,14 +37,14 @@
         <!-- img tag for browsers that do not support picture element -->
         <img src="{{ left_desktop_uri }}">
       </picture>
-      {{ content.field_home_left_title }}
-      {{ content.field_home_left_caption }}
-      {{ content.field_home_left_link }}
+      {{ elements.field_home_left_title }}
+      {{ elements.field_home_left_caption }}
+      {{ elements.field_home_left_link }}
     {% endif %}
   </div>
   <div class="right-column">
     {% if right_oembed %}
-      {{ content.field_home_right_oembed_link }}
+      {{ elements.field_home_right_oembed_link }}
     {% else %}
       <picture>
         <source media="(min-width: 650px)" srcset="{{ right_desktop_uri }}">
@@ -52,9 +52,9 @@
         <!-- img tag for browsers that do not support picture element -->
         <img src="{{ right_desktop_uri }}">
       </picture>
-      {{ content.field_home_right_title }}
-      {{ content.field_home_right_caption }}
-      {{ content.field_home_right_link }}
+      {{ elements.field_home_right_title }}
+      {{ elements.field_home_right_caption }}
+      {{ elements.field_home_right_link }}
     {% endif %}
   </div>
 </div>
