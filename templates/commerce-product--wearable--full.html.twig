@@ -54,8 +54,8 @@
   </div>
   <div style="width: 50%; float: left;">
     <div>
-      {# @todo we need video and lifestyle to trigger colorbox modals of respective divs. #}
-      <a href="#">Video</a>
+      <a class="product--video" href="{{ product.field_product_video.0.uri }}">Video</a>
+      {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
       <a href="#">Lifestyle</a>
       {# @todo what is rating and where do we get it? #}
       <a href="#">Rating</a>
@@ -75,9 +75,6 @@
     </div>
     <div class="product--images__others">
       {{ content.product_images.others }}
-    </div>
-    <div class="product--video colorbox hidden">
-      {{ content.field_product_video }}
     </div>
     <div class="product--images__lifestyle hidden">
       {{ content.field_product_lifestyle_images }}

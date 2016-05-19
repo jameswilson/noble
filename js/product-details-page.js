@@ -16,6 +16,8 @@
         $('.product--images__viewer', context).addClass('hidden');
         $('.product--images_360', context).removeClass('hidden');
       });
+
+      $('.product--video', context).colorbox({iframe: true, innerWidth: 640, innerHeight: 390});
     }
   };
 })(jQuery, Drupal, drupalSettings);

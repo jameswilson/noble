@@ -14,3 +14,4 @@ product-details:
     js/product-details-page.js: {}
   dependencies:
     - core/jquery
+    - colorbox/colorbox
