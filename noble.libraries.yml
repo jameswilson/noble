@@ -8,3 +8,9 @@ global-styling:
     js/topbar-search.js: {}
   dependencies:
     - core/jquery
+product-details:
+  version: 1.x
+  js:
+    js/product-details-page.js: {}
+  dependencies:
+    - core/jquery

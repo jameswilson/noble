@@ -22,6 +22,7 @@
  @todo: Replace generic divs with proper layout items.
  @note: James, I placed these here for quick prototyping, ready for you to replace :)
 #}
+{{ attach_library('noble/product-details') }}
 <article{{ attributes }}>
   <div style="width: 50%; float: left;">
     <div>
@@ -52,9 +53,36 @@
     </div>
   </div>
   <div style="width: 50%; float: left;">
-    {{ content.field_product_view_360_url }}
-    {{ content.field_product_images }}
-    {{ content.field_product_lifestyle_images }}
+    <div>
+      {# @todo we need video and lifestyle to trigger colorbox modals of respective divs. #}
+      <a href="#">Video</a>
+      <a href="#">Lifestyle</a>
+      {# @todo what is rating and where do we get it? #}
+      <a href="#">Rating</a>
+      <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
+      <a class="product--images--360-button" href="">360</a>
+    </div>
+    <div class="product--images_360 hidden">
+      <iframe src="{{ product.field_product_view_360_url.0.uri }}" style="width: 100%; height: 667px;"></iframe>
+    </div>
+    <div class="product--images__viewer">
+      <div class="product--images__front">
+        {{ content.product_images.front }}
+      </div>
+      <div class="product--images__back hidden">
+        {{ content.product_images.back }}
+      </div>
+    </div>
+    <div class="product--images__others">
+      {{ content.product_images.others }}
+    </div>
+    <div class="product--video colorbox hidden">
+      {{ content.field_product_video }}
+    </div>
+    <div class="product--images__lifestyle hidden">
+      {{ content.field_product_lifestyle_images }}
+    </div>
+
   </div>
   {#{{ content }}#}
 </article>
