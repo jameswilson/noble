@@ -591,6 +591,14 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   text-align: right;
 }
 
+.l-top-left {
+  float: left;
+}
+
+.l-top-right {
+  float: right;
+}
+
 .l-contained--top {
   padding: 8px 2%;
   position: relative;
@@ -790,25 +798,10 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
           transform-origin: 100% 100%;
 }
 
-.block--welcomedealertopbar {
-  float: left;
+.block--welcomedealertopbar,
+.block--storelocatorlink {
   font-size: 14px;
   text-transform: uppercase;
-}
-
-.block--welcomedealertopbar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.block--welcomedealertopbar ul li {
-  border-right: 1px solid #d1d8e1;
-  display: inline;
-  margin-right: 10px;
-}
-
-.block--welcomedealertopbar ul li:last-child {
-  border: 0;
 }
 
 .block--menu-cart-block {
@@ -901,6 +894,13 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   margin: 0 1px 1px;
   vertical-align: top;
   width: 21px;
+}
+
+.welcome-dealer__order-info,
+.welcome-dealer__order-total {
+  border-left: 1px solid #d1d8e1;
+  margin-left: 5px;
+  padding-left: 9px;
 }
 
 .block--breadcrumbs nav ol {
