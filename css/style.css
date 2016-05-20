@@ -588,7 +588,13 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .l-top {
   border-bottom: 1px solid #d1d8e1;
+  min-height: 24px;
   text-align: right;
+}
+
+.l-top .block {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .l-top-left {
@@ -600,68 +606,8 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 .l-contained--top {
-  padding: 8px 2%;
+  padding: 9px 2%;
   position: relative;
-}
-
-.block--search,
-.block--shoppingcart,
-.menu--account-menu,
-.menu--topbarb2c,
-.menu--topbarb2b {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.block--shoppingcart {
-  padding-right: 40px;
-}
-
-.cart__summary {
-  font-size: 14px;
-}
-
-.cart__text,
-.cart__icon,
-.cart__count {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.cart__text--anonymous,
-.cart__text--authenticated {
-  display: none;
-}
-
-.not-logged-in .cart__text--anonymous,
-.logged-in .cart__text--authenticated {
-  display: inline-block;
-}
-
-.cart__icon {
-  height: 21px;
-  margin: 0 0 1px;
-  width: 1px;
-}
-
-.not-logged-in .cart__icon {
-  background-image: url("../images/icon-shopping-bag.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  height: 21px;
-  margin: 0 1px 1px;
-  width: 13px;
-}
-
-.cart__count {
-  background-color: #dde2e9;
-  border-radius: 1em;
-  color: #666;
-  font-size: 13px;
-  line-height: 1;
-  min-width: .6em;
-  padding: .01em .25em .05em;
-  text-align: center;
 }
 
 .block--search {
@@ -798,6 +744,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
           transform-origin: 100% 100%;
 }
 
+.block--menu-cart-block,
 .block--welcomedealertopbar,
 .block--storelocatorlink {
   font-size: 14px;
@@ -805,30 +752,25 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 .block--menu-cart-block {
-  font-size: 14px;
-  margin: 0 30px 0 0;
-  padding: 0;
-  text-transform: uppercase;
+  margin: 0 40px 0 0;
 }
 
-.block--menu-cart-block div {
+.menu-cart__item {
   display: inline-block;
-  padding: 0;
-  white-space: nowrap;
+  margin-left: 20px;
+  padding-top: 1px;
 }
 
-.block--menu-cart-block div > a {
-  margin: 0 0 0 20px;
-}
-
-.l-top .cart__link {
-  display: inline-block;
+.menu-cart__item,
+.block--storelocatorlink,
+.block--welcomedealertopbar {
   opacity: 1;
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.l-top.searchopen .menu__item a,
-.l-top.searchopen .cart__link {
+.searchopen .menu-cart__item, .searchopen
+.block--storelocatorlink, .searchopen
+.block--welcomedealertopbar {
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   opacity: 0;
@@ -836,64 +778,57 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
           transform: scale3d(1, 0.65, 1);
 }
 
+.menu-item-store-locator::before, .menu-cart__item--logout::after, .menu-cart__item--login::after, .menu-cart__item--cart::after,
+.menu-cart__item--shopping-bag::after, .menu-cart__item--order-history::after, .menu-cart__item--account::after {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: -1px 1px 1px;
+  vertical-align: top;
+  width: 21px;
+}
+
 .menu-item-store-locator::before {
   background-image: url("../images/icon-location.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 21px;
-  margin: 0 1px 1px;
-  vertical-align: top;
-  width: 21px;
 }
 
-.menu-item-logout::after {
+.menu-cart__item--logout::after {
   background-image: url("../images/icon-logout.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 21px;
-  margin: 0 1px 1px 3px;
-  vertical-align: top;
-  width: 21px;
+  margin-left: 3px;
 }
 
-.menu-item-login::after {
+.menu-cart__item--login::after {
   background-image: url("../images/icon-login.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 21px;
-  margin: 0 1px 1px 3px;
-  vertical-align: top;
-  width: 21px;
+  margin-left: 3px;
 }
 
-.menu-item-order-history::after {
+.menu-cart__item--cart::after,
+.menu-cart__item--shopping-bag::after {
+  background-image: url("../images/icon-shopping-bag.svg");
+  margin-left: 3px;
+  width: 13px;
+}
+
+.menu-cart__item--count {
+  background-color: #dde2e9;
+  border-radius: 1em;
+  color: #666;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0 0 0 4px;
+  min-width: .6em;
+  padding: .05em .25em;
+  text-align: center;
+}
+
+.menu-cart__item--order-history::after {
   background-image: url("../images/icon-order-history.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 21px;
-  margin: 0 1px 1px;
-  vertical-align: top;
-  width: 21px;
 }
 
-.menu-item-account::after {
+.menu-cart__item--account::after {
   background-image: url("../images/icon-account.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 21px;
-  margin: 0 1px 1px;
-  vertical-align: top;
-  width: 21px;
 }
 
 .welcome-dealer__order-info,
