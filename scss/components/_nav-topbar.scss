@@ -1,3 +1,4 @@
+.block--menu-cart-block,
 .block--welcomedealertopbar,
 .block--storelocatorlink {
   font-size: 14px;
@@ -5,103 +6,95 @@
 }
 
 .block--menu-cart-block {
-  font-size: 14px;
-  margin: 0 30px 0 0;
-  padding: 0;
-  text-transform: uppercase;
-
-  div {
-    display: inline-block;
-    padding: 0;
-    white-space: nowrap;
-
-    > a {
-      margin: 0 0 0 20px;
-    }
-  }
+  margin: 0 40px 0 0;
 }
 
-.l-top {
-  .cart__link {
-    display: inline-block;
-    opacity: 1;
-    transition: all .2s cubic-bezier(.645, .045, .355, 1);
-  }
+.menu-cart__item {
+  display: inline-block;
+  margin-left: 20px;
+  padding-top: 1px;
+}
 
-  &.searchopen .menu__item a,
-  &.searchopen .cart__link {
+.menu-cart__item,
+.block--storelocatorlink,
+.block--welcomedealertopbar {
+  opacity: 1;
+  transition: all .2s cubic-bezier(.645, .045, .355, 1);
+
+  .searchopen & {
     animation-timing-function: ease;
     opacity: 0;
     transform: scale3d(1, .65, 1);
   }
 }
 
+
+%topbar-menu-icon-inside-pseudoclass {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 21px;
+  margin: -1px 1px 1px;
+  vertical-align: top;
+  width: 21px;
+}
+
 .menu-item-store-locator {
   &::before {
+    @extend %topbar-menu-icon-inside-pseudoclass;
     background-image: url('../images/icon-location.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    content: '';
-    display: inline-block;
-    height: 21px;
-    margin: 0 1px 1px;
-    vertical-align: top;
-    width: 21px;
   }
 }
 
-.menu-item-logout {
+.menu-cart__item--logout {
   &::after {
+    @extend %topbar-menu-icon-inside-pseudoclass;
     background-image: url('../images/icon-logout.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    content: '';
-    display: inline-block;
-    height: 21px;
-    margin: 0 1px 1px 3px;
-    vertical-align: top;
-    width: 21px;
+    margin-left: 3px;
   }
 }
 
-.menu-item-login {
+.menu-cart__item--login {
   &::after {
+    @extend %topbar-menu-icon-inside-pseudoclass;
     background-image: url('../images/icon-login.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    content: '';
-    display: inline-block;
-    height: 21px;
-    margin: 0 1px 1px 3px;
-    vertical-align: top;
-    width: 21px;
+    margin-left: 3px;
   }
 }
 
-.menu-item-order-history {
+.menu-cart__item--cart,
+.menu-cart__item--shopping-bag {
   &::after {
+    @extend %topbar-menu-icon-inside-pseudoclass;
+    background-image: url('../images/icon-shopping-bag.svg');
+    margin-left: 3px;
+    width: 13px;
+  }
+}
+
+.menu-cart__item--count {
+  background-color: $light-blue;
+  border-radius: 1em;
+  color: $light-graphite;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0 0 0 4px;
+  min-width: .6em;
+  padding: .05em .25em;
+  text-align: center;
+}
+
+.menu-cart__item--order-history {
+  &::after {
+    @extend %topbar-menu-icon-inside-pseudoclass;
     background-image: url('../images/icon-order-history.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    content: '';
-    display: inline-block;
-    height: 21px;
-    margin: 0 1px 1px;
-    vertical-align: top;
-    width: 21px;
   }
 }
 
-.menu-item-account {
+.menu-cart__item--account {
   &::after {
+    @extend %topbar-menu-icon-inside-pseudoclass;
     background-image: url('../images/icon-account.svg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    content: '';
-    display: inline-block;
-    height: 21px;
-    margin: 0 1px 1px;
-    vertical-align: top;
-    width: 21px;
   }
 }
