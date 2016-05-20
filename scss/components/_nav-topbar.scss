@@ -1,23 +1,7 @@
-.block--welcomedealertopbar {
-  float: left;
+.block--welcomedealertopbar,
+.block--storelocatorlink {
   font-size: 14px;
   text-transform: uppercase;
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      border-right: 1px solid $light-light-blue;
-      display: inline;
-      margin-right: 10px;
-
-    }
-
-    li:last-child {
-      border: 0;
-    }
-  }
 }
 
 .block--menu-cart-block {
