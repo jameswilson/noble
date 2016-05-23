@@ -18,23 +18,24 @@
 
 .l-top {
   border-bottom: 1px solid $light-light-blue;
+  min-height: 24px;
   text-align: right;
+
+  .block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.l-top-left {
+  float: left;
+}
+
+.l-top-right {
+  float: right;
 }
 
 .l-contained--top {
-  padding: 8px 2%;
+  padding: 9px 2%;
   position: relative;
-}
-
-.block--search,
-.block--shoppingcart,
-.menu--account-menu,
-.menu--topbarb2c,
-.menu--topbarb2b {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.block--shoppingcart {
-  padding-right: 40px;
 }

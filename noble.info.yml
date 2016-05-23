@@ -9,7 +9,8 @@ libraries:
 base theme: stable
 
 regions:
-  top: Top
+  top_left: Top Left
+  top_right: Top Right
   header: Header
   hero_area: Hero Area
   content: Content
