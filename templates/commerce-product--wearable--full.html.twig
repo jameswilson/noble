@@ -59,7 +59,9 @@
       <a href="#">Lifestyle</a>
       {# @todo what is rating and where do we get it? #}
       <a href="#">Rating</a>
+      {%  if content.product_variation_field_reverse_image %}
       <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
+      {% endif %}
       <a class="product--images--360-button" href="">360</a>
     </div>
     <div class="product--images_360 hidden">
@@ -67,14 +69,14 @@
     </div>
     <div class="product--images__viewer">
       <div class="product--images__front">
-        {{ content.product_images.front }}
+        {{ content.product_variation_field_front_image }}
       </div>
       <div class="product--images__back hidden">
-        {{ content.product_images.back }}
+        {{ content.product_variation_field_reverse_image }}
       </div>
     </div>
     <div class="product--images__others">
-      {{ content.product_images.others }}
+      {{ content.product_variation_field_images }}
     </div>
     <div class="product--images__lifestyle hidden">
       {{ content.field_product_lifestyle_images }}
