@@ -29,7 +29,7 @@ rotating-banner:
   js:
     js/rotating-banner.js: {}
   css:
-      theme:
-        css/rotating-banner.css: {}
+    theme:
+      css/rotating-banner.css: {}
   dependencies:
     - noble/flexslider
