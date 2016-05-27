@@ -8,6 +8,7 @@ global-styling:
     js/topbar-search.js: {}
   dependencies:
     - core/jquery
+
 product-details:
   version: 1.x
   js:
@@ -15,3 +16,20 @@ product-details:
   dependencies:
     - core/jquery
     - colorbox/colorbox
+
+flexslider:
+  version: 2.6.0
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider.min.js: {type: external, minified: true}
+  dependencies:
+    - core/jquery
+
+rotating-banner:
+  version: 1.x
+  js:
+    js/rotating-banner.js: {}
+  css:
+      theme:
+        css/rotating-banner.css: {}
+  dependencies:
+    - noble/flexslider

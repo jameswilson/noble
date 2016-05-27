@@ -1,0 +1,124 @@
+
+.rotating-banner ul,
+.rotating-banner ol,
+.rotating-banner li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * RESETS
+ */
+.flex-container a:hover,
+.flex-slider a:hover {
+    outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*
+ * BASE STYLES
+ */
+.rotating-banner {
+    margin: 0;
+    padding: 0;
+}
+.rotating-banner .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+.rotating-banner .slides img {
+    width: 100%;
+    display: block;
+}
+.rotating-banner .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .rotating-banner .slides {
+    display: block;
+}
+* html .rotating-banner .slides {
+    height: 1%;
+}
+.no-js .rotating-banner .slides > li:first-child {
+    display: block;
+}
+
+.rotating-banner {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    zoom: 1;
+}
+.rotating-banner .slides {
+    zoom: 1;
+}
+.rotating-banner .slides img {
+    height: auto;
+    -moz-user-select: none;
+}
+
+
+/* Flexslider Viewport */
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.loading .flex-viewport {
+    max-height: 300px;
+}
+
+
+/* Control Nav */
+.flex-control-nav {
+    display: none;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+    *height: 0; /* fix for IE 7 */
+}
+.flex-direction-nav a {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    width: 52px;
+    height: 52px;
+    margin: -13px 0 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    transition: all 0.3s ease-out;
+    z-index: 10;
+}
+.flex-direction-nav li .flex-next {
+    background-image: url(../images/rotating-banner-next.svg);
+    right: 10px;
+}
+.flex-direction-nav li .flex-prev {
+    background-image: url(../images/rotating-banner-prev.svg);
+    left: 10px;
+}
+.flex-direction-nav li .disabled {
+    opacity: .3;
+    filter: alpha(opacity=30);
+    cursor: default;
+}
