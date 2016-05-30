@@ -17,7 +17,11 @@
         $('.product--images_360', context).removeClass('hidden');
       });
 
-      $('.product--video', context).colorbox({iframe: true, innerWidth: 640, innerHeight: 390});
+      $('.product--video-button', context).bind('click', function (e) {
+        e.preventDefault();
+        $.colorbox({html: $('.product--video').html()});
+        $.colorbox.resize();
+      });
     }
   };
 })(jQuery, Drupal, drupalSettings);

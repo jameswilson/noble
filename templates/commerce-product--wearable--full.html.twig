@@ -54,7 +54,7 @@
   </div>
   <div style="width: 50%; float: left;">
     <div>
-      <a class="product--video" href="{{ product.field_product_video.0.uri }}">Video</a>
+      <a class="product--video-button" href="">Video</a>
       {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
       <a href="#">Lifestyle</a>
       {# @todo what is rating and where do we get it? #}
@@ -63,6 +63,9 @@
       <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
       {% endif %}
       <a class="product--images--360-button" href="">360</a>
+    </div>
+    <div class="product--video hidden">
+      {{ content.field_product_video.0 }}
     </div>
     <div class="product--images_360 hidden">
       <iframe src="{{ product.field_product_view_360_url.0.uri }}" style="width: 100%; height: 667px;"></iframe>
