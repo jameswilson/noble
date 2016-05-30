@@ -54,15 +54,21 @@
   </div>
   <div style="width: 50%; float: left;">
     <div>
+      {% if content.field_product_video.0 %}
       <a class="product--video-button" href="">Video</a>
-      {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
+      {% endif %}
+      {% if content.field_product_lifestyle_images.0 %}
       <a href="#">Lifestyle</a>
+      {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
+      {% endif %}
       {# @todo what is rating and where do we get it? #}
       <a href="#">Rating</a>
-      {%  if content.product_variation_field_reverse_image %}
+      {%  if content.product_variation_field_reverse_image.0 %}
       <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
       {% endif %}
+      {%  if product.field_product_view_360_url.0 %}
       <a class="product--images--360-button" href="">360</a>
+      {% endif %}
     </div>
     <div class="product--video hidden">
       {{ content.field_product_video.0 }}
