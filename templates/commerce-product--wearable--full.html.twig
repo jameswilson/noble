@@ -61,8 +61,9 @@
       <a href="#">Lifestyle</a>
       {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
       {% endif %}
-      {# @todo what is rating and where do we get it? #}
-      <a href="#">Rating</a>
+      {% if content.product_rating %}
+      <a class="product--rating colorbox" href="{{ content.product_rating.url}}">{{ content.product_rating.label }}</a>
+      {% endif %}
       {%  if content.product_variation_field_reverse_image.0 %}
       <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
       {% endif %}
