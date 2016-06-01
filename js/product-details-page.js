@@ -22,6 +22,11 @@
         $.colorbox({html: $('.product--video').html()});
         $.colorbox.resize();
       });
+
+      $('.product--lifestyle-button', context).bind('click', function (e) {
+        $('.product--images__lifestyle img').colorbox({rel: 'gallery'});
+        $('.product--images__lifestyle img').first().click();
+      });
     }
   };
 })(jQuery, Drupal, drupalSettings);

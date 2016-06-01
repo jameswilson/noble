@@ -57,9 +57,8 @@
       {% if content.field_product_video.0 %}
       <a class="product--video-button" href="">Video</a>
       {% endif %}
-      {% if content.field_product_lifestyle_images.0 %}
-      <a href="#">Lifestyle</a>
-      {# @todo we need lifestyle to trigger colorbox modals of respective divs. #}
+      {% if content.field_product_lifestyle_images %}
+      <a class="product--lifestyle-button" href="#">Lifestyle</a>
       {% endif %}
       {% if content.product_rating %}
       <a class="product--rating colorbox" href="{{ content.product_rating.url}}">{{ content.product_rating.label }}</a>
