@@ -26,71 +26,73 @@
 <article{{ attributes }}>
   <div style="width: 50%; float: left;">
     <div>
-      {{ content.product_variation_field_style_number }}
-      {{ content.title }}
-      {{ content.product_variation_price }}
-      {{ content.variations }}
+      {{ product.variation_field_style_number }}
+      {{ product.title }}
+      {{ product.variation_price }}
+      {{ product.variations }}
+      {{ product.product_size_chart }}
       <a href="#">Find in Store</a>
     </div>
     <div>
-      {{ content.field_fit }}
+      {{ product.field_fit }}
+      {{ product.product_fit_guide }}
       <fieldset>
         <legend>{% trans %}Product Details & Technology {% endtrans %}</legend>
-        {{ content.body }}
+        {{ product.body }}
       </fieldset>
       <fieldset>
         <legend>{% trans %}Product Features {% endtrans %}</legend>
-        {{ content.field_features_elements }}
-        {{ content.field_features_hood_collar_pocke }}
-        {{ content.field_features_pattern_design_lo }}
-        {{ content.field_features_reinforcement_con }}
-        {{ content.field_features_weatherproof_tech }}
+        {{ product.field_features_elements }}
+        {{ product.field_features_hood_collar_pocke }}
+        {{ product.field_features_pattern_design_lo }}
+        {{ product.field_features_reinforcement_con }}
+        {{ product.field_features_weatherproof_tech }}
       </fieldset>
       <div>
         {% trans %}Share Product{% endtrans %}
-        {{ content.product_share_this }}
+        {{ product.product_share_this }}
       </div>
     </div>
   </div>
   <div style="width: 50%; float: left;">
     <div>
-      {% if content.field_product_video.0 %}
+      {% if product.field_product_video.0 %}
       <a class="product--video-button" href="">Video</a>
       {% endif %}
-      {% if content.field_product_lifestyle_images %}
+      {% if product.field_product_lifestyle_images %}
       <a class="product--lifestyle-button" href="#">Lifestyle</a>
       {% endif %}
-      {% if content.product_rating %}
-      <a class="product--rating colorbox" href="{{ content.product_rating.url}}">{{ content.product_rating.label }}</a>
+      {% if product.product_rating %}
+      <a class="product--rating colorbox" href="{{ product.product_rating.url}}">{{ product.product_rating.label }}</a>
       {% endif %}
-      {%  if content.product_variation_field_reverse_image.0 %}
+      {%  if product.variation_field_reverse_image.0 %}
       <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
       {% endif %}
-      {%  if content.product_360_iframe.url %}
+      {%  if product.product_360_iframe.url %}
       <a class="product--images--360-button" href="">360</a>
       {% endif %}
     </div>
     <div class="product--video hidden">
-      {{ content.field_product_video.0 }}
+      {{ product.field_product_video.0 }}
     </div>
     <div class="product--images_360 hidden">
-      <iframe src="{{ content.product_360_iframe.url }}" style="width: 100%; height: 667px;"></iframe>
+      <iframe src="{{ product.product_360_iframe.url }}" style="width: 100%; height: 667px;"></iframe>
     </div>
     <div class="product--images__viewer">
       <div class="product--images__front">
-        {{ content.product_variation_field_front_image }}
+        {{ product.variation_field_front_image }}
       </div>
       <div class="product--images__back hidden">
-        {{ content.product_variation_field_reverse_image }}
+        {{ product.variation_field_reverse_image }}
       </div>
     </div>
     <div class="product--images__others">
-      {{ content.product_variation_field_images }}
+      {{ product.variation_field_images }}
     </div>
     <div class="product--images__lifestyle hidden">
-      {{ content.field_product_lifestyle_images }}
+      {{ product.field_product_lifestyle_images }}
     </div>
 
   </div>
-  {#{{ content }}#}
+  {#{{ product }}#}
 </article>
