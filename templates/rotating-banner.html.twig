@@ -1,0 +1,16 @@
+{{ attach_library('noble/rotating-banner') }}
+
+<div class="rotating-banner">
+  <ul class="slides">
+    {% for slide in banner.slides %}
+      <li>
+        <a href="{{ slide.link }}">
+          <picture>
+            <source srcset="{{ slide.desktop_image }}" media="(min-width: 940px)">
+            <img src="{{ slide.mobile_image }}" alt="{{ slide.image_alt }}">
+          </picture>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
