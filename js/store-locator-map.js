@@ -17,6 +17,12 @@
     var dataLayer = L.geoJson(data, {
       onEachFeature: function(feature, layer) {
         var popupText = '<strong>' + feature.properties.name + '</strong><br />' + feature.properties.description;
+        var properties = {'phone_number': 'P', 'web_address': 'W', 'google_maps': 'M'};
+        for (var property in properties) {
+          if (feature.properties[property].length > 0) {
+            popupText += '<br />' + properties[property] + ': ' + feature.properties[property];
+          }
+        }
         layer.bindPopup(popupText);
       }
     });
