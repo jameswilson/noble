@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     // Autoprefixer post-processes the generated CSS files.
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        browsers: ['last 2 versions', 'ie >= 8', '> 1% in US']
       },
       dist: {
         expand: true,
