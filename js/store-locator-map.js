@@ -1,9 +1,9 @@
-(function ($) {
+(function ($, drupalSettings) {
   // Create map and set center and zoom.
   var map = L.map('map', { // The `L` stands for the Leaflet library.
     scrollWheelZoom: false,
-    center: [35.9908385, -78.9005222],
-    zoom: 12
+    center: [drupalSettings.storeLocatorMap.center.lat, drupalSettings.storeLocatorMap.center.lon],
+    zoom: drupalSettings.storeLocatorMap.zoom
   });
   // Add basemap tiles and attribution.
   var baseLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
@@ -27,11 +27,13 @@
       }
     });
     dataLayer.addTo(map);
-    map.fitBounds(dataLayer.getBounds());
+    if (drupalSettings.storeLocatorMap.fitBounds) {
+      map.fitBounds(dataLayer.getBounds());
+    }
   }
 
   $.getJSON('/stores-feed', function(data) {
     addDataToMap(data, map);
   });
 
-})(jQuery);
+})(jQuery, drupalSettings);

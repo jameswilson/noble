@@ -57,3 +57,4 @@ store-locator-map:
   dependencies:
     - noble/leaflet
     - core/jquery
+    - core/drupalSettings
