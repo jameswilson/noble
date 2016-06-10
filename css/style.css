@@ -838,6 +838,64 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   padding-left: 9px;
 }
 
+.row {
+  margin: 0 auto;
+  max-width: 940px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.row img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.row .col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 -4px 1.666666% 0;
+  vertical-align: top;
+}
+
+.twitter-tweet-wrapper {
+  border: 1px solid #c9c9c9;
+  padding: 20px;
+  text-align: left;
+}
+
+.twitter-tweet-wrapper h3 {
+  color: #1b3e6a;
+  font-size: 24px;
+  margin: 0;
+}
+
+@media screen and (min-width: 620px) {
+  .row .col {
+    display: block;
+    float: left;
+    margin: 0 0 1.666666%;
+  }
+  .row .col-1 {
+    margin-right: .75%;
+    text-align: left;
+  }
+  .row .col-2 {
+    margin-left: .75%;
+    text-align: right;
+  }
+  .row-1-1 .col {
+    width: 49.25%;
+  }
+  .row-2-1 .col-1,
+  .row-1-2 .col-2 {
+    width: 64.666666%;
+  }
+  .row-1-2 .col-1,
+  .row-2-1 .col-2 {
+    width: 33.333333%;
+  }
+}
+
 .block--breadcrumbs nav ol {
   list-style: none;
   margin: 0;

@@ -26,8 +26,8 @@
  */
 #}
 
-<div{{ attributes }}>
-  <div class="left-column">
+<div class="row row-2-1"{{ attributes }}>
+  <div class="col col-1">
     {% if left_oembed %}
       {{ elements.field_home_left_oembed_link }}
     {% else %}
@@ -42,7 +42,7 @@
       {{ elements.field_home_left_link }}
     {% endif %}
   </div>
-  <div class="right-column">
+  <div class="col col-2">
     {% if right_oembed %}
       {{ elements.field_home_right_oembed_link }}
     {% else %}

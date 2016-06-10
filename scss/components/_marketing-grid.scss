@@ -1,0 +1,62 @@
+.row {
+  margin: 0 auto;
+  max-width: 940px;
+  overflow: hidden;
+  padding: 20px;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .col {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 -4px 1.666666% 0;
+    vertical-align: top;
+  }
+}
+
+.twitter-tweet-wrapper {
+  border: 1px solid $border-color;
+  padding: 20px;
+  text-align: left;
+
+  h3 {
+    color: $blue;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:620px) {
+  .row .col {
+    display: block;
+    float: left;
+    margin: 0 0 1.666666%;
+  }
+
+  .row .col-1 {
+    margin-right: .75%;
+    text-align: left;
+  }
+
+  .row .col-2 {
+    margin-left: .75%;
+    text-align: right;
+  }
+
+  .row-1-1 .col {
+    width: 49.25%;
+  }
+
+  .row-2-1 .col-1,
+  .row-1-2 .col-2 {
+    width: 64.666666%;
+  }
+
+  .row-1-2 .col-1,
+  .row-2-1 .col-2 {
+    width: 33.333333%;
+  }
+}
