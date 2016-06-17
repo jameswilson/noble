@@ -12,9 +12,23 @@
   // Add basemap to map.
   map.addLayer(baseLayer);
 
+  var icon = new L.Icon({
+    iconUrl: '/themes/custom/noble/images/map-marker.png',
+    iconSize:    [32, 32],
+    iconAnchor:  [16, 32],
+    popupAnchor: [1, -25]
+  });
+
+
   // Add points.
   function addDataToMap(data, map) {
     var dataLayer = L.geoJson(data, {
+      pointToLayer: function(feature, latlng) {
+        console.log(latlng, feature);
+        return L.marker(latlng, {
+          icon: icon
+        });
+      },
       onEachFeature: function(feature, layer) {
         layer.bindPopup(feature.properties.mapPopup);
       }
