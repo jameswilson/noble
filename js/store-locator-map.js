@@ -1,6 +1,6 @@
 (function ($, drupalSettings) {
   // Create map and set center and zoom.
-  var map = L.map('map', { // The `L` stands for the Leaflet library.
+  var map = L.map('map', {
     scrollWheelZoom: false,
     center: [drupalSettings.storeLocatorMap.center.lat, drupalSettings.storeLocatorMap.center.lon],
     zoom: drupalSettings.storeLocatorMap.zoom
@@ -16,14 +16,7 @@
   function addDataToMap(data, map) {
     var dataLayer = L.geoJson(data, {
       onEachFeature: function(feature, layer) {
-        var popupText = '<strong>' + feature.properties.name + '</strong><br />' + feature.properties.description;
-        var properties = {'phone_number': 'P', 'web_address': 'W', 'google_maps': 'M'};
-        for (var property in properties) {
-          if (feature.properties[property].length > 0) {
-            popupText += '<br />' + properties[property] + ': ' + feature.properties[property];
-          }
-        }
-        layer.bindPopup(popupText);
+        layer.bindPopup(feature.properties.mapPopup);
       }
     });
     dataLayer.addTo(map);
@@ -32,7 +25,23 @@
     }
   }
 
-  $.getJSON('/stores-feed', function(data) {
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return '';
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+  var feed = '/stores-feed';
+  var variation = getParameterByName('variation');
+  console.log(variation);
+  if (variation.length > 0) {
+    feed += '?variation=' + variation;
+  }
+  $.getJSON(feed, function(data) {
     addDataToMap(data, map);
   });
 
