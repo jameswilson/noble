@@ -22,6 +22,7 @@
 
   // Add points.
   function addDataToMap(data, map) {
+    var markers = L.markerClusterGroup();
     var dataLayer = L.geoJson(data, {
       pointToLayer: function(feature, latlng) {
         console.log(latlng, feature);
@@ -33,7 +34,8 @@
         layer.bindPopup(feature.properties.mapPopup);
       }
     });
-    dataLayer.addTo(map);
+    markers.addLayer(dataLayer);
+    map.addLayer(markers);
     if (drupalSettings.storeLocatorMap.fitBounds) {
       map.fitBounds(dataLayer.getBounds());
     }
