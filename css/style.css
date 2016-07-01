@@ -843,6 +843,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   max-width: 940px;
   overflow: hidden;
   padding: 20px;
+  text-align: center;
 }
 
 .row img {
