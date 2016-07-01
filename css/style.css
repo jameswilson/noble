@@ -847,6 +847,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .row img {
   display: inline-block;
+  height: auto;
   vertical-align: top;
 }
 
