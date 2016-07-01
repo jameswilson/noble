@@ -18,6 +18,38 @@
   }
 }
 
+// Override Instagram's oEmbed-generated styles
+// scss-lint:disable ImportantRule
+.instagram-media,
+.instagram-media-registered {
+  border: 0 !important;
+  margin: 0 -8px !important;
+  text-align: left;
+
+  p {
+    font-size: 10px;
+  }
+
+  &,
+  div {
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+  }
+
+  &,
+  > div {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  > div {
+    margin: 0 8px !important;
+  }
+}
+// scss-lint:enable ImportantRule
+
 .twitter-tweet-wrapper {
   border: 1px solid $border-color;
   padding: 20px;
