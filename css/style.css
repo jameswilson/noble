@@ -270,7 +270,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 .messages {
-  background: no-repeat 10px 17px;
+  background: no-repeat 10px 19px;
   border: 1px solid;
   border-radius: 2px;
   border-width: 1px 1px 1px 0;
@@ -280,7 +280,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 [dir="rtl"] .messages {
-  background-position: right 10px top 17px;
+  background-position: right 10px top 19px;
   border-width: 1px 0 1px 1px;
   padding-left: 20px;
   padding-right: 35px;
@@ -289,6 +289,10 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .messages + .messages {
   margin-top: 1.538em;
+}
+
+.messages__wrapper {
+  margin: 35px 0;
 }
 
 .messages__list {
@@ -1149,6 +1153,11 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   .row-2-1 .col-2 {
     width: 33.333333%;
   }
+}
+
+.block--breadcrumbs {
+  font-size: 18px;
+  margin: 35px 0;
 }
 
 .block--breadcrumbs nav ol {
