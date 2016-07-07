@@ -532,6 +532,179 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   font-weight: normal;
 }
 
+.menu__toplevel--about {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__toplevel--about > .menu__item + .menu__item {
+  margin-top: 16px;
+}
+
+.menu__toplevel--about > .menu__item > a {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.menu--about .menu__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu--about .menu__sublevel {
+  padding-left: 20px;
+}
+
+.menu--about .menu__sublevel .menu__item {
+  margin-top: 10px;
+}
+
+.menu--about .menu__sublevel--1 {
+  padding: 0;
+}
+
+.menu__toggle {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  float: right;
+  height: 12px;
+  overflow: hidden;
+  padding: 3px;
+  position: relative;
+  width: 12px;
+}
+
+.menu__toggle-horizontal {
+  background: #1b3e6a;
+  height: 2px;
+  left: 3px;
+  position: absolute;
+  top: 8px;
+  width: 12px;
+}
+
+.menu__item[aria-expanded="true"] > .menu__toggle > .menu__toggle-horizontal {
+  background: #666;
+}
+
+.menu__toggle-vertical {
+  background: #1b3e6a;
+  height: 12px;
+  left: 8px;
+  position: absolute;
+  top: 3px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform .3s ease-out .1s, background .3s ease-out;
+  transition: transform .3s ease-out .1s, background .3s ease-out;
+  width: 2px;
+}
+
+.menu__item[aria-expanded="true"] > .menu__toggle > .menu__toggle-vertical {
+  background: #666;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform .3s ease-out .1s, background .3s ease-out;
+  transition: transform .3s ease-out .1s, background .3s ease-out;
+}
+
+.menu__item[aria-expanded="false"] > .menu__sublevel {
+  -webkit-animation: submenu-collapse .3s ease-out;
+          animation: submenu-collapse .3s ease-out;
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+}
+
+.menu__item[aria-expanded="true"] > .menu__sublevel {
+  -webkit-animation: submenu-expand .3s ease-out;
+          animation: submenu-expand .3s ease-out;
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height .3s ease-out;
+}
+
+@-webkit-keyframes submenu-expand {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    max-height: 1px;
+    opacity: 0;
+  }
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes submenu-expand {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    max-height: 1px;
+    opacity: 0;
+  }
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes submenu-collapse {
+  0% {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+  }
+  99% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes submenu-collapse {
+  0% {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+  }
+  99% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
 .block__title {
   font-weight: normal;
 }

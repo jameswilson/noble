@@ -91,6 +91,11 @@ function noble_preprocess_block(array &$variables) {
   elseif (!empty($variables['elements']['#derivative_plugin_id'])) {
     $variables['machine_name'] = $variables['elements']['#derivative_plugin_id'];
   }
+
+  // Add custom expandable menu functionality for about menu.
+  if ($variables['machine_name'] == 'about') {
+    $variables['attributes']['class'][] = 'menu--expandable';
+  }
 }
 
 /**

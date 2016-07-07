@@ -6,6 +6,7 @@ global-styling:
       css/print.css: { media: print }
   js:
     js/topbar-search.js: {}
+    js/menu--expandable.js: {}
   dependencies:
     - core/jquery
 
