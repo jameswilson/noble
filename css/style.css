@@ -1204,7 +1204,9 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 .block--local-tasks {
-  margin: 10px 0;
+  background: #f0f2f5;
+  font-size: 18px;
+  margin: 36px 0;
 }
 
 .block--local-tasks > ul {
@@ -1215,8 +1217,26 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .block--local-tasks > ul li {
   display: inline-block;
-  margin: 0;
-  padding: .3em .8em;
+  margin: 0 -4px 0 0;
+  padding: .4em 0;
+}
+
+.block--local-tasks a {
+  color: #6b829f;
+  padding: .6em .9em;
+}
+
+.block--local-tasks .is-active {
+  background: #fff;
+  border-top: 0.25em solid #1b3e6a;
+  color: #1b3e6a;
+}
+
+.block--local-tasks .is-active:hover {
+  background: #fff;
+  color: #1b3e6a;
+  cursor: default;
+  opacity: 1;
 }
 
 .block--sitewidecontactform .form-email {

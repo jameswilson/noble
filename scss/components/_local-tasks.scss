@@ -1,5 +1,7 @@
 .block--local-tasks {
-  margin: 10px 0;
+  background: lighten($light-light-blue, 10%);
+  font-size: 18px;
+  margin: 36px 0;
 
   > ul {
     list-style: none;
@@ -8,8 +10,31 @@
 
     li {
       display: inline-block;
-      margin: 0;
-      padding: .3em .8em;
+      margin: 0 -4px 0 0;
+      padding: .4em 0;
+    }
+  }
+
+  a {
+    color: darken($light-light-blue, 33%);
+    padding: .6em .9em;
+
+    // &:hover {
+    //   color: darken($light-light-blue, 33%);
+    //   opacity: 1;
+    // }
+  }
+
+  .is-active {
+    background: $white;
+    border-top: .25em solid $blue;
+    color: $blue;
+
+    &:hover {
+      background: $white;
+      color: $blue;
+      cursor: default;
+      opacity: 1;
     }
   }
 }
