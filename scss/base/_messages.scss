@@ -1,0 +1,97 @@
+// Override core system message styles.
+.messages {
+  background: no-repeat 10px 17px;  // LTR
+  border: 1px solid;
+  border-radius: 2px;
+  border-width: 1px 1px 1px 0;  // LTR
+  overflow-wrap: break-word;
+  padding: 15px 20px 15px 35px; // LTR
+  word-wrap: break-word;
+
+  [dir="rtl"] & {
+    background-position: right 10px top 17px;
+    border-width: 1px 0 1px 1px;
+    padding-left: 20px;
+    padding-right: 35px;
+    text-align: right;
+  }
+
+  + .messages {
+    margin-top: 1.538em;
+  }
+}
+
+.messages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.messages__item + .messages__item {
+  margin-top: .769em;
+}
+
+// See .color-success in Seven's colors.css
+$status-hue: 74;
+$status-color: hsl($status-hue, 84%, 21%); // hsl(100, 54%, 24%)
+$status-background: hsl($status-hue, 63%, 90%); // hsl(98, 52%, 96%)
+$status-border: hsl($status-hue, 78%, 70%); // hsl(100, 37%, 81%)
+$status-shadow: hsl($status-hue, 84%, 45%); // hsl(100, 37%, 52%)
+
+.messages--status {
+  background-color: $status-background;
+  background-image: url('../../../../core/misc/icons/73b355/check.svg');
+  border-color: $status-background $status-background $status-background transparent;  // LTR
+  box-shadow: -8px 0 0 $status-shadow; // LTR
+  color: $status-color;
+
+  [dir="rtl"] & {
+    border-color: $status-background transparent $status-background $status-background;
+    box-shadow: 8px 0 0 $status-shadow;
+    margin-left: 0;
+  }
+}
+
+// See .color-warning in Seven's colors.css
+$warning-hue: 39;
+$warning-color: hsl($warning-hue, 94%, 23%); // hsl(40, 100%, 23%)
+$warning-background: hsl($warning-hue, 63%, 90%); // hsl(41, 80%, 96%)
+$warning-border: hsl($warning-hue, 78%, 70%);
+$warning-shadow: hsl($warning-hue, 84%, 45%);
+
+.messages--warning {
+  background-color: $warning-background;
+  background-image: url('../../../../core/misc/icons/e29700/warning.svg');
+  border-color: $warning-border $warning-border $warning-border transparent;  // LTR
+  box-shadow: -8px 0 0 $warning-shadow; // LTR
+  color: $warning-color;
+
+  [dir="rtl"] & {
+    border-color: $warning-border transparent $warning-border $warning-border;
+    box-shadow: 8px 0 0 $warning-shadow;
+  }
+}
+
+// See .color-error in Seven's colors.css
+$error-hue: 5;
+$error-color: hsl($error-hue, 94%, 32%);
+$error-background: hsl($error-hue, 63%, 90%);
+$error-border: hsl($error-hue, 78%, 70%);
+$error-shadow: hsl($error-hue, 84%, 45%);
+
+.messages--error {
+  background-color: $error-background;
+  background-image: url('../../../../core/misc/icons/e32700/error.svg');
+  border-color: $error-border $error-border $error-border transparent;  // LTR
+  box-shadow: -8px 0 0 $error-shadow; // LTR
+  color: $error-color;
+
+  [dir="rtl"] & {
+    border-color: $error-border transparent $error-border $error-border;
+    box-shadow: 8px 0 0 $error-shadow;
+  }
+
+  .error {
+    color: $error-color;
+  }
+}
