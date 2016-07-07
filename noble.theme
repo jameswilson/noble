@@ -88,6 +88,9 @@ function noble_preprocess_block(array &$variables) {
   if (!empty($variables['elements']['#id'])) {
     $variables['machine_name'] = Html::cleanCssIdentifier($variables['elements']['#id']);
   }
+  elseif (!empty($variables['elements']['#derivative_plugin_id'])) {
+    $variables['machine_name'] = $variables['elements']['#derivative_plugin_id'];
+  }
 }
 
 /**
