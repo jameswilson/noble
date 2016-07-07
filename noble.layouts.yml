@@ -1,0 +1,12 @@
+noble_sidebarfirst:
+  label: Sidebar First
+  category: Obermeyer
+  path: plugins/layouts/noble_sidebarfirst
+  template: noble-sidebarfirst
+  icon: noble-sidebarfirst.png
+  library: noble/noble-sidebarfirst-layout
+  regions:
+    sidebar:
+      label: Sidebar
+    contentmain:
+      label: Content

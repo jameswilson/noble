@@ -10,6 +10,12 @@ global-styling:
   dependencies:
     - core/jquery
 
+noble-sidebarfirst-layout:
+  version: 1.x
+  css:
+    theme:
+      css/noble-sidebarfirst.css: {}
+
 product-details:
   version: 1.x
   js:
