@@ -1085,7 +1085,7 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   content: ' / ';
 }
 
-.block--breadcrumbs nav li:last-child {
+.block--breadcrumbs nav li:last-child::after {
   content: '';
 }
 
