@@ -302,42 +302,48 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 }
 
 .messages--status {
-  background-color: #eef6d5;
+  background-color: #f1f8e2;
   background-image: url("../../../../core/misc/icons/73b355/check.svg");
-  border-color: #eef6d5 #eef6d5 #eef6d5 transparent;
-  box-shadow: -8px 0 0 #a6d312;
-  color: #4e6309;
+  border-color: #c6ee77;
+  border-left-color: transparent;
+  box-shadow: -8px 0 0 #93d312;
+  color: #456309;
 }
 
 [dir="rtl"] .messages--status {
-  border-color: #eef6d5 transparent #eef6d5 #eef6d5;
-  box-shadow: 8px 0 0 #a6d312;
+  border-color: #f1f8e2;
+  border-right-color: transparent;
+  box-shadow: 8px 0 0 #93d312;
   margin-left: 0;
 }
 
 .messages--warning {
-  background-color: #f6ead5;
+  background-color: #f8f1e2;
   background-image: url("../../../../core/misc/icons/e29700/warning.svg");
-  border-color: #eec477 #eec477 #eec477 transparent;
+  border-color: #eec477;
+  border-left-color: transparent;
   box-shadow: -8px 0 0 #d39012;
   color: #724b04;
 }
 
 [dir="rtl"] .messages--warning {
-  border-color: #eec477 transparent #eec477 #eec477;
+  border-color: #eec477;
+  border-right-color: transparent;
   box-shadow: 8px 0 0 #d39012;
 }
 
 .messages--error {
-  background-color: #f6d8d5;
+  background-color: #f8e4e2;
   background-image: url("../../../../core/misc/icons/e32700/error.svg");
-  border-color: #ee8177 #ee8177 #ee8177 transparent;
+  border-color: #ee8177;
+  border-left-color: transparent;
   box-shadow: -8px 0 0 #d32212;
   color: #9e1205;
 }
 
 [dir="rtl"] .messages--error {
-  border-color: #ee8177 transparent #ee8177 #ee8177;
+  border-color: #ee8177;
+  border-left-color: transparent;
   box-shadow: 8px 0 0 #d32212;
 }
 
