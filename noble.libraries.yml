@@ -6,8 +6,15 @@ global-styling:
       css/print.css: { media: print }
   js:
     js/topbar-search.js: {}
+    js/menu--expandable.js: {}
   dependencies:
     - core/jquery
+
+noble-sidebarfirst-layout:
+  version: 1.x
+  css:
+    theme:
+      css/noble-sidebarfirst.css: {}
 
 product-details:
   version: 1.x

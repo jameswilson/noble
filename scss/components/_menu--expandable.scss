@@ -1,0 +1,103 @@
+$toggle-padding: 3px;
+$toggle-stroke: 2px;
+$toggle-width: 12px;
+$toggle-centered-offset: $toggle-padding + (($toggle-width - $toggle-stroke) / 2);
+
+.menu__toggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  float: right; // LTR
+  height: $toggle-width;
+  overflow: hidden;
+  padding: $toggle-padding;
+  position: relative;
+  width: $toggle-width;
+}
+
+.menu__toggle-horizontal {
+  background: $blue;
+  height: $toggle-stroke;
+  left: $toggle-padding;
+  position: absolute;
+  top: $toggle-centered-offset;
+  width: $toggle-width;
+
+  .menu__item[aria-expanded="true"] > .menu__toggle >  & {
+    background: $light-graphite;
+  }
+}
+
+.menu__toggle-vertical {
+  background: $blue;
+  height: $toggle-width;
+  left: $toggle-centered-offset;
+  //opacity: 1;
+  position: absolute;
+  top: $toggle-padding;
+  transform: rotate(0deg);
+  transition: transform .3s ease-out .1s, background .3s ease-out;//, opacity .2s ease;
+  width: $toggle-stroke;
+
+  .menu__item[aria-expanded="true"] > .menu__toggle > & {
+    background: $light-graphite;
+    transform: rotate(90deg);
+    transition: transform .3s ease-out .1s, background .3s ease-out;//opacity .2s ease;
+  }
+}
+
+.menu__item[aria-expanded="false"] > .menu__sublevel {
+  animation: submenu-collapse .3s ease-out;
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  transition: transform .3s ease-out;
+}
+
+.menu__item[aria-expanded="true"] > .menu__sublevel {
+  animation: submenu-expand .3s ease-out;
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height .3s ease-out;
+}
+
+@keyframes submenu-expand {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    max-height: 1px;
+    opacity: 0;
+  }
+
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes submenu-collapse {
+  0% {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  99% {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+}

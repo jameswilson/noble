@@ -1,0 +1,38 @@
+.menu__toplevel--about {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > .menu__item {
+    + .menu__item {
+      margin-top: 16px;
+    }
+
+    > a {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.menu--about {
+  .menu__item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__sublevel {
+    padding-left: 20px;
+
+    .menu__item {
+      margin-top: 10px;
+    }
+  }
+
+  .menu__sublevel--1 {
+    padding: 0;
+  }
+
+}

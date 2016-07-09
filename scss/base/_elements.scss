@@ -17,6 +17,13 @@ a:focus {
   color: $light-graphite;
 }
 
+.is-active:hover,
+.is-active:active,
+.is-active:focus {
+  cursor: default;
+  opacity: 1;
+}
+
 h1,
 h2,
 h3,
