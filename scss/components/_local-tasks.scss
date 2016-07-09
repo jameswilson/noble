@@ -18,23 +18,11 @@
   a {
     color: darken($light-light-blue, 33%);
     padding: .6em .9em;
-
-    // &:hover {
-    //   color: darken($light-light-blue, 33%);
-    //   opacity: 1;
-    // }
   }
 
   .is-active {
     background: $white;
     border-top: .25em solid $blue;
     color: $blue;
-
-    &:hover {
-      background: $white;
-      color: $blue;
-      cursor: default;
-      opacity: 1;
-    }
   }
 }

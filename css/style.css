@@ -248,6 +248,13 @@ a:focus {
   color: #666;
 }
 
+.is-active:hover,
+.is-active:active,
+.is-active:focus {
+  cursor: default;
+  opacity: 1;
+}
+
 h1,
 h2,
 h3,
@@ -1230,13 +1237,6 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   background: #fff;
   border-top: 0.25em solid #1b3e6a;
   color: #1b3e6a;
-}
-
-.block--local-tasks .is-active:hover {
-  background: #fff;
-  color: #1b3e6a;
-  cursor: default;
-  opacity: 1;
 }
 
 .block--sitewidecontactform .form-email {
