@@ -93,7 +93,7 @@ function noble_preprocess_block(array &$variables) {
   }
 
   // Add custom expandable menu functionality for about menu.
-  if ($variables['machine_name'] == 'about') {
+  if (isset($variables['machine_name']) && $variables['machine_name'] == 'about') {
     $variables['attributes']['class'][] = 'menu--expandable';
   }
 }
