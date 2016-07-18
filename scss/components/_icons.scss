@@ -1,15 +1,19 @@
-
-
 .icon-twitter,
 .icon-youtube,
 .icon-facebook,
 .icon-pinterest {
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
   display: inline-block;
   height: 31px;
   text-indent: -9999px;
   width: 35px;
+}
+
+.icon--small {
+  height: 15px;
+  width: 25px;
 }
 
 .icon-facebook {

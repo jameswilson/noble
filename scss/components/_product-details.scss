@@ -1,0 +1,63 @@
+// General layout of the page
+.product-details__row {
+  @include clearfix();
+  margin-bottom: 80px;
+}
+
+.product-details__key-info {
+  box-sizing: border-box;
+  float: left;
+  padding-right: 60px;
+  width: 50%;
+}
+
+.product-details__media {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+}
+
+// Individual sub-components
+.product-details__title {
+  color: $base-font-color;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 0 0 10px;
+}
+
+.product-details__subtitle {
+  color: $base-font-color;
+  font-size: 21px;
+  margin: 0 0 20px;
+}
+
+.product-details__price {
+  color: $base-font-color;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+// This contains the add to cart form markup, which is messy
+.product-details__add-to-cart {
+  @include clearfix();
+
+  .form-item,
+  .form-actions,
+  a {
+    float: left;
+  }
+
+  .product--rendered-attribute {
+    float: none;
+    margin: 30px 0 25px;
+  }
+}
+
+.product-details__fit {
+  border-bottom: 1px solid $light-light-blue;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  padding-bottom: 14px;
+}

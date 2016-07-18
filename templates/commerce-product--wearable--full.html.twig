@@ -16,44 +16,48 @@
  * - product: The product object.
  * - url: The product URL.
  *
- * @ingroup themeable
+ * @ingroup themeables
  */
 
- @todo: Replace generic divs with proper layout items.
- @note: James, I placed these here for quick prototyping, ready for you to replace :)
 #}
 {{ attach_library('noble/product-details') }}
 <article{{ attributes }}>
-  <div style="width: 50%; float: left;">
-    <div>
-      {{ product.variation_field_style_number }}
-      {{ product.title }}
-      {{ product.variation_price }}
-      {{ product.variations }}
-      {{ product.product_size_chart }}
-    </div>
-    <div>
-      {{ product.field_fit }}
-      {{ product.product_fit_guide }}
-      <fieldset>
-        <legend>{% trans %}Product Details & Technology {% endtrans %}</legend>
+<div class="product-details__row">
+  <div class="product-details__key-info">
+      <div class="product-details__number">
+        {{ product.variation_field_style_number }}
+      </div>
+      <h1 class="product-details__title">
+        {{ product.title }}
+      </h1>
+      <div class="product-details__price">
+        {{ product.variation_price }}
+      </div>
+      <div class="product-details__add-to-cart">
+        {{ product.variations }}
+      </div>
+      <div class="product-details__size-chart">
+        {{ product.product_size_chart }}
+      </div>
+      <div class="product-details__fit">
+        {{ product.field_fit }}
+      </div>
+      <div class="product-details__fit-guide">
+        {{ product.product_fit_guide }}
+      </div>
+    <div class="product-details__the-details">
+      <h2 class="product-details__subtitle">{% trans %}Product Details{% endtrans %}</h2>
         {{ product.body }}
-      </fieldset>
-      <fieldset>
-        <legend>{% trans %}Product Features {% endtrans %}</legend>
-        {{ product.field_features_elements }}
-        {{ product.field_features_hood_collar_pocke }}
-        {{ product.field_features_pattern_design_lo }}
-        {{ product.field_features_reinforcement_con }}
-        {{ product.field_features_weatherproof_tech }}
-      </fieldset>
-      <div>
-        {% trans %}Share Product{% endtrans %}
+    </div>
+    <div class="share-widget">
+      <h3 class="share-widget__label">{% trans %}Share Product{% endtrans %}</h3>
+      <div class="share-widget__actions">
         {{ product.product_share_this }}
       </div>
     </div>
   </div>
-  <div style="width: 50%; float: left;">
+
+  <div class="product-details__media">
     <div>
       {% if product.field_product_video.0 %}
       <a class="product--video-button" href="">Video</a>
@@ -91,7 +95,16 @@
     <div class="product--images__lifestyle hidden">
       {{ product.field_product_lifestyle_images }}
     </div>
-
   </div>
+</div>
+
+
+  <h2>{% trans %}Product Features {% endtrans %}</h2>
+  {{ product.field_features_elements }}
+  {{ product.field_features_hood_collar_pocke }}
+  {{ product.field_features_pattern_design_lo }}
+  {{ product.field_features_reinforcement_con }}
+  {{ product.field_features_weatherproof_tech }}
+
   {#{{ product }}#}
 </article>
