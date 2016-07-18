@@ -25,12 +25,6 @@ Things to come:
 
 4. Run `npm install -g grunt-cli` to use `grunt` on the command line.
 
-5. Delete `node_modules/drupal-sass-breakpoints` and replace it with
-
-    $ git clone git@github.com:jameswilson/drupal-sass-breakpoints.git
-
-  See https://github.com/tlattimore/drupal-sass-breakpoints/pull/2
-
 
 ## Development Process
 

@@ -4,7 +4,7 @@
   "description": "Custom Drupal 8 theme for Obermeyer.com",
   "devDependencies": {
     "breakpoint-sass": "^2.7.0",
-    "drupal-sass-breakpoints": "^1.0.1",
+    "drupal-sass-breakpoints": "jameswilson/drupal-sass-breakpoints#94cc289",
     "eyeglass": "^0.8.3",
     "glob": "^5.0.15",
     "grunt": "^1.0.1",
