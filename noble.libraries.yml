@@ -24,13 +24,6 @@ product-details:
     - core/jquery
     - colorbox/colorbox
 
-flexslider:
-  version: 2.6.0
-  js:
-    //cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider.min.js: {type: external, minified: true}
-  dependencies:
-    - core/jquery
-
 rotating-banner:
   version: 1.x
   js:
@@ -39,7 +32,7 @@ rotating-banner:
     theme:
       css/rotating-banner.css: {}
   dependencies:
-    - noble/flexslider
+    - flexslider/flexslider
 
 leaflet:
   remote: http://leaflet.cloudmade.com

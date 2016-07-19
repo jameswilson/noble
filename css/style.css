@@ -802,34 +802,40 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   font-weight: normal;
 }
 
-.icon-twitter, .st_twitter_custom,
+.icon,
+.icon-twitter,
+.st_twitter_custom,
 .icon-youtube,
 .icon-facebook,
 .st_facebook_custom,
 .icon-pinterest,
-.st_pinterest_custom {
+.st_pinterest_custom,
+.icon-email,
+.st_email_custom,
+.icon-instagram,
+.st_instagram_custom {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 98%;
   display: inline-block;
   height: 31px;
   text-indent: -9999px;
   width: 35px;
 }
 
-.icon--small, .st_facebook_custom, .st_twitter_custom, .st_pinterest_custom {
-  height: 15px;
-  width: 25px;
+.icon--small, .st_facebook_custom, .st_twitter_custom, .st_pinterest_custom, .st_email_custom, .st_instagram_custom {
+  height: 20px;
+  width: 30px;
 }
 
 .icon-facebook, .st_facebook_custom {
   background-image: url("../images/icon-facebook--blue.svg");
-  background-position: 0 50%;
   width: 22px;
 }
 
 .icon-twitter, .st_twitter_custom {
   background-image: url("../images/icon-twitter--blue.svg");
+  background-size: auto 98%;
 }
 
 .icon-pinterest, .st_pinterest_custom {
@@ -838,6 +844,31 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .icon-youtube {
   background-image: url("../images/icon-youtube--blue.svg");
+}
+
+.icon-email, .st_email_custom {
+  background-image: url("../images/icon-email--blue.svg");
+  background-size: auto 86%;
+}
+
+.icon-instagram, .st_instagram_custom {
+  background-image: url("../images/icon-instagram--blue.svg");
+}
+
+.icon-play {
+  background-image: url("../images/icon-play--blue.svg");
+}
+
+.icon-grid {
+  background-image: url("../images/icon-grid--blue.svg");
+}
+
+.icon-forward {
+  background-image: url("../images/icon-forward--blue.svg");
+}
+
+.icon-refresh {
+  background-image: url("../images/icon-refresh--blue.svg");
 }
 
 .share-widget {
@@ -852,13 +883,24 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .share-widget__label {
   color: #666;
-  float: left;
   font-size: 21px;
   margin: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .share-widget__label {
+    float: left;
+  }
+}
+
 .share-widget__actions {
-  float: right;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .share-widget__actions {
+    float: right;
+  }
 }
 
 .skip-to-content {
@@ -1354,4 +1396,21 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   margin-bottom: 25px;
   margin-top: 50px;
   padding-bottom: 14px;
+}
+
+.product-details__media-buttons {
+  margin-bottom: 40px;
+}
+
+.product-details__media-button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.product-details__media-button__icon {
+  vertical-align: middle;
+}
+
+.product-details__media-button__text {
+  vertical-align: middle;
 }

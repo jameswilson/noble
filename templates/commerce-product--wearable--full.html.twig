@@ -58,41 +58,44 @@
   </div>
 
   <div class="product-details__media">
-    <div>
+    <div class="product-details__media-buttons">
       {% if product.field_product_video.0 %}
-      <a class="product--video-button" href="">Video</a>
+      <a class="product-details__media-button js-product-details__media-button--video" href=""><span class="product-details__media-button__icon icon icon--small icon-play"></span><span class="product-details__media-button__text">Video</span></a>
       {% endif %}
       {% if product.field_product_lifestyle_images %}
-      <a class="product--lifestyle-button" href="#">Lifestyle</a>
+      <a class="product-details__media-button js-product-details__media-button--lifestyle" href="#"><span class="product-details__media-button__icon icon icon--small icon-grid"></span><span class="product-details__media-button__text">Lifestyle</span></a>
       {% endif %}
       {% if product.product_rating %}
-      <a class="product--rating colorbox" href="{{ product.product_rating.url}}">{{ product.product_rating.label }}</a>
+      <a class="product-details__media-button js-product-details__media-button--rating colorbox" href="{{ product.product_rating.url}}">{{ product.product_rating.label }}</a>
       {% endif %}
       {%  if product.variation_field_reverse_image.0 %}
-      <a class="product--images--reverse-button" data-current-view="front" href="">Reverse</a>
+      <a class="product-details__media-button js-product-details__media-button--images-reverse" data-current-view="front" href=""><span class="product-details__media-button__icon icon icon--small icon-forward"></span><span class="product-details__media-button__text">Back View</span></a>
       {% endif %}
       {%  if product.product_360_iframe.url %}
-      <a class="product--images--360-button" href="">360</a>
+      <a class="product-details__media-button js-product-details__media-button--images-360" href=""><span class="product-details__media-button__icon icon icon--small icon-refresh"></span><span class="product-details__media-button__text">360° View</span></a>
       {% endif %}
     </div>
-    <div class="product--video hidden">
+    <div class="js-product-details__images">
+      {{ product.field_product_images }}
+    </div>
+    <div class="js-product-details__video hidden">
       {{ product.field_product_video.0 }}
     </div>
-    <div class="product--images_360 hidden">
+    <div class="js-product-details__images-360 hidden">
       <iframe src="{{ product.product_360_iframe.url }}" style="width: 100%; height: 667px;"></iframe>
     </div>
-    <div class="product--images__viewer">
-      <div class="product--images__front">
+    <div class="js-product-details__images-viewer">
+      <div class="js-product-details__images-front">
         {{ product.variation_field_front_image }}
       </div>
-      <div class="product--images__back hidden">
+      <div class="js-product-details__images-back hidden">
         {{ product.variation_field_reverse_image }}
       </div>
     </div>
-    <div class="product--images__others">
+    <div class="js-product-details__images-others">
       {{ product.variation_field_images }}
     </div>
-    <div class="product--images__lifestyle hidden">
+    <div class="js-product-details__images-lifestyle hidden">
       {{ product.field_product_lifestyle_images }}
     </div>
   </div>

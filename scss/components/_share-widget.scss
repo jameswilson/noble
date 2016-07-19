@@ -6,13 +6,21 @@
 
 .share-widget__label {
   color: $base-font-color;
-  float: left;
   font-size: 21px;
   margin: 0;
+
+  @media screen and (min-width:768px) {
+    float: left;
+  }
 }
 
 .share-widget__actions {
-  float: right;
+  padding-top: 5px;
+
+  @media screen and (min-width:768px) {
+    float: right;
+  }
+
 }
 
 // Output from the sharethis module
@@ -30,5 +38,15 @@
 
 .st_pinterest_custom {
   @extend .icon-pinterest;
+  @extend .icon--small;
+}
+
+.st_email_custom {
+  @extend .icon-email;
+  @extend .icon--small;
+}
+
+.st_instagram_custom {
+  @extend .icon-instagram;
   @extend .icon--small;
 }

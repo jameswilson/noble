@@ -1,10 +1,13 @@
+.icon,
 .icon-twitter,
 .icon-youtube,
 .icon-facebook,
-.icon-pinterest {
+.icon-pinterest,
+.icon-email,
+.icon-instagram {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 98%;
   display: inline-block;
   height: 31px;
   text-indent: -9999px;
@@ -12,18 +15,18 @@
 }
 
 .icon--small {
-  height: 15px;
-  width: 25px;
+  height: 20px;
+  width: 30px;
 }
 
 .icon-facebook {
   background-image: url('../images/icon-facebook--blue.svg');
-  background-position: 0 50%;
   width: 22px;
 }
 
 .icon-twitter {
   background-image: url('../images/icon-twitter--blue.svg');
+  background-size: auto 98%;
 }
 
 .icon-pinterest {
@@ -32,4 +35,29 @@
 
 .icon-youtube {
   background-image: url('../images/icon-youtube--blue.svg');
+}
+
+.icon-email {
+  background-image: url('../images/icon-email--blue.svg');
+  background-size: auto 86%;
+}
+
+.icon-instagram {
+  background-image: url('../images/icon-instagram--blue.svg');
+}
+
+.icon-play {
+  background-image: url('../images/icon-play--blue.svg');
+}
+
+.icon-grid {
+  background-image: url('../images/icon-grid--blue.svg');
+}
+
+.icon-forward {
+  background-image: url('../images/icon-forward--blue.svg');
+}
+
+.icon-refresh {
+  background-image: url('../images/icon-refresh--blue.svg');
 }
