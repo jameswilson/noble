@@ -5,6 +5,11 @@ package: Sport Obermeyer
 core: 8.x
 libraries:
   - noble/global-styling
+libraries-extend:
+  flexslider/flexslider:
+    - noble/custom-flexslider
+stylesheets-remove:
+  - libraries/flexslider/flexslider.css
 
 base theme: stable
 

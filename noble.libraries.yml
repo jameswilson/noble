@@ -24,6 +24,12 @@ product-details:
     - core/jquery
     - colorbox/colorbox
 
+custom-flexslider:
+  versiom: 1.x
+  css:
+    theme:
+      css/flexslider.css: {}
+
 rotating-banner:
   version: 1.x
   js:

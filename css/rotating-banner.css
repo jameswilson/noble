@@ -77,35 +77,3 @@ html[xmlns] .rotating-banner .slides {
 .rotating-banner .flex-control-nav {
   display: none;
 }
-
-.rotating-banner .flex-direction-nav a {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: block;
-  height: 52px;
-  margin: -13px 0 0;
-  overflow: hidden;
-  position: absolute;
-  text-indent: -9999px;
-  top: 50%;
-  transition: all .3s ease-out;
-  width: 52px;
-  z-index: 10;
-}
-
-.rotating-banner .flex-direction-nav li .flex-next {
-  background-image: url("../images/rotating-banner-next.svg");
-  right: 10px;
-}
-
-.rotating-banner .flex-direction-nav li .flex-prev {
-  background-image: url("../images/rotating-banner-prev.svg");
-  left: 10px;
-}
-
-.rotating-banner .flex-direction-nav li .disabled {
-  cursor: default;
-  filter: alpha(opacity=30);
-  opacity: .3;
-}
