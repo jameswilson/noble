@@ -145,12 +145,12 @@ html[xmlns] .flexslider .slides {
 }
 
 .flexslider .flex-direction-nav .flex-next {
-  background-image: url("../images/rotating-banner-next.svg");
+  background-image: url("../images/icon-arrow-right--blue.svg");
   right: 10px;
 }
 
 .flexslider .flex-direction-nav .flex-prev {
-  background-image: url("../images/rotating-banner-prev.svg");
+  background-image: url("../images/icon-arrow-left--blue.svg");
   left: 10px;
 }
 
@@ -241,18 +241,10 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
   cursor: pointer;
-  -moz-user-select: none;
-  transition: all 1s ease;
-}
-
-.flex-control-thumbs img:hover {
-  opacity: 1;
 }
 
 .flex-control-thumbs .flex-active {
-  opacity: 1;
   cursor: default;
 }
 
@@ -268,4 +260,36 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
     right: 10px;
   }
+}
+
+.optionset-product-detail-images .flex-control-thumbs {
+  margin: 25px 35px;
+}
+
+.optionset-product-detail-images .flex-control-thumbs li {
+  margin: 0 5px;
+}
+
+.optionset-product-detail-images .flex-direction-nav a {
+  top: auto;
+  bottom: 25px;
+  z-index: 20;
+  width: 25px;
+  height: 70px;
+  background-size: contain;
+  opacity: 1;
+}
+
+.optionset-product-detail-images .flex-direction-nav .flex-next {
+  background-image: url("../images/icon-arrow-right--grey.svg");
+  right: 2px;
+}
+
+.optionset-product-detail-images .flex-direction-nav .flex-prev {
+  background-image: url("../images/icon-arrow-left--grey.svg");
+  left: 2px;
+}
+
+.optionset-product-detail-images .flex-direction-nav .flex-disabled {
+  opacity: 0.2;
 }

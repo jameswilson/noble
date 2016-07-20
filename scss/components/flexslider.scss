@@ -140,11 +140,11 @@ html[xmlns] .flexslider .slides {
       z-index: 10;
     }
   .flex-next {
-    background-image: url('../images/rotating-banner-next.svg');
+    background-image: url('../images/icon-arrow-right--blue.svg');
     right: 10px;
   }
   .flex-prev {
-    background-image: url('../images/rotating-banner-prev.svg');
+    background-image: url('../images/icon-arrow-left--blue.svg');
     left: 10px;
   }
   .flex-disabled {
@@ -229,20 +229,9 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
   cursor: pointer;
-  -moz-user-select: none;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.flex-control-thumbs img:hover {
-  opacity: 1;
 }
 .flex-control-thumbs .flex-active {
-  opacity: 1;
   cursor: default;
 }
 /* ====================================================================================================================
@@ -256,5 +245,37 @@ html[xmlns] .flexslider .slides {
   .flex-direction-nav .flex-next {
     opacity: 1;
     right: 10px;
+  }
+}
+
+// Styling just for the product detail gallery.
+.optionset-product-detail-images {
+  .flex-control-thumbs {
+    margin: 25px 35px;
+  }
+  .flex-control-thumbs li {
+    margin: 0 5px;
+  }
+  .flex-direction-nav {
+    a {
+      top: auto;
+      bottom: 25px;
+      z-index:  20;
+      width: 25px;
+      height: 70px;
+      background-size: contain;
+      opacity: 1;
+    }
+    .flex-next {
+      background-image: url('../images/icon-arrow-right--grey.svg');
+      right: 2px;
+    }
+    .flex-prev {
+      background-image: url('../images/icon-arrow-left--grey.svg');
+      left: 2px;
+    }
+    .flex-disabled {
+      opacity: 0.2;
+    }
   }
 }

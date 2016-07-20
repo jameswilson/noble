@@ -10,6 +10,7 @@ libraries-extend:
     - noble/custom-flexslider
 stylesheets-remove:
   - libraries/flexslider/flexslider.css
+  - modules/contrib/flexslider/assets/css/flexslider_img.css
 
 base theme: stable
 

@@ -72,7 +72,7 @@
       <a class="product-details__media-button js-product-details__media-button--images-reverse" data-current-view="front" href=""><span class="product-details__media-button__icon icon icon--small icon-forward"></span><span class="product-details__media-button__text">Back View</span></a>
       {% endif %}
       {%  if product.product_360_iframe.url %}
-      <a class="product-details__media-button js-product-details__media-button--images-360" href=""><span class="product-details__media-button__icon icon icon--small icon-refresh"></span><span class="product-details__media-button__text">360° View</span></a>
+      <a class="product-details__media-button js-product-details__media-button--images-360 colorbox" href="{{ product.product_360_iframe.url }}"><span class="product-details__media-button__icon icon icon--small icon-refresh"></span><span class="product-details__media-button__text">360° View</span></a>
       {% endif %}
     </div>
     <div class="js-product-details__images">
@@ -80,9 +80,6 @@
     </div>
     <div class="js-product-details__video hidden">
       {{ product.field_product_video.0 }}
-    </div>
-    <div class="js-product-details__images-360 hidden">
-      <iframe src="{{ product.product_360_iframe.url }}" style="width: 100%; height: 667px;"></iframe>
     </div>
     <div class="js-product-details__images-viewer">
       <div class="js-product-details__images-front">
