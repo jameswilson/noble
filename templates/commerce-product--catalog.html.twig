@@ -1,0 +1,5 @@
+<article{{ attributes }}>
+    {{- product.field_product_images -}}
+    <a class="outfit-result--title-link" href="{{ path('entity.commerce_product.canonical', {'commerce_product': product_entity.id}) }}">{{- product.title -}}</a>
+    <a class="outfit-result--view-link" href="{{ path('entity.commerce_product.canonical', {'commerce_product': product_entity.id}) }}">{{ 'View'|t }}</a>
+</article>
