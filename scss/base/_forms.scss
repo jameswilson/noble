@@ -12,3 +12,14 @@ input[type=submit] {
     opacity: .8em;
   }
 }
+
+select {
+  appearance: none;
+  background: $white url('../images/icon-arrow-down--blue.svg') right 5px top 12px no-repeat;
+  background-size: 10px auto;
+  border: 1px solid $semi-light-blue;
+  border-radius: 0;
+  color: $blue;
+  line-height: 1em;
+  padding: 6px 22px 6px 10px;
+}

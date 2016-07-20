@@ -37,9 +37,18 @@
   font-weight: 200;
   line-height: 25px;
   margin-bottom: 30px;
+
 }
 
-// This contains the add to cart form markup, which is messy
+.product-details__number {
+  .field--name-field-style-number::before {
+    content: '#';
+    display: inline;
+  }
+}
+
+// This contains the add to cart form markup, the product color/size variation selections, the find in store link.
+// It's too much hassle to unpick the markup coming out of commerce.
 .product-details__add-to-cart {
   @include clearfix();
 
@@ -47,6 +56,16 @@
   .form-actions,
   a {
     float: left;
+  }
+
+  .out-of-stock {
+    color: $med-gray;
+    display: inline-block;
+    margin: 0 .5em;
+  }
+
+  .find-in-store {
+    margin-left: .5em;
   }
 
   .product--rendered-attribute {
@@ -60,6 +79,14 @@
   margin-bottom: 25px;
   margin-top: 50px;
   padding-bottom: 14px;
+
+  .field__label {
+    color: $blue;
+
+    &::after {
+      content: ':';
+    }
+  }
 }
 
 .product-details__media-buttons {

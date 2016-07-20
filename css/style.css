@@ -276,6 +276,19 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   opacity: .8em;
 }
 
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff url("../images/icon-arrow-down--blue.svg") right 5px top 12px no-repeat;
+  background-size: 10px auto;
+  border: 1px solid #bac5d2;
+  border-radius: 0;
+  color: #1b3e6a;
+  line-height: 1em;
+  padding: 6px 22px 6px 10px;
+}
+
 .messages {
   background: no-repeat 10px 19px;
   border: 1px solid;
@@ -1374,6 +1387,11 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   margin-bottom: 30px;
 }
 
+.product-details__number .field--name-field-style-number::before {
+  content: '#';
+  display: inline;
+}
+
 .product-details__add-to-cart::after {
   content: '';
   display: table;
@@ -1386,6 +1404,16 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   float: left;
 }
 
+.product-details__add-to-cart .out-of-stock {
+  color: #999;
+  display: inline-block;
+  margin: 0 .5em;
+}
+
+.product-details__add-to-cart .find-in-store {
+  margin-left: .5em;
+}
+
 .product-details__add-to-cart .product--rendered-attribute {
   float: none;
   margin: 30px 0 25px;
@@ -1396,6 +1424,14 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   margin-bottom: 25px;
   margin-top: 50px;
   padding-bottom: 14px;
+}
+
+.product-details__fit .field__label {
+  color: #1b3e6a;
+}
+
+.product-details__fit .field__label::after {
+  content: ':';
 }
 
 .product-details__media-buttons {
