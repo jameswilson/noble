@@ -71,15 +71,19 @@
   float: left;
 }
 
+.product-details__add-to-cart .add-to-cart-button {
+  margin: 0 .5em;
+}
+
 .product-details__add-to-cart .out-of-stock {
   color: #999;
   display: inline-block;
-  margin: .2em .5em;
+  margin: .35em .5em;
 }
 
 .product-details__add-to-cart .find-in-store {
   display: inline-block;
-  margin: .2em 0 .2em .3em;
+  margin: .35em 0 .35em .3em;
 }
 
 .product-details__add-to-cart .product--rendered-attribute {

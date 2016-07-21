@@ -264,29 +264,30 @@ h6 {
   color: #333;
 }
 
-input[type=submit] {
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff url("../images/icon-arrow-down--blue.svg") right 10px top 16px no-repeat;
+  background-size: 10px auto;
+  border: 1px solid #bac5d2;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #1b3e6a;
+  line-height: 1.5em;
+  padding: .3em 31px .3em 10px;
+}
+
+.button {
   background: #1b3e6a;
-  border: 0;
+  border: 1px solid #1b3e6a;
   color: #fff;
   margin: 0;
   padding: .3em 1em;
 }
 
-input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
+.button:hover, .button:active, .button:focus {
   opacity: .8em;
-}
-
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #fff url("../images/icon-arrow-down--blue.svg") right 5px top 12px no-repeat;
-  background-size: 10px auto;
-  border: 1px solid #bac5d2;
-  border-radius: 0;
-  color: #1b3e6a;
-  line-height: 1em;
-  padding: 6px 22px 6px 10px;
 }
 
 .messages {

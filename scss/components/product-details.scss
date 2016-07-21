@@ -73,15 +73,19 @@ $small-width: 750px;
     float: left;
   }
 
+  .add-to-cart-button {
+    margin: 0 .5em;
+  }
+
   .out-of-stock {
     color: $med-gray;
     display: inline-block;
-    margin: .2em .5em;
+    margin: .35em .5em;
   }
 
   .find-in-store {
     display: inline-block;
-    margin: .2em 0 .2em .3em;
+    margin: .35em 0 .35em .3em;
   }
 
   .product--rendered-attribute {

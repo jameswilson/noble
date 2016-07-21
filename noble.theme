@@ -209,6 +209,8 @@ function noble_preprocess_menu(array &$variables) {
  * Adds some classy markup so these elements can be themed.
  */
 function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  kint($form['actions']['submit']);
+  $form['actions']['submit']['#attributes'] = array('class' => array('add-to-cart-button'));
   $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
   $form['actions']['out_stock']['#suffix'] = '</span>';
   $form['link']['#prefix'] = '<span class="find-in-store">';
