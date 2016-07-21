@@ -267,7 +267,10 @@ html[xmlns] .flexslider .slides {
 }
 
 .optionset-product-detail-images .flex-control-thumbs li {
-  margin: 0 5px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 5px;
+  width: 22%;
 }
 
 .optionset-product-detail-images .flex-direction-nav a {

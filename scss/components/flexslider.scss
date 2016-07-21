@@ -254,7 +254,10 @@ html[xmlns] .flexslider .slides {
     margin: 25px 35px;
   }
   .flex-control-thumbs li {
-    margin: 0 5px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 5px;
+    width: 22%
   }
   .flex-direction-nav {
     a {
