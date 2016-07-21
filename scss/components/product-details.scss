@@ -4,22 +4,32 @@
 '../util/variables',
 '../util/mixins';
 
+$small-width: 750px;
+
 .product-details__row {
   @include clearfix();
-  margin-bottom: 80px;
+  @media screen and (min-width: $small-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .product-details__key-info {
   box-sizing: border-box;
-  float: left;
-  padding-right: 60px;
-  width: 50%;
+
+  @media screen and (min-width: $small-width) {
+    float: left;
+    padding-right: 60px;
+    width: 50%;
+  }
 }
 
 .product-details__media {
   box-sizing: border-box;
-  float: left;
-  width: 50%;
+
+  @media screen and (min-width: $small-width) {
+    float: left;
+    width: 50%;
+  }
 }
 
 // Individual sub-components
@@ -136,6 +146,7 @@
 .product-details__row-title {
   background: $white;
   display: inline-block;
+  margin: 0;
   padding: 0 25px;
   position: relative;
   z-index: 10;
@@ -143,8 +154,13 @@
 
 .product-details__listing {
   @include clearfix();
-  margin: 45px auto 0;
+  margin-left: 20px;
   max-width: 800px;
+
+  @media screen and (min-width: $small-width) {
+    margin: 45px auto 0;
+  }
+
 
   .field__item {
     box-sizing: border-box;
