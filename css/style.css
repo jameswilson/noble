@@ -1246,28 +1246,29 @@ select {
   }
 }
 
-.block--breadcrumbs {
+.breadcrumbs {
   font-size: 18px;
-  margin: 35px 0;
+  margin: 20px 0 45px;
 }
 
-.block--breadcrumbs nav ol {
+.breadcrumbs ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.block--breadcrumbs nav li {
+.breadcrumbs li {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 
-.block--breadcrumbs nav li::after {
+.breadcrumbs li::after {
+  color: #666;
   content: ' / ';
 }
 
-.block--breadcrumbs nav li:last-child::after {
+.breadcrumbs li:last-child::after {
   content: '';
 }
 
