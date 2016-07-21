@@ -90,6 +90,10 @@
   content: ':';
 }
 
+.product-details__fit .field--name-field-fit {
+  display: inline;
+}
+
 .product-details__media-buttons {
   margin-bottom: 40px;
 }
