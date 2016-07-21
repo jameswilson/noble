@@ -1,4 +1,9 @@
-// General layout of the page
+// General layout of the product details page.
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
 .product-details__row {
   @include clearfix();
   margin-bottom: 80px;
@@ -61,11 +66,12 @@
   .out-of-stock {
     color: $med-gray;
     display: inline-block;
-    margin: 0 .5em;
+    margin: .2em .5em;
   }
 
   .find-in-store {
-    margin-left: .5em;
+    display: inline-block;
+    margin: .2em 0 .2em .3em;
   }
 
   .product--rendered-attribute {
@@ -107,3 +113,49 @@
   vertical-align: middle;
 }
 
+.product-details__row-title-wrapper {
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: $light-light-blue;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 51%;
+  }
+}
+
+.product-details__row-title {
+  background: $white;
+  display: inline-block;
+  padding: 0 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.product-details__listing {
+  @include clearfix();
+  margin: 45px auto 0;
+  max-width: 800px;
+
+  .field__item {
+    box-sizing: border-box;
+    color: $blue;
+    font-size: 21px;
+    line-height: 33px;
+    padding: 5px 30px;
+
+    @media screen and (min-width:660px) {
+      float: left;
+      width: 50%;
+    }
+
+    a {
+      display: list-item;
+    }
+  }
+}

@@ -227,5 +227,4 @@ function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(
     $size['#default_value'] = '';
     $form['purchased_entity']['widget'][0]['attributes']['attribute_size'] = $size;
   }
-  kint($form['purchased_entity']['widget'][0]['attributes']['attribute_size']);
 }

@@ -20,6 +20,9 @@ product-details:
   version: 1.x
   js:
     js/product-details-page.js: {}
+  css:
+    theme:
+      css/product-details.css: {}
   dependencies:
     - core/jquery
     - colorbox/colorbox

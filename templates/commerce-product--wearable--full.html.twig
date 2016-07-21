@@ -99,12 +99,14 @@
 </div>
 
 
-  <h2>{% trans %}Product Features {% endtrans %}</h2>
-  {{ product.field_features_elements }}
-  {{ product.field_features_hood_collar_pocke }}
-  {{ product.field_features_pattern_design_lo }}
-  {{ product.field_features_reinforcement_con }}
-  {{ product.field_features_weatherproof_tech }}
+  <div class="product-details__row-title-wrapper"><h2 class="product-details__row-title">{% trans %}Product Features {% endtrans %}</h2></div>
+  <div class="product-details__listing">
+    {{ product.field_features_elements }}
+    {{ product.field_features_hood_collar_pocke }}
+    {{ product.field_features_pattern_design_lo }}
+    {{ product.field_features_reinforcement_con }}
+    {{ product.field_features_weatherproof_tech }}
+  </div>
 
   {#{{ product }}#}
 </article>
