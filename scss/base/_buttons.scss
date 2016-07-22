@@ -1,0 +1,14 @@
+.button {
+  background: $blue;
+  // This helps buttons align with elements that have borders.
+  border: 1px solid $blue;
+  color: $white;
+  margin: 0;
+  padding: .3em 1em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: .8em;
+  }
+}

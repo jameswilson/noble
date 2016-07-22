@@ -1,14 +1,11 @@
-// scss-lint:disable QualifyingElement
-input[type=submit] {
-  background: $blue;
-  border: 0;
-  color: $white;
-  margin: 0;
-  padding: .3em 1em;
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: .8em;
-  }
+select {
+  appearance: none;
+  background: $white url('../images/icon-arrow-down--blue.svg') right 10px top 16px no-repeat;
+  background-size: 10px auto;
+  border: 1px solid $semi-light-blue;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $blue;
+  line-height: 1.5em;
+  padding: .3em 31px .3em 10px;
 }

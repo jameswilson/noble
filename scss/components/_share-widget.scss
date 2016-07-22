@@ -1,0 +1,52 @@
+// Sharing widget for pages, eg product.
+.share-widget {
+  @include clearfix();
+  margin: 40px 0;
+}
+
+.share-widget__label {
+  color: $base-font-color;
+  font-size: 21px;
+  margin: 0;
+
+  @media screen and (min-width:768px) {
+    float: left;
+  }
+}
+
+.share-widget__actions {
+  padding-top: 5px;
+
+  @media screen and (min-width:768px) {
+    float: right;
+  }
+
+}
+
+// Output from the sharethis module
+// @todo: Use the classes from icons.scss
+// scss-lint:disable SelectorFormat, PlaceholderInExtend
+.st_facebook_custom {
+  @extend .icon-facebook;
+  @extend .icon--small;
+}
+
+.st_twitter_custom {
+  @extend .icon-twitter;
+  @extend .icon--small;
+}
+
+.st_pinterest_custom {
+  @extend .icon-pinterest;
+  @extend .icon--small;
+}
+
+.st_email_custom {
+  @extend .icon-email;
+  @extend .icon--small;
+}
+
+.st_instagram_custom {
+  @extend .icon-instagram;
+  @extend .icon--small;
+}

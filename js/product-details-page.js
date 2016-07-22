@@ -3,29 +3,24 @@
 
   Drupal.behaviors.productImages = {
     attach: function (context) {
-      $('.product--images--reverse-button', context).bind('click', function (e) {
+
+      $('.js-product--images--reverse-button', context).bind('click', function (e) {
         e.preventDefault();
-        $('.product--images__viewer', context).removeClass('hidden');
-        $('.product--images_360', context).addClass('hidden');
-        $('.product--images__front', context).toggleClass('hidden');
-        $('.product--images__back', context).toggleClass('hidden');
+        $('.js-product-details__images-viewer', context).removeClass('hidden');
+        $('js-product-details__images-front', context).toggleClass('hidden');
+        $('.js-product-details__images-back', context).toggleClass('hidden');
       });
 
-      $('.product--images--360-button', context).bind('click', function (e) {
+      $('.js-product-details__media-button--video', context).bind('click', function (e) {
         e.preventDefault();
-        $('.product--images__viewer', context).addClass('hidden');
-        $('.product--images_360', context).removeClass('hidden');
-      });
-
-      $('.product--video-button', context).bind('click', function (e) {
-        e.preventDefault();
-        $.colorbox({html: $('.product--video').html()});
+        $.colorbox({html: $('.js-product-details__video').html()});
         $.colorbox.resize();
       });
 
-      $('.product--lifestyle-button', context).bind('click', function (e) {
-        $('.product--images__lifestyle img').colorbox({rel: 'gallery'});
-        $('.product--images__lifestyle img').first().click();
+      $('.js-product-details__media-button--lifestyle', context).bind('click', function (e) {
+        e.preventDefault();
+        $('.js-product-details__images-lifestyle img').colorbox({rel: 'gallery'});
+        $('.js-product-details__images-lifestyle img').first().click();
       });
     }
   };

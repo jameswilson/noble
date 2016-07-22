@@ -1,19 +1,20 @@
-.block--breadcrumbs {
+.breadcrumbs {
   font-size: 18px;
-  margin: 35px 0;
+  margin: 20px 0 45px;
 
-  nav ol {
+  ol {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  nav li {
+  li {
     display: inline-block;
     margin: 0;
     padding: 0;
 
     &::after {
+      color: $light-graphite;
       content: ' / ';
     }
 

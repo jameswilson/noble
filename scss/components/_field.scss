@@ -1,0 +1,6 @@
+// Basic Drupal field styling, supporting display config.
+
+.field--label-inline .field__label,
+.field--label-inline .field__item {
+  display: inline-block;
+}

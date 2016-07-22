@@ -51,61 +51,29 @@ html[xmlns] .rotating-banner .slides {
   display: block;
 }
 
-.flex-container a:hover,
-.flex-slider a:hover {
+.rotating-banner .flex-container a:hover,
+.rotating-banner .flex-slider a:hover {
   outline: none;
 }
 
-.slides,
-.slides > li,
-.flex-control-nav,
-.flex-direction-nav {
+.rotating-banner .slides,
+.rotating-banner .slides > li,
+.rotating-banner .flex-control-nav,
+.rotating-banner .flex-direction-nav {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.flex-viewport {
+.rotating-banner .flex-viewport {
   max-height: 2000px;
   transition: all 1s ease;
 }
 
-.loading .flex-viewport {
+.loading .rotating-banner .flex-viewport {
   max-height: 300px;
 }
 
-.flex-control-nav {
+.rotating-banner .flex-control-nav {
   display: none;
-}
-
-.flex-direction-nav a {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: block;
-  height: 52px;
-  margin: -13px 0 0;
-  overflow: hidden;
-  position: absolute;
-  text-indent: -9999px;
-  top: 50%;
-  transition: all .3s ease-out;
-  width: 52px;
-  z-index: 10;
-}
-
-.flex-direction-nav li .flex-next {
-  background-image: url("../images/rotating-banner-next.svg");
-  right: 10px;
-}
-
-.flex-direction-nav li .flex-prev {
-  background-image: url("../images/rotating-banner-prev.svg");
-  left: 10px;
-}
-
-.flex-direction-nav li .disabled {
-  cursor: default;
-  filter: alpha(opacity=30);
-  opacity: .3;
 }

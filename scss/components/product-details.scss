@@ -1,0 +1,185 @@
+// General layout of the product details page.
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+$small-width: 750px;
+
+.product-details__row {
+  @include clearfix();
+  @media screen and (min-width: $small-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.product-details__key-info {
+  box-sizing: border-box;
+
+  @media screen and (min-width: $small-width) {
+    float: left;
+    padding-right: 60px;
+    width: 50%;
+  }
+}
+
+.product-details__media {
+  box-sizing: border-box;
+
+  @media screen and (min-width: $small-width) {
+    float: left;
+    width: 50%;
+  }
+}
+
+// Individual sub-components
+.product-details__title {
+  color: $base-font-color;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 0 0 10px;
+}
+
+.product-details__subtitle {
+  color: $base-font-color;
+  font-size: 21px;
+  margin: 0 0 20px;
+}
+
+.product-details__price {
+  color: $base-font-color;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 25px;
+  margin-bottom: 30px;
+
+}
+
+.product-details__number {
+  .field--name-field-style-number::before {
+    content: '#';
+    display: inline;
+  }
+}
+
+// This contains the add to cart form markup, the product color/size variation selections, the find in store link.
+// It's too much hassle to unpick the markup coming out of commerce.
+.product-details__add-to-cart {
+  @include clearfix();
+
+  .form-item,
+  .form-actions,
+  a {
+    float: left;
+  }
+
+  .add-to-cart-button {
+    margin: 0 .5em;
+  }
+
+  .out-of-stock {
+    color: $med-gray;
+    display: inline-block;
+    margin: .35em .5em;
+  }
+
+  .find-in-store {
+    display: inline-block;
+    margin: .35em 0 .35em .3em;
+  }
+
+  .product--rendered-attribute {
+    float: none;
+    margin: 30px 0 25px;
+  }
+}
+
+.product-details__fit {
+  border-bottom: 1px solid $light-light-blue;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  padding-bottom: 14px;
+
+  .field__label {
+    color: $blue;
+
+    &::after {
+      content: ':';
+    }
+  }
+
+  .field--name-field-fit {
+    display: inline;
+  }
+}
+
+.product-details__media-buttons {
+  margin-bottom: 40px;
+}
+
+.product-details__media-button {
+  display: inline-block;
+  line-height: 0;
+  margin-right: 10px;
+}
+
+.product-details__media-button__icon {
+  vertical-align: middle;
+}
+
+.product-details__media-button__text {
+  vertical-align: middle;
+}
+
+.product-details__row-title-wrapper {
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: $light-light-blue;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 51%;
+  }
+}
+
+.product-details__row-title {
+  background: $white;
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.product-details__listing {
+  @include clearfix();
+  margin-left: 20px;
+  max-width: 800px;
+
+  @media screen and (min-width: $small-width) {
+    margin: 45px auto 0;
+  }
+
+
+  .field__item {
+    box-sizing: border-box;
+    color: $blue;
+    font-size: 21px;
+    line-height: 33px;
+    padding: 5px 30px;
+
+    @media screen and (min-width:660px) {
+      float: left;
+      width: 50%;
+    }
+
+    a {
+      display: list-item;
+    }
+  }
+}

@@ -55,66 +55,34 @@
     }
     //scss-lint:enable SelectorDepth, QualifyingElement
   }
-}
 
-// Custom flexslider styles
-.flex-container a:hover,
-.flex-slider a:hover {
-  outline: none;
-}
-
-.slides,
-.slides > li,
-.flex-control-nav,
-.flex-direction-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.flex-viewport {
-  max-height: 2000px;
-  transition: all 1s ease;
-
-  .loading & {
-    max-height: 300px;
-  }
-}
-
-.flex-control-nav {
-  display: none;
-}
-
-.flex-direction-nav {
-  a {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    display: block;
-    height: 52px;
-    margin: -13px 0 0;
-    overflow: hidden;
-    position: absolute;
-    text-indent: -9999px;
-    top: 50%;
-    transition: all .3s ease-out;
-    width: 52px;
-    z-index: 10;
+  // Custom flexslider styles for .rotating-banner
+  //scss-lint:disable SelectorDepth
+  .flex-container a:hover,
+  .flex-slider a:hover {
+    outline: none;
   }
 
-  li .flex-next {
-    background-image: url('../images/rotating-banner-next.svg');
-    right: 10px;
+  .slides,
+  .slides > li,
+  .flex-control-nav,
+  .flex-direction-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  li .flex-prev {
-    background-image: url('../images/rotating-banner-prev.svg');
-    left: 10px;
+  .flex-viewport {
+    max-height: 2000px;
+    transition: all 1s ease;
+
+    .loading & {
+      max-height: 300px;
+    }
   }
 
-  li .disabled {
-    cursor: default;
-    filter: alpha(opacity = 30);
-    opacity: .3;
+  .flex-control-nav {
+    display: none;
   }
+
 }

@@ -123,3 +123,6 @@ linters:
 
   Compass::*:
     enabled: false
+
+# Exclude the flexslider CSS because it's copied over from the flexslider project
+exclude: 'scss/components/flexslider.scss'
