@@ -1106,13 +1106,15 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
 
 .row {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 944px;
   overflow: hidden;
-  padding: 20px;
+  padding: 0;
+  text-align: center;
 }
 
 .row img {
   display: inline-block;
+  height: auto;
   vertical-align: top;
 }
 
@@ -1121,6 +1123,41 @@ input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
   display: inline-block;
   margin: 0 -4px 1.666666% 0;
   vertical-align: top;
+}
+
+.instagram-media,
+.instagram-media-registered {
+  border: 0 !important;
+  margin: 0 -8px !important;
+  text-align: left;
+}
+
+.instagram-media p,
+.instagram-media-registered p {
+  font-size: 10px;
+}
+
+.instagram-media,
+.instagram-media div,
+.instagram-media-registered,
+.instagram-media-registered div {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+}
+
+.instagram-media,
+.instagram-media > div,
+.instagram-media-registered,
+.instagram-media-registered > div {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.instagram-media > div,
+.instagram-media-registered > div {
+  margin: 0 8px !important;
 }
 
 .twitter-tweet-wrapper {
