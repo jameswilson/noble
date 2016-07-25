@@ -27,6 +27,15 @@ product-details:
     - core/jquery
     - colorbox/colorbox
 
+product-teaser:
+  version: 1.x
+  css:
+    theme:
+      css/product-teaser.css: {}
+      css/product-attributes.css: {}
+      css/facet.css: {}
+
+
 custom-flexslider:
   versiom: 1.x
   css:
