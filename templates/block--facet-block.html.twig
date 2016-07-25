@@ -1,0 +1,8 @@
+{% extends "block.html.twig" %}
+{% block wrapper %}
+  <div{{ attributes|without('id').addClass('facet') }}>
+{% endblock %}
+
+{% block title %}
+  <h3{{ title_attributes.addClass('facet__title') }}><span>{{ label }}</span></h3>
+{% endblock %}
