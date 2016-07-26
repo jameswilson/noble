@@ -264,6 +264,10 @@ h6 {
   color: #333;
 }
 
+img {
+  height: auto;
+}
+
 select {
   -webkit-appearance: none;
      -moz-appearance: none;
