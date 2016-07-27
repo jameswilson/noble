@@ -25,14 +25,10 @@
  * @see template_preprocess_block()
  */
 #}
-{% block wrapper %}
 <div{{ attributes|without('id').addClass('block block--' ~ machine_name)  }}>
-{% endblock %}
   {{ title_prefix }}
   {% if label %}
-    {% block title %}
     <h2{{ title_attributes.addClass('block__title block__title--' ~ machine_name) }}><span>{{ label }}</span></h2>
-    {% endblock %}
   {% endif %}
   {{ title_suffix }}
   {% block content %}

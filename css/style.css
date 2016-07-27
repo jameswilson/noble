@@ -278,10 +278,6 @@ select {
   padding: .3em 31px .3em 10px;
 }
 
-[type="checkbox"] {
-  margin-right: 5px;
-}
-
 .button {
   background: #1b3e6a;
   border: 1px solid #1b3e6a;
@@ -1384,37 +1380,4 @@ select {
 .field--label-inline .field__label,
 .field--label-inline .field__item {
   display: inline-block;
-}
-
-@media screen and (min-width: 500px) {
-  .product-catalog {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-}
-
-.product-catalog__item {
-  box-sizing: border-box;
-  margin-bottom: 80px;
-  padding: 0 10px;
-}
-
-@media screen and (min-width: 500px) {
-  .product-catalog__item {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .product-catalog__item {
-    width: 33%;
-  }
-}
-
-.product-catalog .pager {
-  width: 100%;
 }

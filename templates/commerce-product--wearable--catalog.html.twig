@@ -19,14 +19,13 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('noble/product-teaser') }}
-<article{{ attributes.addClass('product-teaser') }}>
-  <div class="product-teaser__images">
-    <div class="product-teaser__images__front">
-      {{ product.field_product_images }}
+<article{{ attributes }}>
+  <div class="product--images__viewer">
+    <div class="product--images__front">
+      {{ product.variation_field_front_image }}
     </div>
   </div>
-  <h2 class="product-teaser__title">{{ product.title }}</h2>
-  <div class="product-teaser__price">{{ product.variation_price }}</div>
-  <div class="product-teaser__colors">{{ product.variations }}</div>
+  {{ product.title }}
+  {{ product.variation_price }}
+  {{ product.variations }}
 </article>

@@ -1,18 +1,18 @@
-@media screen and (min-width: 440px) {
-  .noble-sidebarfirst::after {
-    content: '';
-    display: table;
-    width: 100%;
-  }
-  .noble-sidebarfirst__sidebar {
-    box-sizing: border-box;
-    float: left;
-    padding-right: 30px;
-    width: 25%;
-  }
-  .noble-sidebarfirst__content {
-    box-sizing: border-box;
-    float: left;
-    width: 75%;
-  }
+.noble-sidebarfirst::after {
+  content: '';
+  display: table;
+  width: 100%;
+}
+
+.noble-sidebarfirst__sidebar {
+  box-sizing: border-box;
+  float: left;
+  padding-right: 30px;
+  width: 25%;
+}
+
+.noble-sidebarfirst__content {
+  box-sizing: border-box;
+  float: left;
+  width: 75%;
 }

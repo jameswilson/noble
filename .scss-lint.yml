@@ -56,7 +56,7 @@ linters:
 
   MergeableSelector:
     enabled: true
-    force_nesting: false
+    force_nesting: true
 
   NameFormat:
     enabled: true
