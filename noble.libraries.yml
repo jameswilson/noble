@@ -35,6 +35,12 @@ product-teaser:
       css/product-attributes.css: {}
       css/facet.css: {}
 
+store-locator-filter-form:
+  version: 1.x
+  css:
+    theme:
+      css/store-locator-filter-form.css: {}
+      css/store-locator-listing.css: {}
 
 custom-flexslider:
   versiom: 1.x

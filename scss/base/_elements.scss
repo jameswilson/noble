@@ -33,6 +33,18 @@ h6 {
   color: $heading-font-color;
 }
 
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
 img {
   height: auto;
+}
+
+table {
+  width: 100%;
 }

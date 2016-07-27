@@ -1,1 +1,65 @@
+.cart {
 
+  table {
+    border-bottom: 1px solid $light-light-blue;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  th {
+    border-bottom: 1px solid $light-light-blue;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .table-heading-attribute-color,
+  .table-heading-attribute-size {
+    float: left;
+    width: 50%;
+  }
+
+  .attribute-widgets {
+    .form-item {
+      float: left;
+      width: 50%;
+    }
+
+    select {
+      background-position: center bottom 20px;
+      background-size: 20px auto;
+      border-bottom: 0;
+      border-top: 0;
+      height: 90px;
+      margin-bottom: -1px;
+      margin-top: -1px;
+      padding-left: 30px;
+      padding-top: 0;
+      width: 100%;
+    }
+
+    label {
+      @include visually-hidden();
+    }
+  }
+
+  .field--name-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 23px;
+    margin-bottom: 5px;
+  }
+
+  .field--name-sku {
+    font-size: 15px;
+    line-height: 27px;
+  }
+
+  .views-field-purchased-entity {
+    text-align: left;
+  }
+
+  .views-field-total-price__amount {
+    text-align: center;
+  }
+}
