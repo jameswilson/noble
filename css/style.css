@@ -264,8 +264,20 @@ h6 {
   color: #333;
 }
 
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
 img {
   height: auto;
+}
+
+table {
+  width: 100%;
 }
 
 select {
@@ -967,6 +979,72 @@ select {
 .l-contained--top {
   padding: 9px 2%;
   position: relative;
+}
+
+.cart table {
+  border-bottom: 1px solid #d1d8e1;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cart th {
+  border-bottom: 1px solid #d1d8e1;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cart .table-heading-attribute-color,
+.cart .table-heading-attribute-size {
+  float: left;
+  width: 50%;
+}
+
+.cart .attribute-widgets .form-item {
+  float: left;
+  width: 50%;
+}
+
+.cart .attribute-widgets select {
+  background-position: center bottom 20px;
+  background-size: 20px auto;
+  border-bottom: 0;
+  border-top: 0;
+  height: 90px;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  padding-left: 30px;
+  padding-top: 0;
+  width: 100%;
+}
+
+.cart .attribute-widgets label {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.cart .field--name-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
+  margin-bottom: 5px;
+}
+
+.cart .field--name-sku {
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.cart .views-field-purchased-entity {
+  text-align: left;
+}
+
+.cart .views-field-total-price__amount {
+  text-align: center;
 }
 
 .block--search {

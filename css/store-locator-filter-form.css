@@ -1,0 +1,47 @@
+.store-locator-filter-form {
+  background-color: #efefef;
+  padding: 35px;
+}
+
+.store-locator-filter-form__title {
+  color: #666;
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.store-locator-filter-form .form-item {
+  margin-top: 15px;
+}
+
+.store-locator-filter-form .form-text {
+  border: 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.store-locator-filter-form .form-select {
+  background-color: #dde2e9;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.store-locator-filter-form .form-submit {
+  border: 0;
+  box-sizing: border-box;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.store-locator-filter-form__description {
+  color: #666;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 10px 10px 0;
+  text-align: center;
+}

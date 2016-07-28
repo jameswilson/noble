@@ -1,0 +1,35 @@
+@media screen and (min-width: 500px) {
+  .store-locator-listing {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+.store-locator-listing__item {
+  box-sizing: border-box;
+  margin: 50px 0;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .store-locator-listing__item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .store-locator-listing__item {
+    width: 25%;
+  }
+}
+
+.store-locator-listing .pager {
+  width: 100%;
+}

@@ -1,0 +1,26 @@
+.store-locator-listing {
+
+  @media screen and (min-width: 500px) {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.store-locator-listing__item {
+  box-sizing: border-box;
+  margin: 50px 0;
+  padding: 0 10px;
+
+  @media screen and (min-width: 500px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 25%;
+  }
+}
+
+.store-locator-listing .pager {
+  width: 100%;
+}
