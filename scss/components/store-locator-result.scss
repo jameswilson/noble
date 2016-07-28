@@ -1,0 +1,46 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.store-locator-result {
+  align-items: stretch;
+  border-bottom: 1px solid $light-light-blue;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+
+.store-locator-result__column-one {
+  width: 80px;
+}
+
+.store-locator-result__column-two {
+  width: 350px;
+}
+
+.store-locator-result__column-three {
+  width: 180px;
+}
+
+.store-locator-result__distance {
+  color: $light-graphite;
+  font-weight: bold;
+  text-align: center;
+}
+
+.store-locator-result__name {
+  color: $light-graphite;
+  font-weight: bold;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.store-locator-result__address {
+  color: $blue;
+
+  p {
+    margin: 0;
+  }
+}
