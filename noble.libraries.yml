@@ -41,6 +41,7 @@ store-locator-filter-form:
     theme:
       css/store-locator-filter-form.css: {}
       css/store-locator-listing.css: {}
+      css/store-locator-result.css: {}
 
 custom-flexslider:
   versiom: 1.x

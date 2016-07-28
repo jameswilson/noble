@@ -905,6 +905,10 @@ select {
   background-image: url("../images/icon-refresh--blue.svg");
 }
 
+.icon-location {
+  background-image: url("../images/icon-location.svg");
+}
+
 .share-widget {
   margin: 40px 0;
 }

@@ -30,18 +30,22 @@
  */
 #}
 <div class="store-locator-result">
-  <div class="left-column-wrapper">
+  <div class="store-locator-result__column-one">
     {% set distance = fields.search_api_distance %}
-    <{{ distance.element_type }}{{ distance.element_attributes }}>{{ distance.content }}</{{ distance.element_type }}>
+
+    <div class="store-locator-result__distance">
+      <i class="icon icon-location"></i>
+      {{ distance.content }}
+    </div>
   </div>
-  <div class="main-wrapper">
+  <div class="store-locator-result__column-two">
     {% set field_names = ['name', 'address'] %}
     {% for field_name in field_names -%}
       {% set field = attribute(fields, field_name) %}
-      <{{ field.element_type }}{{ field.element_attributes }}>{{ field.content }}</{{ field.element_type }}>
+      <div class="store-locator-result__{{field_name}}">{{ field.content }}</div>
     {%- endfor %}
   </div>
-  <div class="right-column-wrapper">
+  <div class="store-locator-result__column-three">
     {% set field_names = ['field_phone_number', 'field_web_address_1', 'latlon'] %}
     {% for field_name in field_names -%}
       <div>
