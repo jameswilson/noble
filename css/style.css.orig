@@ -1516,6 +1516,7 @@ select {
   display: inline-block;
 }
 
+<<<<<<< 7719ad165136508a818de27702d00cc078d936ca
 @media screen and (min-width: 500px) {
   .product-catalog {
     display: -webkit-flex;
@@ -1547,8 +1548,7 @@ select {
 
 .product-catalog .pager {
   width: 100%;
-}
-
+=======
 .delete-line-item {
   font: 0/0 a;
   text-shadow: none;
@@ -1562,4 +1562,5 @@ select {
 
 .delete-line-item:hover {
   opacity: .8;
+>>>>>>> SO-143 shopping bag theming
 }
