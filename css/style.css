@@ -981,10 +981,18 @@ select {
   position: relative;
 }
 
+@media screen and (max-width: 800px) {
+  .cart {
+    overflow-x: scroll;
+    overflow-y: visible;
+  }
+}
+
 .cart table {
   border-bottom: 1px solid #d1d8e1;
   border-collapse: collapse;
   border-spacing: 0;
+  min-width: 800px;
 }
 
 .cart th {
@@ -1010,11 +1018,14 @@ select {
   background-size: 20px auto;
   border-bottom: 0;
   border-top: 0;
-  height: 90px;
+  height: 120px;
   margin-bottom: -1px;
   margin-top: -1px;
   padding-left: 30px;
   padding-top: 0;
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
   width: 100%;
 }
 
@@ -1027,11 +1038,25 @@ select {
   word-wrap: normal;
 }
 
+.cart .form-item-edit-attributes-0-purchased-entity-0-attributes-attribute-size select {
+  border-left: 0;
+}
+
+.cart .cart__product-image {
+  float: left;
+  margin: 10px;
+}
+
+.cart .cart__product-info {
+  float: left;
+}
+
 .cart .field--name-title {
   font-size: 18px;
   font-weight: bold;
   line-height: 23px;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .cart .field--name-sku {
@@ -1045,6 +1070,29 @@ select {
 
 .cart .views-field-total-price__amount {
   text-align: center;
+}
+
+.cart .views-field-edit-quantity {
+  text-align: center;
+}
+
+.cart .views-field-edit-quantity .form-number {
+  background: #fff;
+  border: 1px solid #d1d8e1;
+  box-sizing: border-box;
+  height: 36px;
+  padding-left: 9px;
+  text-align: center;
+  width: 39px;
+}
+
+.cart .views-field-remove-button {
+  text-align: right;
+}
+
+.cart .form-actions {
+  margin-top: 25px;
+  text-align: right;
 }
 
 .block--search {
@@ -1477,6 +1525,15 @@ select {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
   }
+.delete-line-item {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: transparent url("../images/close.png") no-repeat;
+  border: 0;
+  cursor: pointer;
+  height: 23px;
+  width: 23px;
 }
 
 .product-catalog__item {
@@ -1490,6 +1547,9 @@ select {
     width: 50%;
   }
 }
+
+.delete-line-item:hover {
+  opacity: .8;
 
 @media screen and (min-width: 650px) {
   .product-catalog__item {
