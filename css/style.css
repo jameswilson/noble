@@ -1516,6 +1516,25 @@ select {
   display: inline-block;
 }
 
+ul.entity-moderation-form {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffcc;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  list-style: none;
+  margin: -1em 0 1.2em;
+  padding: .3em 0;
+}
+
 @media screen and (min-width: 500px) {
   .product-catalog {
     display: -webkit-flex;
