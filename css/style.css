@@ -909,6 +909,10 @@ select {
   background-image: url("../images/icon-location.svg");
 }
 
+.icon-location--grey {
+  background-image: url("../images/icon-location--grey.svg");
+}
+
 .share-widget {
   margin: 40px 0;
 }
