@@ -1,0 +1,12 @@
+.delete-line-item {
+  @include hide-text();
+  background: transparent url('../images/close.png') no-repeat;
+  border: 0;
+  cursor: pointer;
+  height: 23px;
+  width: 23px;
+
+  &:hover {
+    opacity: .8;
+  }
+}
