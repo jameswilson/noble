@@ -17,6 +17,8 @@
         $.colorbox.resize();
       });
 
+      $('.js-product-details__media-button--images-360', context).colorbox({iframe:true, width: '80%', height: '80%'});
+
       $('.js-product-details__media-button--lifestyle', context).bind('click', function (e) {
         e.preventDefault();
         $('.js-product-details__images-lifestyle img').colorbox({rel: 'gallery'});
