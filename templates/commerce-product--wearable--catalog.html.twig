@@ -21,6 +21,7 @@
 #}
 {{ attach_library('noble/product-teaser') }}
 <article{{ attributes.addClass('product-teaser') }}>
+  <div class="product-teaser__info"><a href="{{ product_url }}">Information</a></div>
   <div class="product-teaser__images">
     <div class="product-teaser__images__front">
       {{ product.variation_field_front_image }}
