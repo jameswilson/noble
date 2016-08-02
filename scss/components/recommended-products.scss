@@ -1,0 +1,26 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.recommended-products__title {
+  font-size: 30px;
+  line-height: 28px;
+  margin-top: 50px 0;
+  width: 100%;
+}
+
+.recomended-products {
+  @media screen and (min-width: 500px) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.recommended-products__item {
+  @media screen and (min-width: 500px) {
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 25%;
+  }
+}

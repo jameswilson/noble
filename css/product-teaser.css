@@ -1,4 +1,5 @@
 .product-teaser {
+  position: relative;
   text-align: center;
 }
 
@@ -9,6 +10,24 @@
   margin: 5px 0;
 }
 
+.product-teaser__image {
+  padding: 20px 20px 0;
+}
+
 .product-teaser__colors {
   margin-top: 15px;
+}
+
+.product-teaser__info a {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url("../images/icon-info--blue.svg") no-repeat;
+  background-size: 100% auto;
+  display: block;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
 }

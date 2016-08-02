@@ -1,0 +1,25 @@
+.recommended-products__title {
+  font-size: 30px;
+  line-height: 28px;
+  margin-top: 50px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .recomended-products {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .recommended-products__item {
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 25%;
+  }
+}

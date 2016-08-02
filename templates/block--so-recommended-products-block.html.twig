@@ -1,0 +1,9 @@
+{% extends "block.html.twig" %}
+{% block wrapper %}
+  {{ attach_library('noble/recommended-products') }}
+  <div{{ attributes|without('id').addClass('recomended-products') }}>
+{% endblock %}
+
+{% block title %}
+  <h2{{ title_attributes.addClass('recommended-products__title') }}><span>{{ label }}</span></h2>
+{% endblock %}

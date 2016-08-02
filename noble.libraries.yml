@@ -43,6 +43,19 @@ store-locator-filter-form:
       css/store-locator-listing.css: {}
       css/store-locator-result.css: {}
 
+recommended-products:
+  version: 1.x
+  css:
+    theme:
+      css/recommended-products.css: {}
+      css/product-teaser.css: {}
+
+recommendations-cart:
+  version: 1.x
+  css:
+    theme:
+      css/recommendations-cart.css: {}
+
 custom-flexslider:
   versiom: 1.x
   css:
