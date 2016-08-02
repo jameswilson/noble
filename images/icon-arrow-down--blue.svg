@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
-    <title>fa-angle-down</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Introduction" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-504.000000, -578.000000)" id="fa-angle-down" fill="#1B3E6A">
-            <g transform="translate(504.000000, 579.000000)">
-                <path d="M0.374,0.866 L6.21,6.701 C6.277,6.791 6.39,6.836 6.479,6.836 C6.592,6.836 6.704,6.791 6.771,6.701 L12.607,0.866 C12.697,0.776 12.742,0.686 12.742,0.574 C12.742,0.484 12.697,0.372 12.607,0.282 L11.979,-0.324 C11.911,-0.414 11.799,-0.459 11.709,-0.459 C11.597,-0.459 11.485,-0.414 11.418,-0.324 L6.479,4.592 L1.564,-0.324 C1.474,-0.414 1.384,-0.459 1.272,-0.459 C1.16,-0.459 1.07,-0.414 0.98,-0.324 L0.374,0.282 C0.284,0.372 0.24,0.484 0.24,0.574 C0.24,0.686 0.284,0.776 0.374,0.866" id="Fill-35"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="13" height="8" viewBox="0 0 13 8" xmlns="http://www.w3.org/2000/svg"><title>fa-angle-down</title><path d="M.374 1.866L6.21 7.701a.36.36 0 0 0 .561 0l5.836-5.835c.09-.09.135-.18.135-.292a.435.435 0 0 0-.135-.292l-.628-.606a.36.36 0 0 0-.561 0L6.479 5.592 1.564.676a.396.396 0 0 0-.292-.135.396.396 0 0 0-.292.135l-.606.606a.433.433 0 0 0-.134.292c0 .112.044.202.134.292" fill="#1B3E6A" fill-rule="evenodd"/></svg>
