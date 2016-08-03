@@ -1,0 +1,99 @@
+.row {
+  margin: 0 auto;
+  max-width: 944px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+.row img {
+  display: inline-block;
+  height: auto;
+  vertical-align: top;
+}
+
+.row .col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 -4px 1.666666% 0;
+  vertical-align: top;
+}
+
+.instagram-media,
+.instagram-media-registered {
+  border: 0 !important;
+  margin: 0 -8px !important;
+  text-align: left;
+}
+
+.instagram-media p,
+.instagram-media-registered p {
+  font-size: 10px;
+}
+
+.instagram-media,
+.instagram-media div,
+.instagram-media-registered,
+.instagram-media-registered div {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+}
+
+.instagram-media,
+.instagram-media > div,
+.instagram-media-registered,
+.instagram-media-registered > div {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.instagram-media > div,
+.instagram-media-registered > div {
+  margin: 0 8px !important;
+}
+
+.twitter-tweet-wrapper {
+  border: 1px solid #c9c9c9;
+  padding: 20px;
+  text-align: left;
+}
+
+.twitter-tweet-wrapper h3 {
+  color: #1b3e6a;
+  font-size: 24px;
+  margin: 0;
+}
+
+@media screen and (min-width: 620px) {
+  .row .col {
+    display: block;
+    float: left;
+    margin: 0 0 1.666666%;
+  }
+  .row .col-1 {
+    margin-right: .75%;
+    text-align: left;
+  }
+  .row .col-2 {
+    margin-left: .75%;
+    text-align: right;
+  }
+  .row-1-1 .col {
+    width: 49.25%;
+  }
+  .row-2-1 .col-1,
+  .row-1-2 .col-2 {
+    width: 64.666666%;
+  }
+  .row-1-2 .col-1,
+  .row-2-1 .col-2 {
+    width: 33.333333%;
+  }
+}
+
+.row .col img {
+  height: auto;
+  max-width: 100%;
+}

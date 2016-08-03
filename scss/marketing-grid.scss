@@ -1,0 +1,15 @@
+@import 'drupal-sass-breakpoints';
+
+@import
+'util/colors',
+'util/variables',
+'util/mixins',
+
+'components/marketing-grid';
+
+// Specific fixes for displaying the marketing grid outside the scope of the
+// theme, eg. for layout in the node form.
+.row .col img {
+  height: auto;
+  max-width: 100%;
+}

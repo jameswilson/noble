@@ -72,6 +72,12 @@ rotating-banner:
   dependencies:
     - flexslider/flexslider
 
+marketing-grid:
+  version: 1.x
+  css:
+    layout:
+      css/marketing-grid.css: {}
+
 leaflet:
   remote: http://leaflet.cloudmade.com
   version: 0.7.7
