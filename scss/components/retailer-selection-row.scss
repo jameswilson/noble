@@ -1,0 +1,30 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.retailer-selection-row {
+  align-items: center;
+  border: solid $light-light-blue;
+  border-width: 1px 0;
+  display: flex;
+}
+
+.retailer-selection-row + .retailer-selection-row {
+  border-top: 0;
+}
+
+.retailer-selection-row__logo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.retailer-selection-row__products {
+  border-left: 1px solid $light-light-blue;
+  flex-grow: 3;
+  padding: 10px 30px;
+}
+
+.retailer-selection-row__link a {
+  @include button();
+}

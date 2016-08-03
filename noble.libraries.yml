@@ -56,6 +56,13 @@ recommendations-cart:
     theme:
       css/recommendations-cart.css: {}
 
+retailer-selection:
+  version: 1.x
+  css:
+    theme:
+      css/retailer-selection-intro.css: {}
+      css/retailer-selection-row.css: {}
+
 custom-flexslider:
   versiom: 1.x
   css:

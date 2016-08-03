@@ -1074,6 +1074,18 @@ select {
   text-transform: uppercase;
 }
 
+.cart th.views-field-purchased-entity {
+  text-align: left;
+}
+
+.cart .cart__row {
+  border-bottom: 1px solid #d1d8e1;
+}
+
+.cart .cart__row--outstock {
+  background: #ffe5e5;
+}
+
 .cart .table-heading-attribute-color,
 .cart .table-heading-attribute-size {
   float: left;
@@ -1086,13 +1098,14 @@ select {
 }
 
 .cart .attribute-widgets select {
+  background-color: transparent;
   background-position: center bottom 20px;
   background-size: 20px auto;
   border-bottom: 0;
   border-top: 0;
-  height: 120px;
   margin-bottom: -1px;
   margin-top: -1px;
+  min-height: 130px;
   padding-left: 30px;
   padding-top: 0;
   text-align: center;
@@ -1110,17 +1123,46 @@ select {
   word-wrap: normal;
 }
 
-.cart .form-item-edit-attributes-0-purchased-entity-0-attributes-attribute-size select {
+.cart .form-item + .form-item select {
   border-left: 0;
 }
 
+.cart td.views-field-purchased-entity {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  min-height: 130px;
+}
+
 .cart .cart__product-image {
-  float: left;
   margin: 10px;
 }
 
-.cart .cart__product-info {
-  float: left;
+.cart .cart__row--outstock .cart__product-image {
+  position: relative;
+}
+
+.cart .cart__row--outstock .cart__product-image::before {
+  background: transparent url("../images/icon-error--red.svg") center center no-repeat;
+  background-size: 100%;
+  content: '';
+  display: block;
+  height: 30px;
+  left: calc(50% - 15px);
+  opacity: .8;
+  position: absolute;
+  top: calc(50% - 15px);
+  width: 30px;
+}
+
+.cart .cart__row--outstock .cart__product-image:hover::before {
+  opacity: 1;
 }
 
 .cart .field--name-title {
@@ -1134,10 +1176,6 @@ select {
 .cart .field--name-sku {
   font-size: 15px;
   line-height: 27px;
-}
-
-.cart .views-field-purchased-entity {
-  text-align: left;
 }
 
 .cart .views-field-total-price__amount {

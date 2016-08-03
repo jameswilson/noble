@@ -1,0 +1,27 @@
+.retailer-selection-intro {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 130px 0 45px;
+}
+
+.retailer-selection-intro__title {
+  color: #666;
+  font-size: 19px;
+}
+
+.retailer-selection-intro__icon {
+  background: url("../images/icon-shield--light-grey.svg") center center no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 25px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+.retailer-selection-intro__text {
+  color: #1b3e6a;
+}
