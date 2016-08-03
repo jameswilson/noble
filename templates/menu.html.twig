@@ -38,10 +38,9 @@
       <ul class="menu__sublevel menu__sublevel--{{ menu_name|clean_class }} menu__sublevel--{{ menu_level }}">
     {% endif %}
     {% for item in items %}
-      {# Move class attributes to link #}
-      <li class="menu__item menu__item--{{ menu_name|clean_class }}" {{ item.attributes|without('class') }}>
-        {{ link(item.title, item.url, {'class': item.attributes.class}) }}
-        {% if item.below %}
+      <li{{ item.attributes.addClass('menu__item menu__item--' ~ menu_name|clean_class ) }}>
+        {{ link(item.title, item.url) }}
+      {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
         {% endif %}
       </li>
