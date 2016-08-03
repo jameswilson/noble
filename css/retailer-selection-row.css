@@ -1,0 +1,41 @@
+.retailer-selection-row {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid #d1d8e1;
+  border-width: 1px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.retailer-selection-row + .retailer-selection-row {
+  border-top: 0;
+}
+
+.retailer-selection-row__logo {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.retailer-selection-row__products {
+  border-left: 1px solid #d1d8e1;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  padding: 10px 30px;
+}
+
+.retailer-selection-row__link a {
+  background: #1b3e6a;
+  border: 1px solid #1b3e6a;
+  color: #fff;
+  margin: 0;
+  padding: .3em 1em;
+}
+
+.retailer-selection-row__link a:hover, .retailer-selection-row__link a:active, .retailer-selection-row__link a:focus {
+  opacity: .8em;
+}

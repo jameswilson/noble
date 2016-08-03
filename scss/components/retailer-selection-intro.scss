@@ -1,0 +1,28 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.retailer-selection-intro {
+  align-items: center;
+  display: flex;
+  margin: 130px 0 45px;
+}
+
+.retailer-selection-intro__title {
+  color: $light-graphite;
+  font-size: 19px;
+}
+
+.retailer-selection-intro__icon {
+  background: url('../images/icon-shield--light-grey.svg') center center no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 25px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+.retailer-selection-intro__text {
+  color: $blue;
+}

@@ -1,9 +1,13 @@
 $graphite: #333;
 $light-graphite: #666;
 $white: #fff;
+$transparent-white: rgba(256, 256 , 256, .8);
 
 $yellow: #ff0;
 $light-light-yellow: lighten($yellow, 40%);
+
+$red: #c40000;
+$light-red: #ffe5e5;
 
 $gray: #c9c9c9;
 $med-gray: #999;
@@ -14,6 +18,7 @@ $semi-light-blue: #bac5d2;
 $light-blue: #dde2e9;
 $light-light-blue: #d1d8e1;
 $another-blue: #a3b1c3;
+
 
 $base-font-color: $light-graphite;
 $heading-font-color: $graphite;

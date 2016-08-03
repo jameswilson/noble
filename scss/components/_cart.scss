@@ -19,6 +19,19 @@
     text-transform: uppercase;
   }
 
+  // scss-lint:disable QualifyingElement
+  th.views-field-purchased-entity {
+    text-align: left;
+  }
+
+  .cart__row {
+    border-bottom: 1px solid $light-light-blue;
+  }
+
+  .cart__row--outstock {
+    background: $light-red;
+  }
+
   .table-heading-attribute-color,
   .table-heading-attribute-size {
     float: left;
@@ -32,13 +45,14 @@
     }
 
     select {
+      background-color: transparent;
       background-position: center bottom 20px;
       background-size: 20px auto;
       border-bottom: 0;
       border-top: 0;
-      height: 120px;
       margin-bottom: -1px;
       margin-top: -1px;
+      min-height: 130px;
       padding-left: 30px;
       padding-top: 0;
       text-align: center;
@@ -51,17 +65,41 @@
     }
   }
 
-  .form-item-edit-attributes-0-purchased-entity-0-attributes-attribute-size select {
+  .form-item + .form-item select {
     border-left: 0;
   }
 
+  // scss-lint:disable QualifyingElement
+  td.views-field-purchased-entity {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    min-height: 130px;
+  }
+
   .cart__product-image {
-    float: left;
     margin: 10px;
   }
 
-  .cart__product-info {
-    float: left;
+  .cart__row--outstock .cart__product-image {
+    position: relative;
+  }
+
+  .cart__row--outstock .cart__product-image::before {
+    background: transparent url('../images/icon-error--red.svg') center center no-repeat;
+    background-size: 100%;
+    content: '';
+    display: block;
+    height: 30px;
+    left: calc(50% - 15px);
+    opacity: .8;
+    position: absolute;
+    top: calc(50% - 15px);
+    width: 30px;
+  }
+
+  .cart__row--outstock .cart__product-image:hover::before {
+    opacity: 1;
   }
 
   .field--name-title {
@@ -75,10 +113,6 @@
   .field--name-sku {
     font-size: 15px;
     line-height: 27px;
-  }
-
-  .views-field-purchased-entity {
-    text-align: left;
   }
 
   .views-field-total-price__amount {
