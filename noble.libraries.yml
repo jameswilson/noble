@@ -62,6 +62,7 @@ retailer-selection:
     theme:
       css/retailer-selection-intro.css: {}
       css/retailer-selection-row.css: {}
+      css/retailer-redirect.css: {}
 
 custom-flexslider:
   versiom: 1.x
