@@ -1,0 +1,10 @@
+.mobile-nav__trigger {
+  @include hide-text();
+  background: $blue;
+  display: block;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+}

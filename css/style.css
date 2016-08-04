@@ -410,13 +410,19 @@ select {
 }
 
 .l-header {
-  padding: 45px 0 60px;
+  padding: 10px;
 }
 
 .l-header::after {
   content: '';
   display: table;
   width: 100%;
+}
+
+@media screen and (min-width: 910px) {
+  .l-header {
+    padding: 45px 0 60px;
+  }
 }
 
 .l-header .menu {
@@ -443,7 +449,27 @@ select {
   padding: .4em .8em;
 }
 
-@media all and (min-width: 560px) {
+.block--branding {
+  float: left;
+  width: 60%;
+}
+
+.l-header .menu {
+  display: none;
+}
+
+@media screen and (min-width: 810px) {
+  .block--branding {
+    float: left;
+    width: 30%;
+  }
+  .l-header .menu {
+    float: right;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1040px) {
   .block--branding {
     float: left;
     width: 45%;
@@ -653,6 +679,19 @@ select {
     content: '';
     margin: 0;
   }
+}
+
+.mobile-nav__trigger {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: #1b3e6a;
+  display: block;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
 }
 
 .menu__title {
@@ -1058,28 +1097,35 @@ select {
   top: 0;
 }
 
-.l-top {
-  border-bottom: 1px solid #d1d8e1;
-  min-height: 24px;
-  text-align: right;
+@media screen and (max-width: 910px) {
+  .l-top-left {
+    display: none;
+  }
+  .block--menu-cart-block {
+    display: none;
+  }
 }
 
-.l-top .block {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.l-top-left {
-  float: left;
-}
-
-.l-top-right {
-  float: right;
-}
-
-.l-contained--top {
-  padding: 9px 2%;
-  position: relative;
+@media screen and (min-width: 910px) {
+  .l-contained--top {
+    padding: 9px 2%;
+    position: relative;
+  }
+  .l-top {
+    border-bottom: 1px solid #d1d8e1;
+    min-height: 24px;
+    text-align: right;
+  }
+  .l-top .block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .l-top-left {
+    float: left;
+  }
+  .l-top-right {
+    float: right;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1264,6 +1310,12 @@ select {
   width: 100%;
 }
 
+@media screen and (max-width: 910px) {
+  .block--search .form-search {
+    height: 60px;
+  }
+}
+
 .block--search .form-actions {
   height: 42px;
   position: absolute;
@@ -1279,6 +1331,12 @@ select {
   height: 42px;
   text-indent: -9999px;
   width: 42px;
+}
+
+@media screen and (max-width: 910px) {
+  .block--search .form-submit {
+    display: none;
+  }
 }
 
 .block--search form {
@@ -1305,6 +1363,7 @@ select {
   box-sizing: content-box;
   display: inline-block;
   height: 18px;
+  outline: none;
   padding: 4px;
   position: absolute;
   right: 0;
@@ -1313,16 +1372,27 @@ select {
   width: 18px;
 }
 
+@media screen and (max-width: 910px) {
+  .searchform__toggle {
+    height: 50px;
+    right: 50px;
+    top: 0;
+    width: 50px;
+  }
+}
+
 .searchform__open {
-  background: url("../images/icon-search-toggle.svg") no-repeat 50% 50%;
+  background: url("../images/icon-search-toggle.svg") no-repeat 0 0;
+  background-size: contain;
   display: inline-block;
-  height: 18px;
+  height: 0;
   left: 4px;
   opacity: 1;
+  padding-bottom: 100%;
   position: absolute;
   top: 4px;
   transition: opacity .2s ease;
-  width: 18px;
+  width: 100%;
 }
 
 .searchopen .searchform__open {
@@ -1333,10 +1403,12 @@ select {
 .searchform__close-right {
   background: #1b3e6a;
   display: inline-block;
-  height: 18px;
+  height: 0;
+  left: 0;
   opacity: 0;
+  padding-bottom: 150%;
   position: absolute;
-  top: 2px;
+  top: -25%;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -1346,9 +1418,12 @@ select {
   z-index: 1;
 }
 
+.searchform__close-left {
+  left: 10%;
+}
+
 .searchopen .searchform__close-left {
   opacity: 1;
-  right: 19px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1357,8 +1432,11 @@ select {
           transform-origin: 0 100%;
 }
 
+.searchform__close-right {
+  left: 90%;
+}
+
 .searchopen .searchform__close-right {
-  left: 18px;
   opacity: 1;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);

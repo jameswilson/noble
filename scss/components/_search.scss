@@ -26,6 +26,10 @@
     line-height: normal;
     padding: 0 10px;
     width: 100%;
+
+    @media screen and (max-width: $mobile-nav) {
+      height: 60px;
+    }
   }
 
   .form-actions {
@@ -43,6 +47,10 @@
     height: 42px;
     text-indent: -9999px;
     width: 42px;
+
+    @media screen and (max-width: $mobile-nav) {
+      display: none;
+    }
   }
 
   form {
@@ -70,24 +78,34 @@
   box-sizing: content-box;
   display: inline-block;
   height: 18px;
+  outline: none;
   padding: 4px;
   position: absolute;
   right: 0;
   top: 9px;
   vertical-align: middle;
   width: 18px;
+
+  @media screen and (max-width: $mobile-nav) {
+    height: 50px;
+    right: 50px;
+    top: 0;
+    width: 50px;
+  }
 }
 
 .searchform__open {
-  background: url('../images/icon-search-toggle.svg') no-repeat 50% 50%;
+  background: url('../images/icon-search-toggle.svg') no-repeat 0 0;
+  background-size: contain;
   display: inline-block;
-  height: 18px;
+  height: 0;
   left: 4px;
   opacity: 1;
+  padding-bottom: 100%;
   position: absolute;
   top: 4px;
   transition: opacity .2s ease;
-  width: 18px;
+  width: 100%;
 
   .searchopen & {
     opacity: 0;
@@ -98,10 +116,12 @@
 .searchform__close-right {
   background: $blue;
   display: inline-block;
-  height: 18px;
+  height: 0;
+  left: 0;
   opacity: 0;
+  padding-bottom: 150%;
   position: absolute;
-  top: 2px;
+  top: -25%;
   transform: rotate(0deg);
   transition: transform .3s ease-out .1s, opacity .2s ease;
   width: 1px;
@@ -109,19 +129,20 @@
 }
 
 .searchform__close-left {
+  left: 10%;
+
   .searchopen & {
     opacity: 1;
-    right: 19px;
     transform: rotate(45deg);
     transform-origin: 0 100%;
   }
 }
 
 .searchform__close-right {
-  .searchopen & {
-    left: 18px;
-    opacity: 1;
+  left: 90%;
 
+  .searchopen & {
+    opacity: 1;
     transform: rotate(-45deg);
     transform-origin: 100% 100%;
   }
