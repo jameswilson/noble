@@ -1,0 +1,75 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.retailer-redirect {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (min-width: 600px) {
+    min-width: 520px;
+  }
+}
+
+.retailer-redirect__logo {
+  margin-bottom: 40px;
+  max-width: 250px;
+}
+
+.retailer-redirect__message {
+  color: $light-graphite;
+  font-size: 26px;
+  line-height: 23px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.retailer-redirect__progress {
+  width: 100%;
+
+  // Waaa jQuery UI!
+  .ui-progressbar {
+    border: 1px solid $light-blue;
+    border-radius: 0;
+    color: $light-graphite;
+    position: relative;
+  }
+
+  .ui-progressbar-value {
+    background: $semi-light-blue;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+
+    &::before {
+      color: $light-graphite;
+      content: 'Transferring for final secure checkout...';
+      display: block;
+      font-weight: normal;
+      line-height: 35px;
+      padding: 0 10px;
+      white-space: nowrap;
+
+      @media screen and (max-width: 650px) {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      &::after {
+        background: url('../images/icon-shield--light-grey.svg') center center no-repeat;
+        background-size: 100%;
+        content: '';
+        display: block;
+        height: 25px;
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        width: 20px;
+      }
+    }
+  }
+}

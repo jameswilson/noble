@@ -22,7 +22,11 @@
 .retailer-selection-row__products {
   border-left: 1px solid $light-light-blue;
   flex-grow: 3;
-  padding: 10px 30px;
+  padding: 10px;
+
+  @media screen and (min-width: 650px) {
+    padding: 10px 30px;
+  }
 }
 
 .retailer-selection-row__link a {
