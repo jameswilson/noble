@@ -225,10 +225,14 @@ function noble_preprocess_menu(array &$variables) {
  */
 function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $form['actions']['submit']['#attributes'] = array('class' => array('add-to-cart-button'));
-  $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
-  $form['actions']['out_stock']['#suffix'] = '</span>';
-  $form['link']['#prefix'] = '<span class="find-in-store">';
-  $form['link']['#suffix'] = '</span>';
+  if ($form['actions']['out_stock']) {
+    $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
+    $form['actions']['out_stock']['#suffix'] = '</span>';
+  }
+  if ($form['link']) {
+    $form['link']['#prefix'] = '<span class="find-in-store">';
+    $form['link']['#suffix'] = '</span>';
+  }
 
   if($color = $form['purchased_entity']['widget'][0]['attributes']['attribute_color']) {
     $color['#title_display'] = 'invisible';
