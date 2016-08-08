@@ -1,10 +1,23 @@
+.mobile-nav {
+  display: none;
+
+  &:target {
+    display: block;
+  }
+}
+
 .mobile-nav__trigger {
   @include hide-text();
-  background: $blue;
+  background: $blue url('../images/icon-menu--white.svg') no-repeat center center;
+  background-size: 25px auto;
   display: block;
-  height: 60px;
+  height: 45px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 60px;
+  width: 50px;
+
+  @media screen and (min-width: $mobile-nav) {
+    display: none;
+  }
 }

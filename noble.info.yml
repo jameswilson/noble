@@ -19,6 +19,7 @@ regions:
   top_left: Top Left
   top_right: Top Right
   header: Header
+  mobile_nav: Mobile nav
   hero_area: Hero Area
   content: Content
   sidebar_first: Sidebar First

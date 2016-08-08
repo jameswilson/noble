@@ -52,12 +52,15 @@
       </div>
       <div class="l-top-right">
         {{ page.top_right }}
-        <a href="#" class="mobile-nav__trigger">Menu</a>
+        <a href="#mobile-nav" class="mobile-nav__trigger">Menu</a>
       </div>
     </div></div>
-    <div class="l-header"><div class="l-contained l-contained--header">
+    <div class="l-header mobile-header"><div class="l-contained l-contained--header">
       {{ page.header }}
     </div></div>
+    <div id="mobile-nav" class="mobile-nav">
+      {{ page.mobile_nav }}
+    </div>
   </header>
 
   {% if page.hero_area %}
