@@ -687,11 +687,96 @@ select {
 }
 
 .mobile-nav {
+  background: #fff;
+  border: solid #1b3e6a;
+  border-width: 0 0 1px 1px;
+  display: none;
+  padding-top: 20px;
+  position: absolute;
+  left: 30px;
+  right: 0;
+  top: 45px;
+}
+
+.mobile-nav:target, .mobile-nav.is-open {
+  display: block;
+}
+
+.mobile-nav .menu--mainnavigation .menu__toplevel {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 30px 20px;
+}
+
+.mobile-nav .menu--mainnavigation .menu__item a {
+  color: #1b3e6a;
+  font-size: 20px;
+  line-height: 28px;
+  background: #dde2e9;
+  display: block;
+  padding: 5px;
+  margin-top: 1px;
+}
+
+.mobile-nav .menu--mainnavigation .menu__item a::before {
+  content: '+';
+  font-size: 25px;
+  float: right;
+}
+
+.mobile-nav .menu--mainnavigation .menu__item.is-open a {
+  color: #666;
+}
+
+.mobile-nav .menu--mainnavigation .menu__item.is-open a::before {
+  content: '-';
+}
+
+.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item {
   display: none;
 }
 
-.mobile-nav:target {
+.mobile-nav .menu--mainnavigation .menu__sublevel.is-open .menu__item {
   display: block;
+}
+
+.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item a {
+  background: none;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item a::before {
+  content: '>';
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.block--menucartblock {
+  position: relative;
+}
+
+.mobile-nav .menu-cart__item,
+.menu-item-store-locator {
+  background: #1b3e6a;
+  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 5px;
+  margin-top: 1px;
+}
+
+.mobile-nav .menu-cart__item--count {
+  background: #fff;
+  color: #1b3e6a;
+  display: inline-block;
+  padding: 3px 5px;
+  line-height: 1em;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
 }
 
 .mobile-nav__trigger {

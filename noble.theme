@@ -111,6 +111,7 @@ function noble_preprocess_block(array &$variables) {
   if (isset($variables['machine_name']) && $variables['machine_name'] == 'about') {
     $variables['attributes']['class'][] = 'menu--expandable';
   }
+  // Add custom expandable menu functionality for main mobile menu.
 }
 
 /**
