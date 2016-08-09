@@ -1009,6 +1009,35 @@ select {
   background-image: url("../images/icon-arrow-right--light-blue.svg");
 }
 
+#cboxWrapper {
+  border-radius: 0;
+}
+
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxBottomLeft,
+#cboxBottomCenter,
+#cboxBottomRight {
+  display: none;
+}
+
+#cboxContent {
+  float: none !important;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 10px;
+}
+
+@media screen and (min-width: 650px) {
+  #cboxContent {
+    padding: 30px 50px;
+  }
+}
+
+#cboxLoadedContent {
+  margin: 0;
+}
+
 .skip-to-content {
   background: #1b3e6a;
   color: #fff;

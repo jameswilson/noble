@@ -1,0 +1,81 @@
+.retailer-redirect {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .retailer-redirect {
+    min-width: 520px;
+  }
+}
+
+.retailer-redirect__logo {
+  margin-bottom: 40px;
+  max-width: 250px;
+}
+
+.retailer-redirect__message {
+  color: #666;
+  font-size: 26px;
+  line-height: 23px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.retailer-redirect__progress {
+  width: 100%;
+}
+
+.retailer-redirect__progress .ui-progressbar {
+  border: 1px solid #dde2e9;
+  border-radius: 0;
+  color: #666;
+  position: relative;
+}
+
+.retailer-redirect__progress .ui-progressbar-value {
+  background: #bac5d2;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+.retailer-redirect__progress .ui-progressbar-value::before {
+  color: #666;
+  content: 'Transferring for final secure checkout...';
+  display: block;
+  font-weight: normal;
+  line-height: 35px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 650px) {
+  .retailer-redirect__progress .ui-progressbar-value::before {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .retailer-redirect__progress .ui-progressbar-value::after {
+    background: url("../images/icon-shield--light-grey.svg") center center no-repeat;
+    background-size: 100%;
+    content: '';
+    display: block;
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+  }
+}

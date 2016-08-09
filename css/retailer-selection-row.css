@@ -25,7 +25,13 @@
   -webkit-flex-grow: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
-  padding: 10px 30px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 650px) {
+  .retailer-selection-row__products {
+    padding: 10px 30px;
+  }
 }
 
 .retailer-selection-row__link a {
