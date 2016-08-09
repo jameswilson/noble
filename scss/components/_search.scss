@@ -87,9 +87,9 @@
   width: 18px;
 
   @media screen and (max-width: $mobile-nav) {
-    height: 50px;
-    right: 30px;
-    top: 0;
+    height: auto;
+    right: 40px;
+    top: 5px;
     width: 30px;
   }
 }

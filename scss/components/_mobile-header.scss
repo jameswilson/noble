@@ -1,4 +1,8 @@
 .mobile-header {
   border-bottom: 1px solid $light-light-blue;
   padding-bottom: 0;
+
+  .has-mobile-nav & {
+    border-bottom-color: $blue;
+  }
 }

@@ -686,29 +686,71 @@ select {
   padding-bottom: 0;
 }
 
+.has-mobile-nav .mobile-header {
+  border-bottom-color: #1b3e6a;
+}
+
+.has-mobile-nav {
+  overflow: hidden;
+}
+
 .mobile-nav {
   background: #fff;
   border: solid #1b3e6a;
   border-width: 0 0 1px 1px;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
   padding-top: 20px;
   position: absolute;
   left: 30px;
   right: 0;
   top: 45px;
+  -webkit-transform: translateX(100vw);
+      -ms-transform: translateX(100vw);
+          transform: translateX(100vw);
+  transition: opacity .5s ease-out, -webkit-transform .25s ease-out;
+  transition: opacity .5s ease-out, transform .25s ease-out;
 }
 
 .mobile-nav:target, .mobile-nav.is-open {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
-.mobile-nav .menu--mainnavigation .menu__toplevel {
+.mobile-nav__background {
+  background-color: rgba(27, 62, 106, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .1s ease-out;
+}
+
+.has-mobile-nav .mobile-nav__background {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu--mainnavigation-mobile .menu__toplevel {
   list-style-type: none;
   margin: 0;
   padding: 0 0 30px 20px;
 }
 
-.mobile-nav .menu--mainnavigation .menu__item a {
+.menu--mainnavigation-mobile .menu__item {
+  position: relative;
+}
+
+.menu--mainnavigation-mobile .menu__item a {
   color: #1b3e6a;
   font-size: 20px;
   line-height: 28px;
@@ -718,35 +760,25 @@ select {
   margin-top: 1px;
 }
 
-.mobile-nav .menu--mainnavigation .menu__item a::before {
-  content: '+';
-  font-size: 25px;
-  float: right;
+.menu--mainnavigation-mobile .menu__toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
-.mobile-nav .menu--mainnavigation .menu__item.is-open a {
-  color: #666;
+.menu--mainnavigation-mobile .menu__sublevel {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.mobile-nav .menu--mainnavigation .menu__item.is-open a::before {
-  content: '-';
-}
-
-.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item {
-  display: none;
-}
-
-.mobile-nav .menu--mainnavigation .menu__sublevel.is-open .menu__item {
-  display: block;
-}
-
-.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item a {
+.menu--mainnavigation-mobile .menu__sublevel .menu__item a {
   background: none;
   font-size: 16px;
   line-height: 21px;
 }
 
-.mobile-nav .menu--mainnavigation .menu__sublevel .menu__item a::before {
+.menu--mainnavigation-mobile .menu__sublevel .menu__item a::before {
   content: '>';
   display: inline-block;
   margin-right: 5px;
@@ -757,13 +789,46 @@ select {
 }
 
 .mobile-nav .menu-cart__item,
-.menu-item-store-locator {
+.mobile-nav .menu-item-store-locator {
   background: #1b3e6a;
   color: #fff;
   display: block;
   margin: 0;
-  padding: 5px;
+  padding: 5px 5px 5px 15px;
   margin-top: 1px;
+}
+
+.mobile-nav .menu-cart__item::after,
+.mobile-nav .menu-item-store-locator::after {
+  content: none;
+}
+
+.mobile-nav .menu-cart__item::before,
+.mobile-nav .menu-item-store-locator::before {
+  content: '';
+  background: no-repeat center right;
+  background-size: auto 100%;
+  display: inline-block;
+  margin-right: 5px;
+  height: 20px;
+  width: 22px;
+  vertical-align: -5px;
+}
+
+.mobile-nav .menu-cart__item--login::before {
+  background-image: url("../images/icon-login--white.svg");
+}
+
+.mobile-nav .menu-cart__item--logout::before {
+  background-image: url("../images/icon-logout--white.svg");
+}
+
+.mobile-nav .menu-cart__item--shopping-bag::before {
+  background-image: url("../images/icon-shopping-bag--white.svg");
+}
+
+.mobile-nav .menu-item-store-locator::before {
+  background-image: url("../images/icon-location--white.svg");
 }
 
 .mobile-nav .menu-cart__item--count {
@@ -776,7 +841,11 @@ select {
   border-radius: 50%;
   position: absolute;
   right: 10px;
-  bottom: 5px;
+  bottom: 6px;
+}
+
+.mobile-nav .menu-cart__item--count::before {
+  content: none;
 }
 
 .mobile-nav__trigger {
@@ -797,6 +866,13 @@ select {
   .mobile-nav__trigger {
     display: none;
   }
+}
+
+.has-mobile-nav .mobile-nav__trigger {
+  background-color: #fff;
+  background-image: url("../images/icon-menu--blue.svg");
+  border-left: 1px solid #1b3e6a;
+  z-index: 10;
 }
 
 .menu__title {
@@ -1479,9 +1555,9 @@ select {
 
 @media screen and (max-width: 910px) {
   .searchform__toggle {
-    height: 50px;
-    right: 30px;
-    top: 0;
+    height: auto;
+    right: 40px;
+    top: 5px;
     width: 30px;
   }
 }
