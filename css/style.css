@@ -858,14 +858,14 @@ select {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-  background: #1b3e6a url("../images/icon-menu--white.svg") no-repeat center center;
-  background-size: 25px auto;
+  background: #1b3e6a;
   display: block;
   height: 45px;
   position: absolute;
   right: 0;
   top: 0;
   width: 50px;
+  border-left: 1px solid transparent;
 }
 
 @media screen and (min-width: 910px) {
@@ -876,9 +876,61 @@ select {
 
 .has-mobile-nav .mobile-nav__trigger {
   background-color: #fff;
-  background-image: url("../images/icon-menu--blue.svg");
-  border-left: 1px solid #1b3e6a;
+  border-left-color: #1b3e6a;
   z-index: 10;
+}
+
+.menu-icon {
+  display: block;
+  position: relative;
+  padding: 0 10px;
+}
+
+.menu-icon__line {
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  margin-top: 21px;
+  display: block;
+  height: 2px;
+  width: 30px;
+  transition: all .25s ease-in-out;
+}
+
+.has-mobile-nav .menu-icon__line {
+  background: #1b3e6a;
+}
+
+.menu-icon__line--one {
+  -webkit-transform: translateY(-8px);
+      -ms-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.has-mobile-nav .menu-icon__line--one {
+  -webkit-transform: translateY(0) rotate(45deg);
+      -ms-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+
+.menu-icon__line--two {
+  margin-top: 21px;
+}
+
+.has-mobile-nav .menu-icon__line--two {
+  opacity: 0;
+}
+
+.menu-icon__line--three {
+  -webkit-transform: translateY(8px);
+      -ms-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.has-mobile-nav .menu-icon__line--three {
+  -webkit-transform: translateY(0) rotate(-45deg);
+      -ms-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
 }
 
 .menu__title {
@@ -1499,7 +1551,7 @@ select {
 
 @media screen and (max-width: 910px) {
   .block--search .form-search {
-    height: 45px;
+    height: 44px;
   }
 }
 
@@ -1598,8 +1650,8 @@ select {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  transition: -webkit-transform .3s ease-out .1s, opacity .2s ease;
-  transition: transform .3s ease-out .1s, opacity .2s ease;
+  transition: -webkit-transform .25s ease-out .1s, opacity .2s ease;
+  transition: transform .25s ease-out .1s, opacity .2s ease;
   width: 1px;
   z-index: 1;
 }

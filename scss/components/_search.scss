@@ -28,7 +28,7 @@
     width: 100%;
 
     @media screen and (max-width: $mobile-nav) {
-      height: 45px;
+      height: 44px;
     }
   }
 
@@ -122,7 +122,7 @@
   position: absolute;
   top: -4px;
   transform: rotate(0deg);
-  transition: transform .3s ease-out .1s, opacity .2s ease;
+  transition: transform .25s ease-out .1s, opacity .2s ease;
   width: 1px;
   z-index: 1;
 }

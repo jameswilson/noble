@@ -157,14 +157,14 @@
 
 .mobile-nav__trigger {
   @include hide-text();
-  background: $blue url('../images/icon-menu--white.svg') no-repeat center center;
-  background-size: 25px auto;
+  background: $blue;
   display: block;
   height: 45px;
   position: absolute;
   right: 0;
   top: 0;
   width: 50px;
+  border-left: 1px solid transparent;
 
   @media screen and (min-width: $mobile-nav) {
     display: none;
@@ -172,8 +172,7 @@
 
   .has-mobile-nav & {
     background-color: $white;
-    background-image: url('../images/icon-menu--blue.svg');
-    border-left: 1px solid $blue;
+    border-left-color: $blue;
     z-index: 10;
   }
 }
