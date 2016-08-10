@@ -37,8 +37,8 @@
   float: left;
   width: 60%;
 
-  @media screen and (max-width: 810px) {
-    max-width: 178px;
+  @media screen and (max-width: $mobile-nav) {
+    max-width: 209px;
   }
 }
 

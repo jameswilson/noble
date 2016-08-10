@@ -1,8 +1,12 @@
-.mobile-header {
-  border-bottom: 1px solid $light-light-blue;
-  padding-bottom: 0;
+@media screen and (max-width: $mobile-nav) {
+  .mobile-header {
+    border-bottom: 1px solid $light-light-blue;
+    padding-top: 5px;
+    padding-bottom: 0;
 
-  .has-mobile-nav & {
-    border-bottom-color: $blue;
+    .has-mobile-nav & {
+      border-bottom-color: $blue;
+    }
   }
+
 }

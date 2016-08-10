@@ -454,9 +454,9 @@ select {
   width: 60%;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 910px) {
   .block--branding {
-    max-width: 178px;
+    max-width: 209px;
   }
 }
 
@@ -687,13 +687,15 @@ select {
   }
 }
 
-.mobile-header {
-  border-bottom: 1px solid #d1d8e1;
-  padding-bottom: 0;
-}
-
-.has-mobile-nav .mobile-header {
-  border-bottom-color: #1b3e6a;
+@media screen and (max-width: 910px) {
+  .mobile-header {
+    border-bottom: 1px solid #d1d8e1;
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+  .has-mobile-nav .mobile-header {
+    border-bottom-color: #1b3e6a;
+  }
 }
 
 .has-mobile-nav {
@@ -858,6 +860,7 @@ select {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+  -webkit-tap-highlight-color: transparent;
   background: #1b3e6a;
   display: block;
   height: 45px;
@@ -866,6 +869,10 @@ select {
   top: 0;
   width: 50px;
   border-left: 1px solid transparent;
+}
+
+.mobile-nav__trigger:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 910px) {

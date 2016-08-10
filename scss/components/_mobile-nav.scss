@@ -157,6 +157,7 @@
 
 .mobile-nav__trigger {
   @include hide-text();
+  -webkit-tap-highlight-color: transparent;
   background: $blue;
   display: block;
   height: 45px;
@@ -165,6 +166,10 @@
   top: 0;
   width: 50px;
   border-left: 1px solid transparent;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media screen and (min-width: $mobile-nav) {
     display: none;
