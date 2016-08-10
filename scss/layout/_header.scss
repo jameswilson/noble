@@ -36,7 +36,12 @@
 .block--branding {
   float: left;
   width: 60%;
+
+  @media screen and (max-width: 810px) {
+    max-width: 178px;
+  }
 }
+
 
 .l-header .menu {
   display: none;

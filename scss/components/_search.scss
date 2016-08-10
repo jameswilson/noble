@@ -87,7 +87,7 @@
   width: 18px;
 
   @media screen and (max-width: $mobile-nav) {
-    height: auto;
+    height: 30px;
     right: 40px;
     top: 5px;
     width: 30px;
@@ -117,11 +117,10 @@
   background: $blue;
   display: inline-block;
   height: 0;
-  left: 0;
   opacity: 0;
   padding-bottom: 150%;
   position: absolute;
-  top: -25%;
+  top: -4px;
   transform: rotate(0deg);
   transition: transform .3s ease-out .1s, opacity .2s ease;
   width: 1px;
@@ -129,21 +128,15 @@
 }
 
 .searchform__close-left {
-  left: 10%;
-
   .searchopen & {
     opacity: 1;
     transform: rotate(45deg);
-    transform-origin: 0 100%;
   }
 }
 
 .searchform__close-right {
-  left: 90%;
-
   .searchopen & {
     opacity: 1;
     transform: rotate(-45deg);
-    transform-origin: 100% 100%;
   }
 }
