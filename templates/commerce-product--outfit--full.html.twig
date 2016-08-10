@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ *
+ * Override product template for an outfit type.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('noble/outfit-detail') }}
+<article{{ attributes.addClass('outfit-detail') }}>
+  <div class="outfit-detail__column-one">
+    <h1 class="outfit-detail__title">
+      {{ product.title }}
+    </h1>
+    <div class="outfit-detail__collection">
+      {{ product.field_outfit_collection }}
+    </div>
+    <div class="outfit-detail__price">
+      {{ product.variations.outfit_total }}
+    </div>
+    <div class="outfit-detail__actions">
+      {{ product.variations.actions }}
+      {{ product.variations.sizing_chart }}
+    </div>
+  </div>
+  <div class="outfit-detail__column-two">
+    {{ product.variations|without('outfit_total', 'actions', 'sizing_chart') }}
+  </div>
+</article>

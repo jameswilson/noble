@@ -1,0 +1,65 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.outfit-detail {
+  @include clearfix();
+}
+
+.outfit-detail__column-one {
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  padding-right: 30px;
+}
+
+.outfit-detail__column-two {
+  float: left;
+  width: 70%;
+}
+
+.outfit-detail__price {
+  color: $base-font-color;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.outfit-detail__title {
+  color: $base-font-color;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 0 0 10px;
+}
+
+.outfit-detail__collection {
+  margin: 10px 0;
+}
+
+.outfit-detail__variation-listing {
+  @media screen and (min-width: 500px) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.product-catalog__item {
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  padding: 0 10px;
+
+  @media screen and (min-width: 500px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 650px) {
+    width: 33%;
+  }
+}
+
+.product-catalog .pager {
+  width: 100%;
+}
