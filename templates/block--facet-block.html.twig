@@ -1,8 +1,19 @@
-{% extends "block.html.twig" %}
-{% block wrapper %}
-  <div{{ attributes|without('id').addClass('facet') }}>
-{% endblock %}
+{# There is a bug in the facets module where it still prints empty blocks despite the config setting. #}
+{% if content %}
 
-{% block title %}
-  <h3{{ title_attributes.addClass('facet__title') }}><span>{{ label }}</span></h3>
-{% endblock %}
+  {% block wrapper %}
+    <div{{ attributes|without('id').addClass('facet') }}>
+  {% endblock %}
+    {{ title_prefix }}
+    {% if label %}
+      {% block title %}
+        <h3{{ title_attributes.addClass('facet__title') }}><span>{{ label }}</span></h3>
+      {% endblock %}
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+
+{% endif %}

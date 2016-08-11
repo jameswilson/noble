@@ -1,6 +1,9 @@
 <?php
 
 use Drupal\Component\Utility\Html;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\file\Entity\File;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * @file
@@ -99,6 +102,35 @@ function noble_theme_suggestions_block_alter(array &$suggestions, array $variabl
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_block(array &$variables) {
+  // Change the theme and prepare images for rotating banner blocks.
+  if (isset($variables['content']['#block_content']) && $variables['content']['#block_content']->bundle() == 'rotating_banner') {
+    $narrow_style = ImageStyle::load('rotating_banner_mobile');
+    $wide_style = ImageStyle::load('rotating_banner_desktop');
+
+    $variables['content']['#theme'] = 'rotating_banner';
+    $block = $variables['content']['#block_content'];
+
+    $paragraph_fields = $block->get('field_slide_info')->getValue();
+
+    foreach($paragraph_fields as $key => $value) {
+      $paragraph_field = Paragraph::load($value['target_id']);
+
+      $desktop_file = $paragraph_field->get('field_desktop_image')->entity->uri->value;
+      $mobile_file = $paragraph_field->get('field_mobile_image')->entity->uri->value;
+
+      $link = $paragraph_field->get('field_slide_link')->getValue()[0]['uri'];
+      $alt = $paragraph_field->get('field_desktop_image')->alt;
+
+      $build_object = [];
+      $build_object['desktop_image'] = file_url_transform_relative($wide_style->buildUrl($desktop_file));
+      $build_object['mobile_image'] = file_url_transform_relative($narrow_style->buildUrl($mobile_file));
+      $build_object['image_alt'] = $alt;
+      $build_object['link'] = $link;
+      $slides[] = $build_object;
+    }
+    $variables['content']['slides'] = $slides;
+  }
+
   // Create an HTML class based on the block ID.
   if (!empty($variables['elements']['#id'])) {
     $variables['machine_name'] = Html::cleanCssIdentifier($variables['elements']['#id']);
@@ -230,7 +262,7 @@ function noble_preprocess_menu(array &$variables) {
  */
 function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $form['actions']['submit']['#attributes'] = array('class' => array('add-to-cart-button'));
-  if ($form['actions']['out_stock']) {
+  if (isset($form['actions']['out_stock']) && $form['actions']['out_stock']) {
     $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
     $form['actions']['out_stock']['#suffix'] = '</span>';
   }
@@ -242,14 +274,5 @@ function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(
   if($color = $form['purchased_entity']['widget'][0]['attributes']['attribute_color']) {
     $color['#title_display'] = 'invisible';
     $form['purchased_entity']['widget'][0]['attributes']['attribute_color'] = $color;
-  }
-
-  // Modify the size form to match the design.
-  // Add an empty 'size' option as the first and default option.
-  if($size = $form['purchased_entity']['widget'][0]['attributes']['attribute_size']) {
-    $size['#title_display'] = 'invisible';
-    $size['#options'] = array('' => $size['#title']) + $size['#options'];
-    $size['#default_value'] = '';
-    $form['purchased_entity']['widget'][0]['attributes']['attribute_size'] = $size;
   }
 }
