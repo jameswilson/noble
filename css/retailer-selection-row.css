@@ -1,11 +1,7 @@
 .retailer-selection-row {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: solid #d1d8e1;
   border-width: 1px 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -14,17 +10,13 @@
 }
 
 .retailer-selection-row__logo {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   text-align: center;
 }
 
 .retailer-selection-row__products {
   border-left: 1px solid #d1d8e1;
-  -webkit-flex-grow: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  flex-grow: 3;
   padding: 10px;
 }
 

@@ -18,6 +18,8 @@
   }
 
   .form-search {
+    appearance: none;
+    border-radius: 0;
     border-bottom: 0;
     border-left: 1px solid $light-blue;
     border-right: 0;

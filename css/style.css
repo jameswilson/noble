@@ -1611,6 +1611,9 @@ select {
 }
 
 .block--search .form-search {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-bottom: 0;
   border-left: 1px solid #dde2e9;
   border-right: 0;
@@ -1827,6 +1830,10 @@ select {
   min-width: .6em;
   padding: .05em .25em;
   text-align: center;
+}
+
+.menu-cart__item--count:hover {
+  opacity: 1;
 }
 
 .menu-cart__item--order-history::after {

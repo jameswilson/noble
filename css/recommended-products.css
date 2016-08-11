@@ -7,12 +7,8 @@
 
 @media screen and (min-width: 500px) {
   .recomended-products {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 }
 

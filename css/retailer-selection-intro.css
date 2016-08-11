@@ -1,21 +1,13 @@
 .retailer-selection-intro {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   margin: 130px 0 45px;
 }
 
 @media screen and (max-width: 650px) {
   .retailer-selection-intro {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 

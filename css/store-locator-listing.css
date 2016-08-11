@@ -1,14 +1,8 @@
 @media screen and (min-width: 500px) {
   .store-locator-listing {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    align-items: center;
     display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 }
 

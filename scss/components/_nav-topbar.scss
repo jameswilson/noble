@@ -83,6 +83,10 @@
   min-width: .6em;
   padding: .05em .25em;
   text-align: center;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .menu-cart__item--order-history {
