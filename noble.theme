@@ -102,7 +102,7 @@ function noble_theme_suggestions_block_alter(array &$suggestions, array $variabl
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_block(array &$variables) {
-
+  // Change the theme and prepare images for rotating banner blocks.
   if (isset($variables['content']['#block_content']) && $variables['content']['#block_content']->bundle() == 'rotating_banner') {
     $narrow_style = ImageStyle::load('rotating_banner_mobile');
     $wide_style = ImageStyle::load('rotating_banner_desktop');
