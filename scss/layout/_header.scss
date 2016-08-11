@@ -36,6 +36,7 @@
 .block--branding {
   float: left;
   width: 60%;
+  padding-left: 5px;
   padding-top: 5px;
 
   @media screen and (max-width: $mobile-nav) {

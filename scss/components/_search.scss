@@ -63,6 +63,10 @@
       display: inline-block;
       max-width: 680px;
       width: 80%;
+
+      @media screen and (max-width: $mobile-nav) {
+        width: 90%;
+      }
     }
   }
 

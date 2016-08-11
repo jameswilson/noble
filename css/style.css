@@ -452,6 +452,7 @@ select {
 .block--branding {
   float: left;
   width: 60%;
+  padding-left: 5px;
   padding-top: 5px;
 }
 
@@ -856,7 +857,7 @@ select {
 .mobile-nav .menu-cart__item::before,
 .mobile-nav .menu-item-store-locator::before {
   content: '';
-  background: no-repeat center right;
+  background: no-repeat center center;
   background-size: auto 100%;
   display: inline-block;
   margin-right: 5px;
@@ -867,18 +868,31 @@ select {
 
 .mobile-nav .menu-cart__item--login::before {
   background-image: url("../images/icon-login--white.svg");
+  background-size: auto 85%;
+  background-position: center right;
 }
 
 .mobile-nav .menu-cart__item--logout::before {
   background-image: url("../images/icon-logout--white.svg");
+  background-size: auto 85%;
+  background-position: center right;
 }
 
-.mobile-nav .menu-cart__item--shopping-bag::before {
+.mobile-nav .menu-cart__item--shopping-bag::before,
+.mobile-nav .menu-cart__item--cart::before {
   background-image: url("../images/icon-shopping-bag--white.svg");
 }
 
 .mobile-nav .menu-item-store-locator::before {
   background-image: url("../images/icon-location--white.svg");
+}
+
+.mobile-nav .menu-cart__item--order-history::before {
+  background-image: url("../images/icon-order-history--white.svg");
+}
+
+.mobile-nav .menu-cart__item--account::before {
+  background-image: url("../images/icon-account--white.svg");
 }
 
 .mobile-nav .menu-cart__item--count {
@@ -1647,6 +1661,12 @@ select {
   display: inline-block;
   max-width: 680px;
   width: 80%;
+}
+
+@media screen and (max-width: 910px) {
+  .searchopen .block--search form {
+    width: 90%;
+  }
 }
 
 .block--search .contextual .trigger {
