@@ -19,7 +19,18 @@
  * @ingroup themeable
  */
 #}
-{{kint( product_variation )}}
-<div{{ attributes }}>
-  {{ product_variation }}
+<div{{ attributes.addClass() }}>
+  <div class="product-teaser__info">
+    {{ product_variation.link }}
+  </div>
+  <div class="product-teaser__image">
+    {{ product_variation.field_front_image }}
+  </div>
+  <h2 class="product-teaser__title">
+    {{ product_variation.title }}
+  </h2>
+  <div class="product-teaser__price">
+    {{ product_variation.price }}
+  </div>
 </div>
+

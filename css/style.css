@@ -1323,6 +1323,19 @@ select {
   margin: 0;
 }
 
+.input-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-group__submit {
+  margin-left: -1px;
+}
+
 .skip-to-content {
   background: #1b3e6a;
   color: #fff;

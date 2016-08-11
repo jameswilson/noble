@@ -4,16 +4,24 @@
   width: 100%;
 }
 
-.outfit-detail__column-one {
-  box-sizing: border-box;
-  float: left;
-  width: 30%;
-  padding-right: 30px;
+@media screen and (max-width: 450px) {
+  .outfit-detail__column-one {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
-.outfit-detail__column-two {
-  float: left;
-  width: 70%;
+@media screen and (min-width: 450px) {
+  .outfit-detail__column-one {
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+    padding-right: 30px;
+  }
+  .outfit-detail__column-two {
+    float: left;
+    width: 70%;
+  }
 }
 
 .outfit-detail__price {
@@ -47,24 +55,20 @@
   }
 }
 
-.product-catalog__item {
+.outfit-detail__variation-listing-item {
   box-sizing: border-box;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   padding: 0 10px;
 }
 
 @media screen and (min-width: 500px) {
-  .product-catalog__item {
+  .outfit-detail__variation-listing-item {
     width: 50%;
   }
 }
 
 @media screen and (min-width: 650px) {
-  .product-catalog__item {
+  .outfit-detail__variation-listing-item {
     width: 33%;
   }
-}
-
-.product-catalog .pager {
-  width: 100%;
 }
