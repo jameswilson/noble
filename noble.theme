@@ -1,6 +1,9 @@
 <?php
 
 use Drupal\Component\Utility\Html;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\file\Entity\File;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * @file
@@ -99,6 +102,35 @@ function noble_theme_suggestions_block_alter(array &$suggestions, array $variabl
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_block(array &$variables) {
+
+  if (isset($variables['content']['#block_content']) && $variables['content']['#block_content']->bundle() == 'rotating_banner') {
+    $narrow_style = ImageStyle::load('rotating_banner_mobile');
+    $wide_style = ImageStyle::load('rotating_banner_desktop');
+
+    $variables['content']['#theme'] = 'rotating_banner';
+    $block = $variables['content']['#block_content'];
+
+    $paragraph_fields = $block->get('field_slide_info')->getValue();
+
+    foreach($paragraph_fields as $key => $value) {
+      $paragraph_field = Paragraph::load($value['target_id']);
+
+      $desktop_file = $paragraph_field->get('field_desktop_image')->entity->uri->value;
+      $mobile_file = $paragraph_field->get('field_mobile_image')->entity->uri->value;
+
+      $link = $paragraph_field->get('field_slide_link')->getValue()[0]['uri'];
+      $alt = $paragraph_field->get('field_desktop_image')->alt;
+
+      $build_object = [];
+      $build_object['desktop_image'] = file_url_transform_relative($wide_style->buildUrl($desktop_file));
+      $build_object['mobile_image'] = file_url_transform_relative($narrow_style->buildUrl($mobile_file));
+      $build_object['image_alt'] = $alt;
+      $build_object['link'] = $link;
+      $slides[] = $build_object;
+    }
+    $variables['content']['slides'] = $slides;
+  }
+
   // Create an HTML class based on the block ID.
   if (!empty($variables['elements']['#id'])) {
     $variables['machine_name'] = Html::cleanCssIdentifier($variables['elements']['#id']);
