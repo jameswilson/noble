@@ -27,11 +27,11 @@
 
 .mobile-nav__background {
   background-color: rgba($blue, .15);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100vh;
+  width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 5;
@@ -160,12 +160,11 @@
   -webkit-tap-highlight-color: transparent;
   background: $blue;
   display: block;
+  float: right;
   height: 45px;
-  position: absolute;
-  right: 0;
-  top: 0;
   width: 50px;
   border-left: 1px solid transparent;
+  position: relative;
 
   &:hover {
     opacity: 1;
@@ -179,5 +178,15 @@
     background-color: $white;
     border-left-color: $blue;
     z-index: 10;
+  }
+
+  .has-mobile-nav &::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $white;
   }
 }
