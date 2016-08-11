@@ -1,12 +1,12 @@
 // Convert pixel widths to percentages for the fluid grid. Note: The column
 // widths are tied to the pixel width of their respective image style sizes.
 $mg-width: 940px;
-$mg-gutter: 20px/$mg-width*100%;
-$mg-col-33: 300px/$mg-width*100%;
-$mg-col-40: 376px/$mg-width*100%;
-$mg-col-50: 460px/$mg-width*100%;
-$mg-col-60: 544px/$mg-width*100%;
-$mg-col-66: 620px/$mg-width*100%;
+$mg-gutter: 20px / $mg-width * 100%;
+$mg-col-33: 300px / $mg-width * 100%;
+$mg-col-40: 376px / $mg-width * 100%;
+$mg-col-50: 460px / $mg-width * 100%;
+$mg-col-60: 544px / $mg-width * 100%;
+$mg-col-66: 620px / $mg-width * 100%;
 
 .row {
   margin: 0 auto;
@@ -91,16 +91,16 @@ $mg-col-66: 620px/$mg-width*100%;
     }
 
     .col-1 {
-      margin-right: $mg-gutter/2;
+      margin-right: $mg-gutter / 2;
     }
 
     .col-2 {
-      margin-left: $mg-gutter/2;
-      margin-right: $mg-gutter/2;
+      margin-left: $mg-gutter / 2;
+      margin-right: $mg-gutter / 2;
     }
 
     .col-3 {
-      margin-left: $mg-gutter/2;
+      margin-left: $mg-gutter / 2;
     }
   }
 
@@ -110,11 +110,11 @@ $mg-col-66: 620px/$mg-width*100%;
   .row-2-3,
   .row-3-2 {
     .col-1 {
-      margin-right: $mg-gutter/2;
+      margin-right: $mg-gutter / 2;
     }
 
     .col-2 {
-      margin-left: $mg-gutter/2;
+      margin-left: $mg-gutter / 2;
     }
   }
 

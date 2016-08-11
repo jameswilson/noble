@@ -452,6 +452,7 @@ select {
 .block--branding {
   float: left;
   width: 60%;
+  padding-top: 5px;
 }
 
 @media screen and (max-width: 910px) {
@@ -460,7 +461,13 @@ select {
   }
 }
 
-.l-header .menu {
+@media screen and (max-width: 910px) {
+  .l-header .menu {
+    display: none;
+  }
+}
+
+.l-header .menu__sublevel {
   display: none;
 }
 
@@ -690,11 +697,18 @@ select {
 @media screen and (max-width: 910px) {
   .mobile-header {
     border-bottom: 1px solid #d1d8e1;
-    padding-top: 5px;
-    padding-bottom: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
   }
   .has-mobile-nav .mobile-header {
     border-bottom-color: #1b3e6a;
+  }
+  .mobile-header__wrapper {
+    position: relative;
+  }
+  .mobile-header .l-contained {
+    padding: 0;
   }
 }
 
@@ -730,11 +744,11 @@ select {
 
 .mobile-nav__background {
   background-color: rgba(27, 62, 106, 0.15);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100vh;
+  width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 5;
@@ -863,12 +877,11 @@ select {
   -webkit-tap-highlight-color: transparent;
   background: #1b3e6a;
   display: block;
+  float: right;
   height: 45px;
-  position: absolute;
-  right: 0;
-  top: 0;
   width: 50px;
   border-left: 1px solid transparent;
+  position: relative;
 }
 
 .mobile-nav__trigger:hover {
@@ -885,6 +898,16 @@ select {
   background-color: #fff;
   border-left-color: #1b3e6a;
   z-index: 10;
+}
+
+.has-mobile-nav .mobile-nav__trigger::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
 }
 
 .menu-icon {

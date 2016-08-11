@@ -36,14 +36,21 @@
 .block--branding {
   float: left;
   width: 60%;
+  padding-top: 5px;
 
   @media screen and (max-width: $mobile-nav) {
     max-width: 209px;
   }
 }
 
+@media screen and (max-width: $mobile-nav) {
+  .l-header .menu {
+    display: none;
+  }
+}
 
-.l-header .menu {
+// Hide these sub items for now until the dropdown designs are complete.
+.l-header .menu__sublevel {
   display: none;
 }
 
