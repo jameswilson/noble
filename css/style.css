@@ -712,8 +712,10 @@ select {
   }
 }
 
-.has-mobile-nav {
-  overflow: hidden;
+@media screen and (max-width: 910px) {
+  .has-mobile-nav {
+    overflow: hidden;
+  }
 }
 
 .mobile-nav {
@@ -734,12 +736,14 @@ select {
   transition: opacity .5s ease-out, transform .25s ease-out;
 }
 
-.mobile-nav:target, .mobile-nav.is-open {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+@media screen and (max-width: 910px) {
+  .mobile-nav:target, .mobile-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .mobile-nav__background {
@@ -757,9 +761,11 @@ select {
   transition: opacity .1s ease-out;
 }
 
-.has-mobile-nav .mobile-nav__background {
-  opacity: 1;
-  pointer-events: auto;
+@media screen and (max-width: 910px) {
+  .has-mobile-nav .mobile-nav__background {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .menu--mainnavigation-mobile .menu__toplevel {
@@ -770,9 +776,10 @@ select {
 
 .menu--mainnavigation-mobile .menu__item {
   position: relative;
+  text-align: center;
 }
 
-.menu--mainnavigation-mobile .menu__item a {
+.menu--mainnavigation-mobile .menu__item a:not(.menu-item--b2c-outfit-builder) {
   color: #1b3e6a;
   font-size: 20px;
   line-height: 28px;
@@ -780,6 +787,27 @@ select {
   display: block;
   padding: 5px;
   margin-top: 1px;
+  text-align: left;
+}
+
+.menu--mainnavigation-mobile .menu-item--b2c-outfit-builder {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.menu--mainnavigation-mobile .menu-item--b2c-outfit-builder::after {
+  background-size: 100%;
+  height: 25px;
+  width: 25px;
+}
+
+.menu--mainnavigation-mobile .menu-item--b2c-outfit-builder + .menu__toggle {
+  display: none;
 }
 
 .menu--mainnavigation-mobile .menu__toggle {
@@ -903,10 +931,10 @@ select {
 .has-mobile-nav .mobile-nav__trigger::before {
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 3px;
   background-color: #fff;
 }
 
@@ -1553,6 +1581,7 @@ select {
   position: absolute;
   right: 20px;
   top: 0;
+  z-index: 15;
 }
 
 .searchopen .block--search {
@@ -1633,7 +1662,7 @@ select {
   display: inline-block;
   height: 18px;
   outline: none;
-  padding: 4px;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 9px;
@@ -1643,10 +1672,10 @@ select {
 
 @media screen and (max-width: 910px) {
   .searchform__toggle {
-    height: 30px;
-    right: 40px;
+    height: 28px;
+    right: 50px;
     top: 5px;
-    width: 30px;
+    width: 28px;
   }
 }
 
@@ -1655,11 +1684,11 @@ select {
   background-size: contain;
   display: inline-block;
   height: 0;
-  left: 4px;
   opacity: 1;
   padding-bottom: 100%;
   position: absolute;
   top: 4px;
+  left: 20%;
   transition: opacity .2s ease;
   width: 100%;
 }
@@ -1674,9 +1703,10 @@ select {
   display: inline-block;
   height: 0;
   opacity: 0;
-  padding-bottom: 150%;
+  padding-bottom: 100%;
   position: absolute;
-  top: -4px;
+  top: 4px;
+  left: 80%;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);

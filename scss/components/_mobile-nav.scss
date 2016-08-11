@@ -1,6 +1,8 @@
 // Disable scrolling when the mobile nav is active.
 .has-mobile-nav {
-  overflow: hidden;
+  @media screen and (max-width: $mobile-nav) {
+    overflow: hidden;
+  }
 }
 
 .mobile-nav {
@@ -19,9 +21,11 @@
 
   &:target,
   &.is-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
+    @media screen and (max-width: $mobile-nav) {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
   }
 }
 
@@ -40,8 +44,10 @@
   transition: opacity .1s ease-out;
 
   .has-mobile-nav & {
-    opacity: 1;
-    pointer-events: auto;
+    @media screen and (max-width: $mobile-nav) {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 }
 
@@ -56,9 +62,11 @@
 
   .menu__item {
     position: relative;
+    // We add text align here so we can center the outfit button, then undo below.
+    text-align: center;
   }
 
-  .menu__item a {
+  .menu__item a:not(.menu-item--b2c-outfit-builder) {
     color: $blue;
     font-size: 20px;
     line-height: 28px;
@@ -66,6 +74,27 @@
     display: block;
     padding: 5px;
     margin-top: 1px;
+    text-align: left;
+  }
+
+  .menu-item--b2c-outfit-builder {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &::after {
+      background-size: 100%;
+      height: 25px;
+      width: 25px;
+    }
+
+    + .menu__toggle {
+      display: none;
+    }
   }
 
   .menu__toggle {
@@ -183,10 +212,10 @@
   .has-mobile-nav &::before {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 3px;
     background-color: $white;
   }
 }
