@@ -41,6 +41,11 @@
         nav.$wrapper.addClass('is-open');
         nav.$body.addClass('has-mobile-nav');
         nav.isOpen = true;
+
+        if(Drupal.behaviors.topbarSearch.isOpen) {
+          Drupal.behaviors.topbarSearch.toggle();
+        }
+
       }
     }
   };
