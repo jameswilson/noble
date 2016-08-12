@@ -904,9 +904,11 @@ select {
   line-height: 1em;
   font-weight: bold;
   border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  bottom: 6px;
+  float: right;
+  position: relative;
+  top: -27px;
+  right: 5px;
+  z-index: 20;
 }
 
 .mobile-nav .menu-cart__item--count::before {
