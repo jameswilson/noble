@@ -100,13 +100,24 @@
 </div>
 
 
+<div class="product-details__row-title-wrapper"><h2 class="product-details__row-title">{% trans %}Product Technologies {% endtrans %}</h2></div>
+<div class="product-details__row-description product-details__row-description--tech">
+  {% trans %}State of the art performance where you go, whatever the conditions.{% endtrans %}
+</div>
+<div class="product-details__technologies">
+  {{ product.field_weatherproof_rating }}
+  {{ product.field_features_weatherproof_tech }}
+</div>
+
   <div class="product-details__row-title-wrapper"><h2 class="product-details__row-title">{% trans %}Product Features {% endtrans %}</h2></div>
+  <div class="product-details__row-description product-details__row-description--features">
+    {% trans %}Everything you would need to be warm dry and comfortable. From weatherproof features to convenient adjustability to accommodating your accessories and valuables. {% endtrans %}
+  </div>
   <div class="product-details__listing">
     {{ product.field_features_elements }}
     {{ product.field_features_hood_collar_pocke }}
     {{ product.field_features_pattern_design_lo }}
     {{ product.field_features_reinforcement_con }}
-    {{ product.field_features_weatherproof_tech }}
   </div>
 
   {#{{ product }}#}

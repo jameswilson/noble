@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Overrides taxonomy-term.html.twig for Features vocabulary.
+ */
+#}
+<div{{ attributes.addClass("product-details__technology") }}>
+
+  {# Display contextual links. #}
+  {{ title_suffix }}
+
+  {# Display technology image. #}
+  <div class="product-details__technology-image">
+    {{ content.field_feature_image }}
+  </div>
+
+  {# If term has an empty description, fall back to term name. #}
+  <div class="product-details__technology-description">
+    {% if content.description|render|trim %}
+      {{ content.description }}
+    {% else %}
+      <h3>{{ name }}</h3>
+    {% endif %}
+  </div>
+
+</div>
