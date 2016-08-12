@@ -1,12 +1,21 @@
-@media screen and (max-width: $mobile-nav) {
+@include media(mobile-nav) {
   .mobile-header {
     border-bottom: 1px solid $light-light-blue;
-    padding-top: 5px;
-    padding-bottom: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
 
     .has-mobile-nav & {
       border-bottom-color: $blue;
     }
+  }
+
+  .mobile-header__wrapper {
+    position: relative;
+  }
+
+  .mobile-header .l-contained {
+    padding: 0;
   }
 
 }

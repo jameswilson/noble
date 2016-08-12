@@ -1,21 +1,34 @@
+// Convert pixel widths to percentages for the fluid grid. Note: The column
+// widths are tied to the pixel width of their respective image style sizes.
+$mg-width: 940px;
+$mg-gutter: 20px / $mg-width * 100%;
+$mg-col-33: 300px / $mg-width * 100%;
+$mg-col-40: 376px / $mg-width * 100%;
+$mg-col-50: 460px / $mg-width * 100%;
+$mg-col-60: 544px / $mg-width * 100%;
+$mg-col-66: 620px / $mg-width * 100%;
+
 .row {
   margin: 0 auto;
-  max-width: 944px;
+  max-width: $mg-width;
   overflow: hidden;
   padding: 0;
   text-align: center;
 
+  a,
   img {
     display: inline-block;
     height: auto;
     vertical-align: top;
+    width: 100%;
   }
 
   .col {
     box-sizing: border-box;
     display: inline-block;
-    margin: 0 -4px 1.666666% 0;
+    margin: 0 -4px $mg-gutter 0;
     vertical-align: top;
+    width: 100%;
   }
 }
 
@@ -67,30 +80,66 @@
   .row .col {
     display: block;
     float: left;
-    margin: 0 0 1.666666%;
-  }
-
-  .row .col-1 {
-    margin-right: .75%;
+    margin: 0 0 $mg-gutter;
     text-align: left;
   }
 
-  .row .col-2 {
-    margin-left: .75%;
-    text-align: right;
+  .row-1-1-1 {
+    .col-1,
+    .col-2,
+    .col-3 {
+      width: $mg-col-33;
+    }
+
+    .col-1 {
+      margin-right: $mg-gutter / 2;
+    }
+
+    .col-2 {
+      margin-left: $mg-gutter / 2;
+      margin-right: $mg-gutter / 2;
+    }
+
+    .col-3 {
+      margin-left: $mg-gutter / 2;
+    }
+  }
+
+  .row-1-1,
+  .row-2-1,
+  .row-1-2,
+  .row-2-3,
+  .row-3-2 {
+    .col-1 {
+      margin-right: $mg-gutter / 2;
+    }
+
+    .col-2 {
+      margin-left: $mg-gutter / 2;
+    }
   }
 
   .row-1-1 .col {
-    width: 49.25%;
+    width: $mg-col-50;
   }
 
   .row-2-1 .col-1,
   .row-1-2 .col-2 {
-    width: 64.666666%;
+    width: $mg-col-66;
   }
 
   .row-1-2 .col-1,
   .row-2-1 .col-2 {
-    width: 33.333333%;
+    width: $mg-col-33;
+  }
+
+  .row-2-3 .col-1,
+  .row-3-2 .col-2 {
+    width: $mg-col-40;
+  }
+
+  .row-3-2 .col-1,
+  .row-2-3 .col-2 {
+    width: $mg-col-60;
   }
 }

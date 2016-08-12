@@ -45,25 +45,25 @@
 #}
 <div class="l-page">
 
-  <header role="banner">
+  <header role="banner" class="mobile-header__wrapper">
     <div class="l-top"><div class="l-contained l-contained--top">
       <div class="l-top-left">
         {{ page.top_left }}
       </div>
       <div class="l-top-right">
         {{ page.top_right }}
-        <a href="#mobile-nav" class="mobile-nav__trigger">
-          Menu
-          <span class="menu-icon">
-            <span class="menu-icon__line menu-icon__line--one"></span>
-            <span class="menu-icon__line menu-icon__line--two"></span>
-            <span class="menu-icon__line menu-icon__line--three"></span>
-          </span>
-        </a>
       </div>
     </div></div>
     <div class="l-header mobile-header"><div class="l-contained l-contained--header">
       {{ page.header }}
+      <a href="#mobile-nav" class="mobile-nav__trigger">
+        Menu
+        <span class="menu-icon">
+          <span class="menu-icon__line menu-icon__line--one"></span>
+          <span class="menu-icon__line menu-icon__line--two"></span>
+          <span class="menu-icon__line menu-icon__line--three"></span>
+        </span>
+      </a>
     </div></div>
     <div class="mobile-nav__background">
       <div id="mobile-nav" class="mobile-nav">
