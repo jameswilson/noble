@@ -1,3 +1,9 @@
+// Product attributes.
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
 .product-attributes {
   list-style-type: none;
   margin: 0;
@@ -8,3 +14,5 @@
     margin: 0 5px;
   }
 }
+
+@import 'color-swatches';
