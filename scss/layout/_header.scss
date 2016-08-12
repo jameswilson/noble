@@ -3,7 +3,7 @@
 
   padding: 10px;
 
-  @media screen and (min-width: $mobile-nav) {
+  @include media(desktop-nav) {
     padding: 45px 0 60px;
   }
 
@@ -36,14 +36,15 @@
 .block--branding {
   float: left;
   width: 60%;
+  padding-left: 5px;
   padding-top: 5px;
 
-  @media screen and (max-width: $mobile-nav) {
+  @include media(mobile-nav) {
     max-width: 209px;
   }
 }
 
-@media screen and (max-width: $mobile-nav) {
+@include media(mobile-nav) {
   .l-header .menu {
     display: none;
   }
