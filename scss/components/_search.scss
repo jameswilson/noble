@@ -5,6 +5,10 @@
   top: 0;
   z-index: 15;
 
+  @include media(mobile-nav) {
+    right: 40px;
+  }
+
   .searchopen & {
     margin: 0 auto;
     max-width: $page-width;
@@ -15,6 +19,10 @@
 
   .form-item {
     margin-right: 42px;
+
+    @include media(mobile-nav) {
+      margin-left: 20px;
+    }
   }
 
   .form-search {
@@ -96,7 +104,7 @@
 
   @include media(mobile-nav) {
     height: 28px;
-    right: 50px;
+    right: 30px;
     top: 5px;
     width: 28px;
   }
