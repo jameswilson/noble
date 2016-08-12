@@ -1,9 +1,15 @@
 .recommendations-cart {
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #c9c9c9;
   border-width: 1px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .recommendations-cart__products {
@@ -13,7 +19,9 @@
 }
 
 .recommendations-cart__details {
-  flex-grow: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   font-size: 18px;
   line-height: 21px;
   padding-left: 30px;

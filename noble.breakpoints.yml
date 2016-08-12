@@ -10,6 +10,18 @@ noble.mobile-only:
   weight: 0
   multipliers:
     - 1x
+noble.mobile-nav:
+  label: mobile-nav
+  mediaQuery: '(max-width: 910px)'
+  weight: 0
+  multipliers:
+    - 1x
+noble.desktop-nav:
+  label: desktop-nav
+  mediaQuery: '(min-width: 911px)'
+  weight: 0
+  multipliers:
+    - 1x
 noble.narrow:
   label: narrow
   mediaQuery: 'all and (min-width: 560px)'

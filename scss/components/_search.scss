@@ -5,6 +5,10 @@
   top: 0;
   z-index: 15;
 
+  @include media(mobile-nav) {
+    right: 40px;
+  }
+
   .searchopen & {
     margin: 0 auto;
     max-width: $page-width;
@@ -15,6 +19,10 @@
 
   .form-item {
     margin-right: 42px;
+
+    @include media(mobile-nav) {
+      margin-left: 20px;
+    }
   }
 
   .form-search {
@@ -30,7 +38,7 @@
     padding: 0 10px;
     width: 100%;
 
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       height: 44px;
     }
   }
@@ -51,7 +59,7 @@
     text-indent: -9999px;
     width: 42px;
 
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       display: none;
     }
   }
@@ -66,7 +74,7 @@
       max-width: 680px;
       width: 80%;
 
-      @media screen and (max-width: $mobile-nav) {
+      @include media(mobile-nav) {
         width: 90%;
       }
     }
@@ -83,6 +91,7 @@
   background: none;
   border: 0;
   box-sizing: content-box;
+  cursor: pointer;
   display: inline-block;
   height: 18px;
   outline: none;
@@ -93,9 +102,9 @@
   vertical-align: middle;
   width: 18px;
 
-  @media screen and (max-width: $mobile-nav) {
+  @include media(mobile-nav) {
     height: 28px;
-    right: 50px;
+    right: 30px;
     top: 5px;
     width: 28px;
   }

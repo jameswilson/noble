@@ -1,6 +1,6 @@
 // Disable scrolling when the mobile nav is active.
 .has-mobile-nav {
-  @media screen and (max-width: $mobile-nav) {
+  @include media(mobile-nav) {
     overflow: hidden;
   }
 }
@@ -13,15 +13,16 @@
   pointer-events: none;
   padding-top: 20px;
   position: absolute;
-  left: 30px;
   right: 0;
+  width: 100%;
+  max-width: 18em;
   top: 45px;
   transform: translateX(100vw);
   transition: opacity .5s ease-out, transform .25s ease-out;
 
   &:target,
   &.is-open {
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       opacity: 1;
       pointer-events: auto;
       transform: translateX(0);
@@ -44,7 +45,7 @@
   transition: opacity .1s ease-out;
 
   .has-mobile-nav & {
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       opacity: 1;
       pointer-events: auto;
     }
@@ -188,9 +189,11 @@
   line-height: 1em;
   font-weight: bold;
   border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  bottom: 6px;
+  float: right;
+  position: relative;
+  top: -27px;
+  right: 5px;
+  z-index: 20;
 
   &::before {
     content: none;
@@ -200,6 +203,7 @@
 .mobile-nav__trigger {
   @include hide-text();
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   background: $blue;
   display: block;
   float: right;
@@ -212,7 +216,7 @@
     opacity: 1;
   }
 
-  @media screen and (min-width: $mobile-nav) {
+  @include media(desktop-nav) {
     display: none;
   }
 
