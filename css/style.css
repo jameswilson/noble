@@ -964,11 +964,11 @@ select {
 
 .menu-icon__line {
   background: #fff;
-  border-radius: 2px;
+  border-radius: 1px;
   position: absolute;
-  margin-top: 21px;
+  margin-top: 22px;
   display: block;
-  height: 2px;
+  height: 1px;
   width: 30px;
   transition: all .25s ease-in-out;
 }
@@ -998,9 +998,9 @@ select {
 }
 
 .menu-icon__line--three {
-  -webkit-transform: translateY(8px);
-      -ms-transform: translateY(8px);
-          transform: translateY(8px);
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
 }
 
 .has-mobile-nav .menu-icon__line--three {
