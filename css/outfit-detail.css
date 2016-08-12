@@ -4,14 +4,14 @@
   width: 100%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 879px) {
   .outfit-detail__column-one {
     text-align: center;
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 880px) {
   .outfit-detail__column-one {
     box-sizing: border-box;
     float: left;
@@ -52,12 +52,15 @@
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
 .outfit-detail__variation-listing-item {
   box-sizing: border-box;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 0 10px;
 }
 
