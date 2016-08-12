@@ -1,6 +1,6 @@
 // Disable scrolling when the mobile nav is active.
 .has-mobile-nav {
-  @media screen and (max-width: $mobile-nav) {
+  @include media(mobile-nav) {
     overflow: hidden;
   }
 }
@@ -21,7 +21,7 @@
 
   &:target,
   &.is-open {
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       opacity: 1;
       pointer-events: auto;
       transform: translateX(0);
@@ -44,7 +44,7 @@
   transition: opacity .1s ease-out;
 
   .has-mobile-nav & {
-    @media screen and (max-width: $mobile-nav) {
+    @include media(mobile-nav) {
       opacity: 1;
       pointer-events: auto;
     }
@@ -212,7 +212,7 @@
     opacity: 1;
   }
 
-  @media screen and (min-width: $mobile-nav) {
+  @include media(desktop-nav) {
     display: none;
   }
 
