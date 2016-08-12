@@ -727,8 +727,9 @@ select {
   pointer-events: none;
   padding-top: 20px;
   position: absolute;
-  left: 30px;
   right: 0;
+  width: 100%;
+  max-width: 18em;
   top: 45px;
   -webkit-transform: translateX(100vw);
       -ms-transform: translateX(100vw);
@@ -917,6 +918,7 @@ select {
   text-shadow: none;
   color: transparent;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   background: #1b3e6a;
   display: block;
   float: right;
@@ -1683,6 +1685,7 @@ select {
   background: none;
   border: 0;
   box-sizing: content-box;
+  cursor: pointer;
   display: inline-block;
   height: 18px;
   outline: none;

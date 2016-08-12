@@ -13,8 +13,9 @@
   pointer-events: none;
   padding-top: 20px;
   position: absolute;
-  left: 30px;
   right: 0;
+  width: 100%;
+  max-width: 18em;
   top: 45px;
   transform: translateX(100vw);
   transition: opacity .5s ease-out, transform .25s ease-out;
@@ -200,6 +201,7 @@
 .mobile-nav__trigger {
   @include hide-text();
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   background: $blue;
   display: block;
   float: right;
