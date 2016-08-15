@@ -17,14 +17,19 @@
   margin: 0 5px;
 }
 
-.product-attributes--10::after {
-  content: '';
-  width: 100%;
-}
+@media screen and (min-width: 975px) {
+  // Prevent orphan attributes. Note that this is only set to work at desktop size
+  // Create a fake flex item that spans 100%
+  .product-attributes--10::after {
+    content: '';
+    width: 100%;
+  }
 
-.product-attributes--10 .product-attributes--item:nth-of-type(9),
-.product-attributes--10 .product-attributes--item:nth-of-type(10) {
-  order: 1;
+  // Move the last two items to the end of the list
+  .product-attributes--10 .product-attributes--item:nth-of-type(9),
+  .product-attributes--10 .product-attributes--item:nth-of-type(10) {
+    order: 1;
+  }
 }
 
 @import 'color-swatches';
