@@ -8,11 +8,23 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  li {
-    display: inline-block;
-    margin: 0 5px;
-  }
+.product-attributes--item {
+  margin: 0 5px;
+}
+
+.product-attributes--10::after {
+  content: '';
+  width: 100%;
+}
+
+.product-attributes--10 .product-attributes--item:nth-of-type(9),
+.product-attributes--10 .product-attributes--item:nth-of-type(10) {
+  order: 1;
 }
 
 @import 'color-swatches';
