@@ -1,0 +1,26 @@
+#Frame {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#Frame::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+#FramePhoto {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  margin: 0 !important;
+}
+
+#FrameHTML5Viewer {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+}
