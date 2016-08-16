@@ -1405,6 +1405,18 @@ select {
   margin-left: -1px;
 }
 
+.subhead {
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subhead__prefix {
+  margin-bottom: 0;
+}
+
 .skip-to-content {
   background: #1b3e6a;
   color: #fff;
