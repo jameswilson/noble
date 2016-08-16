@@ -1,0 +1,77 @@
+.outfit-detail::after {
+  content: '';
+  display: table;
+  width: 100%;
+}
+
+@media screen and (max-width: 879px) {
+  .outfit-detail__column-one {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .outfit-detail__column-one {
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+    padding-right: 30px;
+  }
+  .outfit-detail__column-two {
+    float: left;
+    width: 70%;
+  }
+}
+
+.outfit-detail__price {
+  color: #666;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.outfit-detail__title {
+  color: #666;
+  font-size: 35px;
+  line-height: 35px;
+  margin: 0 0 10px;
+}
+
+.outfit-detail__collection {
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 500px) {
+  .outfit-detail__variation-listing {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.outfit-detail__variation-listing-item {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .outfit-detail__variation-listing-item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .outfit-detail__variation-listing-item {
+    width: 33%;
+  }
+}

@@ -2,9 +2,107 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.product-attributes li {
-  display: inline-block;
+.product-attributes--item {
   margin: 0 5px;
+}
+
+@media screen and (min-width: 975px) {
+  .product-attributes--10::after {
+    content: '';
+    width: 100%;
+  }
+  .product-attributes--10 .product-attributes--item:nth-of-type(9),
+  .product-attributes--10 .product-attributes--item:nth-of-type(10) {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.field--name-field-swatch {
+  background: #efefef url(../images/noswatch.jpg) no-repeat 50% 50%;
+  display: inline-block;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+.field--name-field-swatch:hover {
+  cursor: pointer;
+}
+
+.field--name-field-swatch img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.product--rendered-attribute .form-radio {
+  display: block;
+  width: 0;
+  height: 0;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.product--rendered-attribute ~ label {
+  opacity: 1;
+  transition: opacity .3 ease-out;
+}
+
+.product--rendered-attribute__selected ~ label.option {
+  border: none;
+}
+
+.product--rendered-attribute input:active + label.option,
+.product--rendered-attribute input:focus + label.option {
+  outline-offset: -2px;
+  outline: #4d90fe auto 5px;
+  outline: -webkit-focus-ring-color auto 5px;
+  border: none;
+}
+
+.product--rendered-attribute input[checked] + label.option {
+  opacity: .9;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color {
+  position: relative;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color label,
+.form-item-purchased-entity-0-attributes-attribute-color label div {
+  display: block;
+  line-height: 16px;
+  vertical-align: top;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress .throbber {
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress .message {
+  display: none;
 }

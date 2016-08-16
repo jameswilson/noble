@@ -1,0 +1,80 @@
+.field--name-field-swatch  {
+  background: $light-gray url(../images/noswatch.jpg) no-repeat 50% 50%;
+  display: inline-block;
+  line-height: 15px;
+  vertical-align: top;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+}
+
+.product--rendered-attribute .form-radio {
+  display: block;
+  width: 0;
+  height: 0;
+  clip: rect(0,0,0,0);
+  position: absolute;
+}
+
+// Override and reset default "selected" functionality
+// and resort to CSS native [checked] functionality.
+.product--rendered-attribute ~ label {
+  opacity: 1;
+  transition: opacity .3 ease-out;
+}
+
+.product--rendered-attribute__selected ~ label.option {
+  border: none;
+}
+
+.product--rendered-attribute input:active + label.option,
+.product--rendered-attribute input:focus + label.option {
+  outline-offset: -2px;
+  outline: rgb(77, 144, 254) auto 5px; // #4D90FE
+  outline: -webkit-focus-ring-color auto 5px;
+  border: none;
+}
+
+.product--rendered-attribute input[checked] + label.option {
+  opacity: .9;
+}
+
+
+
+.form-item-purchased-entity-0-attributes-attribute-color {
+  position: relative;
+
+  label,
+  label div {
+    display:block;
+    line-height: 16px;
+    vertical-align: top;
+  }
+
+  .ajax-progress {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+
+    .throbber {
+      padding: 0;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
+
+    .message {
+      display: none;
+    }
+  }
+}

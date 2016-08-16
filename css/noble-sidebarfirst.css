@@ -12,7 +12,7 @@
   }
   .noble-sidebarfirst__content {
     box-sizing: border-box;
-    float: left;
+    float: right;
     width: 75%;
   }
 }
