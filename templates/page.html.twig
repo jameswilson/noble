@@ -43,7 +43,13 @@
  * @see html.html.twig
  */
 #}
-<div class="l-page">
+{% if page.sidebar_first %}
+  {% set wrapperclass = ' noble-sidebarfirst' %}
+  {% set mainclass = ' noble-sidebarfirst__content' %}
+  {{ attach_library('noble/noble-sidebarfirst-layout') }}
+{% endif %}
+
+<div class="l-page{{ wrapperclass }}">
 
   <header role="banner" class="mobile-header__wrapper">
     <div class="l-top"><div class="l-contained l-contained--top">
@@ -81,12 +87,12 @@
   <main class="l-main" role="main"><div class="l-contained l-contained--main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="l-content">
+    <div class="l-content{{mainclass}}">
       {{ page.content }}
     </div>
 
     {% if page.sidebar_first %}
-      <aside class="l-sidebar-first" role="complementary">
+      <aside class="noble-sidebarfirst__sidebar" role="complementary">
         {{ page.sidebar_first }}
       </aside>
     {% endif %}
