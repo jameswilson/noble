@@ -78,7 +78,9 @@
     </h1>
   {{ title_suffix }}
 
+  {% if content.field_page_subhead %}
   <h2 class="subhead">{{ content.field_page_subhead }}</h2>
+  {% endif %}
 
   <div{{ content_attributes }}>
     {{ content|without('field_page_subhead') }}
