@@ -84,6 +84,12 @@
   </div>
   {% endif %}
 
+  {% if page.pre_content %}
+  <div class="l-contained">
+    {{ page.pre_content }}
+  </div>
+  {% endif %}
+
   <main class="l-main" role="main"><div class="l-contained l-contained--main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
