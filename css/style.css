@@ -733,6 +733,12 @@ select {
   }
 }
 
+.toolbar .toolbar-bar::after {
+  content: '';
+  display: table;
+  width: 100%;
+}
+
 @media (max-width: 910px) {
   .mobile-header {
     border-bottom: 1px solid #d1d8e1;
