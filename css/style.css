@@ -1580,6 +1580,7 @@ select {
   height: 1px;
   width: 1px;
   word-wrap: normal;
+  pointer-events: none;
 }
 
 .cart .form-item + .form-item select {
