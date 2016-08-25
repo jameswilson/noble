@@ -1,0 +1,4 @@
+.toolbar .toolbar-bar {
+  // Ensure toolbar background color loads correctly even without JS.
+  @include clearfix();
+}

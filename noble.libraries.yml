@@ -7,6 +7,7 @@ global-styling:
   js:
     js/topbar-search.js: {}
     js/menu--expandable.js: {}
+    js/mobile-nav.js: {}
   dependencies:
     - core/jquery
 
@@ -34,6 +35,15 @@ product-teaser:
       css/product-teaser.css: {}
       css/product-attributes.css: {}
       css/facet.css: {}
+
+outfit-detail:
+  version: 1.x
+  css:
+    theme:
+      css/outfit-detail.css: {}
+      css/product-teaser.css: {}
+      css/product-attributes.css: {}
+
 
 store-locator-filter-form:
   version: 1.x

@@ -1,0 +1,238 @@
+// Disable scrolling when the mobile nav is active.
+.has-mobile-nav {
+  @include media(mobile-nav) {
+    overflow: hidden;
+  }
+}
+
+.mobile-nav {
+  background: $white;
+  border: solid $blue;
+  border-width: 0 0 1px 1px;
+  opacity: 0;
+  pointer-events: none;
+  padding-top: 20px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  max-width: 18em;
+  top: 45px;
+  transform: translateX(100vw);
+  transition: opacity .5s ease-out, transform .25s ease-out;
+
+  &:target,
+  &.is-open {
+    @include media(mobile-nav) {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+  }
+}
+
+.mobile-nav__background {
+  background-color: rgba($blue, .15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .1s ease-out;
+
+  .has-mobile-nav & {
+    @include media(mobile-nav) {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+// scss-lint:disable SelectorDepth
+.menu--mainnavigation-mobile {
+
+  .menu__toplevel {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 30px 20px;
+  }
+
+  .menu__item {
+    position: relative;
+    // We add text align here so we can center the outfit button, then undo below.
+    text-align: center;
+  }
+
+  .menu__item a:not(.menu-item--b2c-outfit-builder) {
+    color: $blue;
+    font-size: 20px;
+    line-height: 28px;
+    background: $light-blue;
+    display: block;
+    padding: 5px;
+    margin-top: 1px;
+    text-align: left;
+  }
+
+  .menu-item--b2c-outfit-builder {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &::after {
+      background-size: 100%;
+      height: 25px;
+      width: 25px;
+    }
+
+    + .menu__toggle {
+      display: none;
+    }
+  }
+
+  .menu__toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .menu__sublevel {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__sublevel .menu__item a {
+    background: none;
+    font-size: 16px;
+    line-height: 21px;
+
+    &::before {
+      content: '>';
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.block--menucartblock {
+  position: relative;
+}
+
+.mobile-nav .menu-cart__item,
+.mobile-nav .menu-item-store-locator {
+  background: $blue;
+  color: $white;
+  display: block;
+  margin: 0;
+  padding: 5px 5px 5px 15px;
+  margin-top: 1px;
+
+  &::after {
+    content: none;
+  }
+
+  &::before {
+    content: '';
+    background: no-repeat center center;
+    background-size: auto 100%;
+    display: inline-block;
+    margin-right: 5px;
+    height: 20px;
+    width: 22px;
+    vertical-align: -5px;
+  }
+}
+
+.mobile-nav .menu-cart__item--login::before {
+  background-image: url('../images/icon-login--white.svg');
+  background-size: auto 85%;
+  background-position: center right;
+}
+
+.mobile-nav .menu-cart__item--logout::before {
+  background-image: url('../images/icon-logout--white.svg');
+  background-size: auto 85%;
+  background-position: center right;
+}
+
+.mobile-nav .menu-cart__item--shopping-bag::before,
+.mobile-nav .menu-cart__item--cart::before {
+  background-image: url('../images/icon-shopping-bag--white.svg');
+}
+
+.mobile-nav .menu-item-store-locator::before {
+  background-image: url('../images/icon-location--white.svg');
+}
+
+.mobile-nav .menu-cart__item--order-history::before {
+  background-image: url('../images/icon-order-history--white.svg');
+}
+
+.mobile-nav .menu-cart__item--account::before {
+  background-image: url('../images/icon-account--white.svg');
+}
+
+.mobile-nav .menu-cart__item--count {
+  background: $white;
+  color: $blue;
+  display: inline-block;
+  padding: 3px 5px;
+  line-height: 1em;
+  font-weight: bold;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  top: -27px;
+  right: 5px;
+  z-index: 20;
+
+  &::before {
+    content: none;
+  }
+}
+
+.mobile-nav__trigger {
+  @include hide-text();
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background: $blue;
+  display: block;
+  float: right;
+  height: 45px;
+  width: 50px;
+  border-left: 1px solid transparent;
+  position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include media(desktop-nav) {
+    display: none;
+  }
+
+  .has-mobile-nav & {
+    background-color: $white;
+    border-left-color: $blue;
+    z-index: 10;
+  }
+
+  .has-mobile-nav &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: $white;
+  }
+}

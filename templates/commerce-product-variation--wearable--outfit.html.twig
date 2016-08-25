@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ *
+ * Override template for product variations.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product_variation: The rendered product variation fields.
+ *   Use 'product_variation' to print them all, or print a subset such as
+ *   'product_variation.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product_variation|without('title') }}
+ *   @endcode
+ * - product_variation_entity: The product variation entity.
+ * - url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass() }}>
+  <div class="product-teaser__info">
+    {{ product_variation.link }}
+  </div>
+  <div class="product-teaser__image">
+    {{ product_variation.field_front_image }}
+  </div>
+  <h2 class="product-teaser__title">
+    {{ product_variation.title }}
+  </h2>
+  <div class="product-teaser__price">
+    {{ product_variation.price }}
+  </div>
+</div>
+

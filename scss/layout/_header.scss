@@ -1,6 +1,11 @@
 .l-header {
   @include clearfix;
-  padding: 45px 0 60px;
+
+  padding: 10px;
+
+  @include media(desktop-nav) {
+    padding: 45px 0 60px;
+  }
 
   .menu {
     margin-top: 1.1em;
@@ -18,16 +23,91 @@
   .menu__item {
     display: inline-block;
     padding: 0 .2em;
+    position: relative;
 
     a {
       display: inline-block;
       line-height: 22px;
       padding: .4em .8em;
+      // Always appear on top of the sub-items.
+      position: relative;
+      z-index: 10;
     }
   }
 }
 
-@include media('narrow') {
+// Dropdown functionality.
+.l-header .menu__sublevel {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  // The height of the top menu item.
+  padding: 56px 10px 20px;
+  z-index: 5;
+  transition: opacity .2s ease-out;
+  border-left: 1px solid $light-light-blue;
+  background: $transparent-white;
+}
+
+.l-header .menu__item--has-children:hover > a {
+  color: $light-graphite;
+}
+
+.l-header li:hover .menu__sublevel {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.l-header .menu__sublevel li {
+  display: block;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    background: url('../images/icon-arrow-right--blue.svg');
+    background-size: auto 100%;
+    height: 10px;
+    width: 8px;
+  }
+}
+
+.l-header .menu__sublevel a {
+  padding-left: 0;
+}
+
+.block--branding {
+  float: left;
+  width: 60%;
+  padding-left: 5px;
+  padding-top: 5px;
+
+  @include media(mobile-nav) {
+    max-width: 209px;
+  }
+}
+
+@include media(mobile-nav) {
+  .l-header .menu {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 810px) {
+  .block--branding {
+    float: left;
+    width: 30%;
+  }
+
+  .l-header .menu {
+    float: right;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1040px) {
   .block--branding {
     float: left;
     width: 45%;

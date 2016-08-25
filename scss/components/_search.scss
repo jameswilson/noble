@@ -3,6 +3,11 @@
   position: absolute;
   right: 20px;
   top: 0;
+  z-index: 15;
+
+  @include media(mobile-nav) {
+    right: 40px;
+  }
 
   .searchopen & {
     margin: 0 auto;
@@ -14,9 +19,15 @@
 
   .form-item {
     margin-right: 42px;
+
+    @include media(mobile-nav) {
+      margin-left: 20px;
+    }
   }
 
   .form-search {
+    appearance: none;
+    border-radius: 0;
     border-bottom: 0;
     border-left: 1px solid $light-blue;
     border-right: 0;
@@ -26,6 +37,10 @@
     line-height: normal;
     padding: 0 10px;
     width: 100%;
+
+    @include media(mobile-nav) {
+      height: 44px;
+    }
   }
 
   .form-actions {
@@ -43,6 +58,10 @@
     height: 42px;
     text-indent: -9999px;
     width: 42px;
+
+    @include media(mobile-nav) {
+      display: none;
+    }
   }
 
   form {
@@ -54,6 +73,10 @@
       display: inline-block;
       max-width: 680px;
       width: 80%;
+
+      @include media(mobile-nav) {
+        width: 90%;
+      }
     }
   }
 
@@ -68,26 +91,37 @@
   background: none;
   border: 0;
   box-sizing: content-box;
+  cursor: pointer;
   display: inline-block;
   height: 18px;
-  padding: 4px;
+  outline: none;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 9px;
   vertical-align: middle;
   width: 18px;
+
+  @include media(mobile-nav) {
+    height: 28px;
+    right: 30px;
+    top: 5px;
+    width: 28px;
+  }
 }
 
 .searchform__open {
-  background: url('../images/icon-search-toggle.svg') no-repeat 50% 50%;
+  background: url('../images/icon-search-toggle.svg') no-repeat 0 0;
+  background-size: contain;
   display: inline-block;
-  height: 18px;
-  left: 4px;
+  height: 0;
   opacity: 1;
+  padding-bottom: 100%;
   position: absolute;
   top: 4px;
+  left: 20%;
   transition: opacity .2s ease;
-  width: 18px;
+  width: 100%;
 
   .searchopen & {
     opacity: 0;
@@ -98,12 +132,14 @@
 .searchform__close-right {
   background: $blue;
   display: inline-block;
-  height: 18px;
+  height: 0;
   opacity: 0;
+  padding-bottom: 100%;
   position: absolute;
-  top: 2px;
+  top: 4px;
+  left: 80%;
   transform: rotate(0deg);
-  transition: transform .3s ease-out .1s, opacity .2s ease;
+  transition: transform .25s ease-out .1s, opacity .2s ease;
   width: 1px;
   z-index: 1;
 }
@@ -111,18 +147,13 @@
 .searchform__close-left {
   .searchopen & {
     opacity: 1;
-    right: 19px;
     transform: rotate(45deg);
-    transform-origin: 0 100%;
   }
 }
 
 .searchform__close-right {
   .searchopen & {
-    left: 18px;
     opacity: 1;
-
     transform: rotate(-45deg);
-    transform-origin: 100% 100%;
   }
 }
