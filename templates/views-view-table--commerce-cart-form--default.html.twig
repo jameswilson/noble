@@ -115,7 +115,10 @@ sticky ? 'sticky-enabled',
                     {% for content in column.content %}
                         {{- content.separator }}{{ content.field_output -}}
                         {% if row.out_of_stock and key == 'purchased_entity' %}
-                            This product is out of stock online. Modify the configuration or<a href="{{ path('page_manager.page_view_store_locator', { 'variation': row.variation_id }) }}">{{ 'find a local store' }}</a>for this product.
+                            {% set path = path('page_manager.page_view_store_locator', { 'variation': row.variation_id }) %}
+                            {% trans %}
+                            This product is out of stock online. Modify the configuration or<a href="{{ path }}">find a local store</a>for this product.
+                            {% endtrans %}
                         {% endif %}
                     {% endfor %}
                 {%- endif %}
@@ -130,7 +133,9 @@ sticky ? 'sticky-enabled',
             </td>
         {% endfor %}
         <td{{ column.attributes.addClass(column_classes) }}>
+            {% trans %}
             TOTAL:
+            {% endtrans %}
         </td>
         <td{{ column.attributes.addClass(column_classes) }}>
             ${{ total_amount }}
