@@ -49,6 +49,11 @@
       <h2 class="product-details__subtitle">{% trans %}Product Details{% endtrans %}</h2>
         {{ product.body }}
     </div>
+    <div class="fabric-and-insulation">
+      <h2 class="fabric-and-insulation__subtitle">{% trans %}Fabric & Insulation{% endtrans %}</h2>
+      {{ product.field_fabric }}
+      {{ product.field_insulation }}
+    </div>
     <div class="share-widget">
       <h3 class="share-widget__label">{% trans %}Share Product{% endtrans %}</h3>
       <div class="share-widget__actions">
