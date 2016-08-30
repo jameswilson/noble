@@ -70,9 +70,6 @@
       {% if product.field_product_lifestyle_images.0 %}
       <a class="product-details__media-button js-product-details__media-button--lifestyle" href="#"><span class="product-details__media-button__icon icon icon--small icon-grid"></span><span class="product-details__media-button__text">Lifestyle</span></a>
       {% endif %}
-      {% if product.product_rating %}
-      <a class="product-details__media-button js-product-details__media-button--rating colorbox" href="{{ product.product_rating.url}}">{{ product.product_rating.label }}</a>
-      {% endif %}
       {%  if product.variation_field_reverse_image.0 %}
       <a class="product-details__media-button js-product-details__media-button--images-reverse" data-current-view="front" href=""><span class="product-details__media-button__icon icon icon--small icon-forward"></span><span class="product-details__media-button__text">Back View</span></a>
       {% endif %}
