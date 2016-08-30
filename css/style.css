@@ -1520,14 +1520,12 @@ select {
 }
 
 .cart table {
-  border-bottom: 1px solid #d1d8e1;
   border-collapse: collapse;
   border-spacing: 0;
-  min-width: 800px;
+  min-width: 960px;
 }
 
 .cart th {
-  border-bottom: 1px solid #d1d8e1;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1538,7 +1536,7 @@ select {
 }
 
 .cart .cart__row {
-  border-bottom: 1px solid #d1d8e1;
+  border-top: 1px solid #d1d8e1;
 }
 
 .cart .cart__row--outstock {
@@ -1594,10 +1592,14 @@ select {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-justify-content: left;
       -ms-flex-pack: left;
           justify-content: left;
   min-height: 130px;
+  max-width: 530px;
 }
 
 .cart .cart__product-image {
@@ -1625,6 +1627,13 @@ select {
   opacity: 1;
 }
 
+.cart .cart__row--outstock .cart__product-info {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: -50px;
+}
+
 .cart .field--name-title {
   font-size: 18px;
   font-weight: bold;
@@ -1633,9 +1642,21 @@ select {
   margin-top: 5px;
 }
 
+.cart .cart__row--outstock .field--name-title {
+  display: inline-block;
+}
+
 .cart .field--name-sku {
   font-size: 15px;
   line-height: 27px;
+}
+
+.cart .cart__row--outstock .field--name-sku {
+  display: inline-block;
+}
+
+.cart .cart__out-of-stock-message {
+  margin: -100px 0 0 105px;
 }
 
 .cart .views-field-total-price__amount {
@@ -1644,6 +1665,7 @@ select {
 
 .cart .views-field-edit-quantity {
   text-align: center;
+  border-right: 1px solid #d1d8e1;
 }
 
 .cart .views-field-edit-quantity .form-number {
@@ -1663,6 +1685,23 @@ select {
 .cart .form-actions {
   margin-top: 25px;
   text-align: right;
+}
+
+.cart .cart__total-price-row {
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+}
+
+.cart .cart__total-price-row-label {
+  padding: 10px 15px;
+  text-align: right;
+  border-right: 1px solid #fff;
+}
+
+.cart .cart__total-price-row-amount {
+  padding: 10px 15px;
+  text-align: center;
 }
 
 .block--search {

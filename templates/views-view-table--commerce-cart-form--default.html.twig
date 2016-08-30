@@ -116,9 +116,11 @@ sticky ? 'sticky-enabled',
                         {{- content.separator }}{{ content.field_output -}}
                         {% if row.out_of_stock and key == 'purchased_entity' %}
                             {% set path = path('page_manager.page_view_store_locator', { 'variation': row.variation_id }) %}
-                            {% trans %}
-                            This product is out of stock online. Modify the configuration or<a href="{{ path }}">find a local store</a>for this product.
-                            {% endtrans %}
+                            <div class="cart__out-of-stock-message">
+                                {% trans %}
+                                This product is out of stock online. Modify the configuration or <a href="{{ path }}">find a local store</a> for this product.
+                                {% endtrans %}
+                            </div>
                         {% endif %}
                     {% endfor %}
                 {%- endif %}
@@ -126,20 +128,19 @@ sticky ? 'sticky-enabled',
             {% endfor %}
         </tr>
     {% endfor %}
-    <tr{{ row.attributes }}>
-        {% for i in 0..2 %}
-            <td{{ column.attributes.addClass(column_classes) }}>
+    <tr class="cart__total-price-row">
+        <td colspan="2">
 
-            </td>
-        {% endfor %}
-        <td{{ column.attributes.addClass(column_classes) }}>
+        </td>
+        <td class="cart__total-price-row-label">
             {% trans %}
             TOTAL:
             {% endtrans %}
         </td>
-        <td{{ column.attributes.addClass(column_classes) }}>
+        <td class="cart__total-price-row-amount">
             ${{ total_amount }}
         </td>
+        <td></td>
     </tr>
     </tbody>
 </table>
