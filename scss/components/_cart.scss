@@ -6,14 +6,12 @@
   }
 
   table {
-    border-bottom: 1px solid $light-light-blue;
     border-collapse: collapse;
     border-spacing: 0;
-    min-width: 800px;
+    min-width: 960px;
   }
 
   th {
-    border-bottom: 1px solid $light-light-blue;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -25,7 +23,7 @@
   }
 
   .cart__row {
-    border-bottom: 1px solid $light-light-blue;
+    border-top: 1px solid $light-light-blue;
   }
 
   .cart__row--outstock {
@@ -73,9 +71,12 @@
   td.views-field-purchased-entity {
     align-items: center;
     display: flex;
+    flex-flow: row wrap;
     justify-content: left;
     min-height: 130px;
+    max-width: 530px;
   }
+
 
   .cart__product-image {
     margin: 10px;
@@ -102,6 +103,13 @@
     opacity: 1;
   }
 
+  .cart__row--outstock .cart__product-info {
+    flex-grow: 1;
+    margin-top: -50px;
+    white-space: nowrap;
+    max-width: 420px;
+  }
+
   .field--name-title {
     font-size: 18px;
     font-weight: bold;
@@ -110,9 +118,21 @@
     margin-top: 5px;
   }
 
+  .cart__row--outstock .field--name-title {
+    display: inline-block;
+  }
+
   .field--name-sku {
     font-size: 15px;
     line-height: 27px;
+  }
+
+  .cart__row--outstock .field--name-sku {
+    display: inline-block;
+  }
+
+  .cart__out-of-stock-message {
+    margin: -100px 0 0 105px;
   }
 
   .views-field-total-price__amount {
@@ -121,6 +141,7 @@
 
   .views-field-edit-quantity {
     text-align: center;
+    border-right: 1px solid $light-light-blue;
 
     .form-number {
       background: $white;
@@ -140,5 +161,22 @@
   .form-actions {
     margin-top: 25px;
     text-align: right;
+  }
+
+  .cart__total-price-row {
+    background-color: $light-graphite;
+    color: $white;
+    font-weight: bold;
+  }
+
+  .cart__total-price-row-label {
+    padding: 10px 15px;
+    text-align: right;
+    border-right: 1px solid $white;
+  }
+
+  .cart__total-price-row-amount {
+    padding: 10px 15px;
+    text-align: center;
   }
 }
