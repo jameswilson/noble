@@ -798,7 +798,6 @@ select {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 5;
@@ -809,6 +808,7 @@ select {
 
 @media (max-width: 910px) {
   .has-mobile-nav .mobile-nav__background {
+    width: 100vw;
     opacity: 1;
     pointer-events: auto;
   }
