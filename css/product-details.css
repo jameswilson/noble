@@ -232,6 +232,12 @@
   margin: 30px 0 25px;
 }
 
+.product-details__size-chart {
+  border: 1px solid #bac5d2;
+  border-left: 0;
+  padding: .3em 10px;
+}
+
 .product-details__fit {
   border-bottom: 1px solid #d1d8e1;
   margin-bottom: 25px;
@@ -248,6 +254,10 @@
 }
 
 .product-details__fit .field--name-field-fit {
+  display: inline;
+}
+
+.product-details__fit .field--name-field-fit-guide {
   display: inline;
 }
 
