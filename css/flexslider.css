@@ -96,11 +96,14 @@ html[xmlns] .flexslider .slides {
 
 .flex-viewport {
   max-height: 2000px;
-  transition: all 1s ease;
 }
 
 .loading .flex-viewport {
   max-height: 300px;
+}
+
+.flex-viewport.is-hidden {
+  height: 0 !important;
 }
 
 .carousel li {
