@@ -106,6 +106,8 @@
   .cart__row--outstock .cart__product-info {
     flex-grow: 1;
     margin-top: -50px;
+    white-space: nowrap;
+    max-width: 420px;
   }
 
   .field--name-title {

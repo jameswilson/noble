@@ -1632,6 +1632,8 @@ select {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-top: -50px;
+  white-space: nowrap;
+  max-width: 420px;
 }
 
 .cart .field--name-title {
