@@ -34,7 +34,7 @@
         $.colorbox.resize();
       });
 
-      $('.js-product-details__media-button--images-360', context).colorbox({iframe:true, width: '80%', height: '80%'});
+      $('.js-product-details__media-button--images-360', context).colorbox({iframe:true, width: '80%', height: '100%'});
 
       $('.js-product-details__media-button--lifestyle', context).bind('click', function (e) {
         e.preventDefault();
