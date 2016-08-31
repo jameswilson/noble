@@ -75,6 +75,7 @@ $small-width: 750px;
     float: left;
   }
 
+
   .fieldgroup.attribute--color {
     float: none;
     margin-bottom: 15px;
@@ -101,6 +102,12 @@ $small-width: 750px;
   }
 }
 
+.product-details__size-chart {
+  border: 1px solid #bac5d2;
+  border-left: 0;
+  padding: .3em 10px;
+}
+
 .product-details__fit {
   border-bottom: 1px solid $light-light-blue;
   margin-bottom: 25px;
@@ -116,6 +123,10 @@ $small-width: 750px;
   }
 
   .field--name-field-fit {
+    display: inline;
+  }
+
+  .field--name-field-fit-guide  {
     display: inline;
   }
 }
