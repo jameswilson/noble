@@ -87,14 +87,12 @@ html[xmlns] .flexslider .slides {
 }
 .flex-viewport {
   max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 .loading .flex-viewport {
   max-height: 300px;
+}
+.flex-viewport.is-hidden {
+  height: 0!important;
 }
 .carousel li {
   margin-right: 5px;
