@@ -428,7 +428,7 @@ select {
 
 @media (min-width: 911px) {
   .l-header {
-    padding: 45px 0 60px;
+    padding: 45px 0;
   }
 }
 

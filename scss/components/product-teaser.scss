@@ -16,8 +16,15 @@
   margin: 5px 0;
 }
 
-.product-teaser__image {
+.product-teaser__images, // Used on catalogs
+.product-teaser__image { // Used on outfits
   padding: 20px 20px 0;
+
+  // Ensure the bottom alignment of small product images like mittens and caps
+  // look ok next to larger images on outfits and catalog pages.
+  min-height: 240px;
+  display: flex;
+  align-items: center;
 }
 
 .product-teaser__colors {

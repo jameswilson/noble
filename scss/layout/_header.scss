@@ -4,7 +4,7 @@
   padding: 10px;
 
   @include media(desktop-nav) {
-    padding: 45px 0 60px;
+    padding: 45px 0;
   }
 
   .menu {

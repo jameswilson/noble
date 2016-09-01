@@ -10,8 +10,16 @@
   margin: 5px 0;
 }
 
+.product-teaser__images,
 .product-teaser__image {
   padding: 20px 20px 0;
+  min-height: 240px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-teaser__colors {

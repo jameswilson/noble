@@ -23,6 +23,7 @@
 #}
 {{ attach_library('classy/messages') }}
 {% block messages %}
+{% if message_list %}
 <div class="messages__wrapper">
 {% for type, messages in message_list %}
   {%
@@ -55,4 +56,5 @@
   {{ attributes.removeClass(classes) }}
 {% endfor %}
 </div>
+{% endif %}
 {% endblock messages %}
