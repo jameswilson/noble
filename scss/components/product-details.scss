@@ -104,7 +104,7 @@ $small-width: 750px;
 }
 
 .product-details__size-chart {
-  border: 1px solid #bac5d2;
+  border: 1px solid $semi-light-blue;
   border-left: 0;
   padding: .3em 10px;
 }
@@ -127,7 +127,7 @@ $small-width: 750px;
     display: inline;
   }
 
-  .field--name-field-fit-guide  {
+  .field--name-field-fit-guide {
     display: inline;
   }
 }
