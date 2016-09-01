@@ -2269,6 +2269,72 @@ ul.entity-moderation-form {
   width: 100%;
 }
 
+.gsc-wrapper {
+  max-width: 600px;
+}
+
+.gcsc-branding {
+  display: none;
+}
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+  font-size: 23px;
+  line-height: 25px;
+  color: #333;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus {
+  border-color: #d1d8e1;
+  height: auto !important;
+}
+
+.gsib_a {
+  padding-bottom: 4px !important;
+}
+
+.gsst_a {
+  padding-top: 8px !important;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+  width: 20px !important;
+  height: 20px !important;
+  margin-top: 3px !important;
+  border-radius: 0 !important;
+}
+
+.gs-webResult div.gs-visibleUrl-long {
+  display: none !important;
+}
+
+.gsc-webResult gsc-result {
+  border-bottom: 1px solid #d1d8e1 !important;
+}
+
+.gs-result .gs-title,
+.gs-result .gs-title * {
+  color: #333;
+  font-size: 18px !important;
+  font-weight: bold;
+  font-family: "Maven Pro", sans-serif;
+  height: auto !important;
+  text-decoration: none !important;
+}
+
+.gs-result .gs-title:hover,
+.gs-result .gs-title *:hover {
+  text-decoration: underline !important;
+}
+
+.gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
+  font-size: 15px;
+}
+
 .delete-line-item {
   font: 0/0 a;
   text-shadow: none;
