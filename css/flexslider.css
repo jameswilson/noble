@@ -247,8 +247,16 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
 }
 
+.flex-control-thumbs img:hover {
+  opacity: 0.8;
+}
+
 .flex-control-thumbs .flex-active {
   cursor: default;
+}
+
+.flex-control-thumbs .flex-active:hover {
+  opacity: 1;
 }
 
 /* ====================================================================================================================

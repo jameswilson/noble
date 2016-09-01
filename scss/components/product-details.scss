@@ -150,6 +150,11 @@ $small-width: 750px;
   vertical-align: middle;
 }
 
+.product-details__images img {
+  display: block;
+  margin: 0 auto;
+}
+
 .product-details__row-title-wrapper {
   font-size: 30px;
   position: relative;
