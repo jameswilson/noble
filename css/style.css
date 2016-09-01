@@ -1447,6 +1447,16 @@ select {
   max-width: 707px;
 }
 
+#cboxTitle {
+  left: 10px;
+}
+
+@media screen and (min-width: 650px) {
+  #cboxTitle {
+    left: 50px;
+  }
+}
+
 .input-group {
   display: -webkit-flex;
   display: -ms-flexbox;
