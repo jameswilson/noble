@@ -33,7 +33,22 @@
         $.colorbox.resize();
       });
 
-      $('.js-product-details__media-button--images-360', context).colorbox({iframe:true, width: '80%', height: '80%'});
+      var cboxOptions = {iframe:true, width: '600px', height: '688px', maxWidth: '99%', maxHeight: '99%',
+      onComplete: function() {
+        // Resize colorbox if the viewport changes.
+        $(window).on('resize',function(){
+            $.colorbox.resize({
+              width: window.innerWidth < parseInt(cboxOptions.width) ? cboxOptions.maxWidth : cboxOptions.width,
+              height: window.innerHeight < parseInt(cboxOptions.height) ? cboxOptions.maxHeight : cboxOptions.height
+            });
+        });
+      },
+      onCleanup: function() {
+        // Resize colorbox if the viewport changes.
+        $(window).off('resize');
+      }};
+
+      $('.js-product-details__media-button--images-360', context).colorbox(cboxOptions);
 
       $('.js-product-details__media-button--lifestyle', context).bind('click', function (e) {
         e.preventDefault();

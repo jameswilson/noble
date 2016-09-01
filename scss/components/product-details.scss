@@ -27,6 +27,7 @@ $small-width: 750px;
 
 .product-details__media {
   box-sizing: border-box;
+  overflow: hidden;
 
   @media screen and (min-width: $small-width) {
     float: left;
