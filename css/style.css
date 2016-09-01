@@ -1504,6 +1504,17 @@ select {
 
 .input-group__submit {
   margin-left: -1px;
+  line-height: 1.1;
+  padding: 0 0 0 -5px;
+}
+
+.input-group__submit .form-submit {
+  line-height: 1.5;
+  margin-left: -5px;
+}
+
+.input-group__item {
+  width: 50%;
 }
 
 .subhead {
