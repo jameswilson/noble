@@ -53,3 +53,15 @@
 #cboxClose {
   background: url('../images/icon-close.svg') no-repeat 50% 50%;
 }
+
+#cboxPrevious,
+#cboxClose,
+#cboxNext {
+  opacity: 1;
+  transition: opacity .2s ease-out;
+
+  &:hover {
+    background-position: 50% 50%;
+    opacity: .8;
+  }
+}

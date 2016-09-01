@@ -1472,6 +1472,20 @@ select {
   background: url("../images/icon-close.svg") no-repeat 50% 50%;
 }
 
+#cboxPrevious,
+#cboxClose,
+#cboxNext {
+  opacity: 1;
+  transition: opacity .2s ease-out;
+}
+
+#cboxPrevious:hover,
+#cboxClose:hover,
+#cboxNext:hover {
+  background-position: 50% 50%;
+  opacity: .8;
+}
+
 .input-group {
   display: -webkit-flex;
   display: -ms-flexbox;
