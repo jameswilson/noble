@@ -20,7 +20,6 @@
  */
 #}
 <div{{ attributes.addClass('recommended-products__item product-teaser') }}>
-  <div class="product-teaser__info">{{ product_variation.link }}</div>
   <div class="product-teaser__image">{{ product_variation.field_front_image }}</div>
   <h3 class="product-teaser__title">{{ product_variation.title }}</h3>
   {{- product_variation|without('link', 'title', 'field_front_image') -}}

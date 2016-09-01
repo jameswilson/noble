@@ -12,7 +12,7 @@
 
 .product-teaser__images,
 .product-teaser__image {
-  padding: 20px 20px 0;
+  padding: 0;
   min-height: 240px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,20 +24,6 @@
 
 .product-teaser__colors {
   margin-top: 15px;
-}
-
-.product-teaser__info a {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background: url("../images/icon-info--blue.svg") no-repeat;
-  background-size: 100% auto;
-  display: block;
-  height: 25px;
-  position: absolute;
-  right: 30px;
-  top: 0;
-  width: 25px;
 }
 
 .product-teaser__view-button {
