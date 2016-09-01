@@ -1517,6 +1517,10 @@ select {
   width: 50%;
 }
 
+.input-group__item select {
+  width: 100%;
+}
+
 .subhead {
   font-size: 25px;
   line-height: 38px;
