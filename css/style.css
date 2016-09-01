@@ -1486,6 +1486,13 @@ select {
   opacity: .8;
 }
 
+#cboxCurrent {
+  bottom: 1px;
+  color: #666;
+  font-size: 15px;
+  left: 56px;
+}
+
 .input-group {
   display: -webkit-flex;
   display: -ms-flexbox;
