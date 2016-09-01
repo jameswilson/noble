@@ -9,7 +9,7 @@ body {
   height: auto !important;
   min-height: 100vh !important;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
 #FramePhoto {
@@ -21,13 +21,13 @@ body {
 #FrameHTML5Viewer {
   display: block;
   margin: 0 auto;
-  height: 100vh !important;
+  height: auto !important;
   max-height: 100vh !important;
   width: auto !important;
   max-width: 100vw !important;
 
   @media screen and (max-aspect-ratio: 600/688) {
-    height: auto !important;
+    max-height: none !important;
   }
 }
 

@@ -160,6 +160,7 @@
 
 .product-details__media {
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 750px) {
