@@ -4,7 +4,6 @@
   Drupal.behaviors.productImages = {
     attach: function (context) {
 
-      $('.js-product-details__images .flex-viewport').addClass('is-hidden');
       $('.js-product-details__media-button--images-reverse').bind('click', function (e) {
         e.preventDefault();
         $('.js-product-details__images-reverse').removeClass('hidden');
@@ -13,10 +12,14 @@
         $('.js-product-details__images .flex-viewport').addClass('is-hidden');
       });
 
-      $('.js-product-details__images .flexslider').bind('start', function(e, slider) {
-        $('.flex-control-thumbs li', slider).bind('click', function(e) {
+      var $slider = $('.js-product-details__images .flexslider').first();
+      var $sliderApi = $slider.data('flexslider');
+      $slider.bind('start', function(e) {
+        $slider.find('.flex-viewport').addClass('is-hidden');
+        $slider.find('.flex-control-thumbs li').bind('click', function(e) {
           $('.js-product-details__images-reverse').addClass('hidden');
-          $('.js-product-details__images .flex-viewport').removeClass('is-hidden');
+          $slider.find('.flex-viewport').removeClass('is-hidden');
+          $sliderApi.resize();
         });
       });
 
