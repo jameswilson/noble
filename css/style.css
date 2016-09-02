@@ -2444,7 +2444,11 @@ input.gsc-input,
 }
 
 .gs-webResult .gs-snippet b:nth-child(2) {
-  color: black;
+  color: #333;
+}
+
+.gsc-adBlock {
+  display: none;
 }
 
 .gsc-table-cell-snippet-close,

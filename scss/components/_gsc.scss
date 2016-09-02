@@ -103,8 +103,12 @@ input.gsc-input,
 
 .gs-webResult .gs-snippet {
   b:nth-child(2) {
-    color: black;
+    color: $graphite;
   }
+}
+
+.gsc-adBlock {
+  display: none;
 }
 
 .gsc-table-cell-snippet-close,
