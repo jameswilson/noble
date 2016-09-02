@@ -460,6 +460,10 @@ select {
   z-index: 10;
 }
 
+.l-header .no-link:hover {
+  cursor: default;
+}
+
 .l-header .menu__sublevel {
   opacity: 0;
   pointer-events: none;
