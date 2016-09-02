@@ -29,6 +29,12 @@
   text-transform: uppercase;
 }
 
+.footer__logo {
+  img {
+    display: block;
+  }
+}
+
 @include media('narrow') {
   .block--footer-copyright {
     float: left;

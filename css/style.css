@@ -722,6 +722,10 @@ select {
   text-transform: uppercase;
 }
 
+.footer__logo img {
+  display: block;
+}
+
 @media all and (min-width: 560px) {
   .block--footer-copyright {
     float: left;
