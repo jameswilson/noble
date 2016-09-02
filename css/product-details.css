@@ -217,6 +217,14 @@
   margin: 0 .5em;
 }
 
+.product-details__add-to-cart .button--sizing-chart {
+  border: 1px solid #bac5d2;
+  background: none;
+  color: #1b3e6a;
+  border-left: 0;
+  padding: .3em 10px;
+}
+
 .product-details__add-to-cart .out-of-stock {
   color: #999;
   display: inline-block;
@@ -231,12 +239,6 @@
 .product-details__add-to-cart .product--rendered-attribute {
   float: none;
   margin: 30px 0 25px;
-}
-
-.product-details__size-chart {
-  border: 1px solid #bac5d2;
-  border-left: 0;
-  padding: .3em 10px;
 }
 
 .product-details__fit {

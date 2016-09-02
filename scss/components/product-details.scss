@@ -86,6 +86,14 @@ $small-width: 750px;
     margin: 0 .5em;
   }
 
+  .button--sizing-chart {
+    border: 1px solid $semi-light-blue;
+    background: none;
+    color: $blue;
+    border-left: 0;
+    padding: .3em 10px;
+  }
+
   .out-of-stock {
     color: $med-gray;
     display: inline-block;
@@ -101,12 +109,6 @@ $small-width: 750px;
     float: none;
     margin: 30px 0 25px;
   }
-}
-
-.product-details__size-chart {
-  border: 1px solid $semi-light-blue;
-  border-left: 0;
-  padding: .3em 10px;
 }
 
 .product-details__fit {
