@@ -13,21 +13,53 @@
 }
 
 .store-locator-result__column-one {
-  width: 80px;
+  width: 12%;
+  padding-right: 10px;
 }
 
 .store-locator-result__column-two {
-  width: 350px;
+  width: 60%;
+  padding-right: 10px;
 }
 
 .store-locator-result__column-three {
-  width: 180px;
+  width: 31%;
+}
+
+.store-locator-result__info {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: .5em 0;
+  padding-left: 1.5em;
+  overflow: hidden;
+}
+
+.store-locator-result__info-label {
+  margin-left: -1.5em;
+  width: 1.5em;
+  float: left;
+}
+
+.store-locator-result__info-value {
+  display: block;
+  float: left;
+  overflow: hidden;
+
+  a {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
 }
 
 .store-locator-result__distance {
   color: $light-graphite;
   font-weight: bold;
   text-align: center;
+
+  .icon {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .store-locator-result__name {
