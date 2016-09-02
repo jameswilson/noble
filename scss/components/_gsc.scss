@@ -1,10 +1,38 @@
 // Overrides for Google Custom Search
 .gsc-wrapper {
-  max-width: 600px;
+  max-width: 640px;
+  margin-top: 15px;
+}
+
+.gsc-above-wrapper-area {
+  padding: 10px 0 15px;
 }
 
 .gcsc-branding {
   display: none;
+}
+
+.gsc-control-cse {
+  margin: 0;
+
+  &,
+  .gsc-table-result {
+    font-family: $maven-pro;
+    font-size: 16px;
+  }
+
+  .gsc-table-result {
+    max-width: 580px;
+  }
+}
+
+.gsc-result-info,
+.gsc-cursor-page {
+  font-size: 15px;
+}
+
+.gsc-result-info {
+  padding-left: 0;
 }
 
 .gsc-search-box-tools .gsc-search-box .gsc-input {
@@ -32,8 +60,9 @@ input.gsc-input,
 }
 
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-  width: 20px !important;
-  height: 20px !important;
+  width: 13px !important;
+  height: 13px !important;
+  padding: 10px 27px !important;
   margin-top: 3px !important;
   border-radius: 0 !important;
 }
@@ -42,14 +71,16 @@ input.gsc-input,
   display: none !important;
 }
 
-.gsc-webResult gsc-result {
-  border-bottom: 1px solid $light-light-blue !important;
+.gsc-table-result,
+.gsc-thumbnail-inside,
+.gsc-url-top {
+
 }
 
 .gs-result .gs-title,
 .gs-result .gs-title * {
   color: $heading-font-color;
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: bold;
   font-family: $maven-pro;
   height: auto !important;
@@ -59,6 +90,26 @@ input.gsc-input,
   }
 }
 
-.gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
+.gs-result .gs-title {
+  margin: 10px 0;
+}
+
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
   font-size: 15px;
+}
+
+.gs-webResult .gs-snippet {
+
+}
+
+.gsc-table-cell-snippet-close,
+.gs-promotion-text-cell {
+  vertical-align: middle;
+}
+
+.gs-image-box.gs-web-image-box.gs-web-image-box-portrait {
+  width: 70px;
+  height: 60px;
 }
