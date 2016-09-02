@@ -460,6 +460,10 @@ select {
   z-index: 10;
 }
 
+.l-header .no-link {
+  color: #1b3e6a;
+}
+
 .l-header .no-link:hover {
   cursor: default;
 }

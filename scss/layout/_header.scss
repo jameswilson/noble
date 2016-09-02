@@ -36,8 +36,12 @@
     }
   }
 
-  .no-link:hover {
-    cursor: default;
+  .no-link {
+    color: $blue;
+
+    &:hover {
+      cursor: default;
+    }
   }
 }
 
