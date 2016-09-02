@@ -46,7 +46,9 @@
 
 .outfit-detail__actions {
   .button--sizing-chart {
-    border: 1px solid;
+    border: 1px solid $semi-light-blue;
+    background: none;
+    color: $blue;
     padding: .2em .8em;
     margin: .5em 0;
     display: inline-block;
