@@ -451,6 +451,7 @@ select {
   position: relative;
 }
 
+.l-header .menu__item .no-link,
 .l-header .menu__item a {
   display: inline-block;
   line-height: 22px;
