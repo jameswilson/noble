@@ -6,6 +6,11 @@
 
 .gsc-above-wrapper-area {
   padding: 10px 0 15px;
+
+  .gsc-result-info {
+    font-size: 15px;
+    padding-left: 0;
+  }
 }
 
 .gcsc-branding {
@@ -17,8 +22,8 @@
 
   &,
   .gsc-table-result {
-    font-family: $maven-pro;
-    font-size: 16px;
+    font-family: $maven-pro !important;
+    font-size: 16px !important;
   }
 
   .gsc-table-result {
@@ -26,14 +31,14 @@
   }
 }
 
-.gsc-result-info,
-.gsc-cursor-page {
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
   font-size: 15px;
+  margin: 0 .4em 0 0;
+  text-align: center;
+  padding: .3em .4em;
 }
 
-.gsc-result-info {
-  padding-left: 0;
-}
+
 
 
 .gsc-search-box-tools .gsc-search-box .gsc-input {
@@ -68,14 +73,17 @@ input.gsc-input,
   border-radius: 0 !important;
 }
 
-.gs-webResult div.gs-visibleUrl-long {
-  display: none !important;
-}
+.gs-webResult {
 
-.gsc-table-result,
-.gsc-thumbnail-inside,
-.gsc-url-top {
+  div.gs-visibleUrl-long {
+    display: none !important;
+  }
 
+  .gsc-table-result,
+  .gsc-thumbnail-inside,
+  .gsc-url-top {
+    padding-left: 0 !important;
+  }
 }
 
 .gs-result .gs-title,
@@ -102,7 +110,7 @@ input.gsc-input,
 }
 
 .gs-webResult .gs-snippet {
-  b:nth-child(2) {
+  b {
     color: $graphite;
   }
 }

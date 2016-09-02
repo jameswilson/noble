@@ -2355,6 +2355,11 @@ ul.entity-moderation-form {
   padding: 10px 0 15px;
 }
 
+.gsc-above-wrapper-area .gsc-result-info {
+  font-size: 15px;
+  padding-left: 0;
+}
+
 .gcsc-branding {
   display: none;
 }
@@ -2365,21 +2370,19 @@ ul.entity-moderation-form {
 
 .gsc-control-cse,
 .gsc-control-cse .gsc-table-result {
-  font-family: "Maven Pro", sans-serif;
-  font-size: 16px;
+  font-family: "Maven Pro", sans-serif !important;
+  font-size: 16px !important;
 }
 
 .gsc-control-cse .gsc-table-result {
   max-width: 580px;
 }
 
-.gsc-result-info,
-.gsc-cursor-page {
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
   font-size: 15px;
-}
-
-.gsc-result-info {
-  padding-left: 0;
+  margin: 0 .4em 0 0;
+  text-align: center;
+  padding: .3em .4em;
 }
 
 .gsc-search-box-tools .gsc-search-box .gsc-input {
@@ -2418,6 +2421,12 @@ input.gsc-input,
   display: none !important;
 }
 
+.gs-webResult .gsc-table-result,
+.gs-webResult .gsc-thumbnail-inside,
+.gs-webResult .gsc-url-top {
+  padding-left: 0 !important;
+}
+
 .gs-result .gs-title,
 .gs-result .gs-title * {
   color: #333;
@@ -2443,7 +2452,7 @@ input.gsc-input,
   font-size: 15px;
 }
 
-.gs-webResult .gs-snippet b:nth-child(2) {
+.gs-webResult .gs-snippet b {
   color: #333;
 }
 
