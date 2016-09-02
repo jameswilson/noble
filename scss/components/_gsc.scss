@@ -35,6 +35,7 @@
   padding-left: 0;
 }
 
+
 .gsc-search-box-tools .gsc-search-box .gsc-input {
   font-size: 23px;
   line-height: 25px;
@@ -101,7 +102,9 @@ input.gsc-input,
 }
 
 .gs-webResult .gs-snippet {
-
+  b:nth-child(2) {
+    color: black;
+  }
 }
 
 .gsc-table-cell-snippet-close,

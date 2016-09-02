@@ -2443,6 +2443,10 @@ input.gsc-input,
   font-size: 15px;
 }
 
+.gs-webResult .gs-snippet b:nth-child(2) {
+  color: black;
+}
+
 .gsc-table-cell-snippet-close,
 .gs-promotion-text-cell {
   vertical-align: middle;
