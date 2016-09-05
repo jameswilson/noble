@@ -1,6 +1,6 @@
 .cart {
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 950px) {
     overflow-x: scroll;
     overflow-y: visible;
   }
@@ -9,6 +9,11 @@
     border-collapse: collapse;
     border-spacing: 0;
     min-width: 960px;
+
+    // reduce the min-width in a smaller layout.
+    .noble-sidebarfirst__content & {
+      min-width: 680px;
+    }
   }
 
   th {

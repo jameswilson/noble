@@ -1597,7 +1597,7 @@ select {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .cart {
     overflow-x: scroll;
     overflow-y: visible;
@@ -1608,6 +1608,10 @@ select {
   border-collapse: collapse;
   border-spacing: 0;
   min-width: 960px;
+}
+
+.noble-sidebarfirst__content .cart table {
+  min-width: 680px;
 }
 
 .cart th {
