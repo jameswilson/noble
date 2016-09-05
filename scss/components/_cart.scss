@@ -1,6 +1,6 @@
 .cart {
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 950px) {
     overflow-x: scroll;
     overflow-y: visible;
   }
@@ -9,6 +9,11 @@
     border-collapse: collapse;
     border-spacing: 0;
     min-width: 960px;
+
+    // reduce the min-width in a smaller layout.
+    .noble-sidebarfirst__content & {
+      min-width: 680px;
+    }
   }
 
   th {
@@ -61,6 +66,12 @@
       width: 100%;
     }
 
+    @include firefox-only {
+      select {
+        padding-top: 50px;
+      }
+    }
+
     label {
       @include visually-hidden();
     }
@@ -72,10 +83,6 @@
 
   // scss-lint:disable QualifyingElement
   td.views-field-purchased-entity {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: left;
     min-height: 130px;
     max-width: 530px;
   }
@@ -83,6 +90,8 @@
 
   .cart__product-image {
     margin: 10px;
+    float: left;
+    width: 85px;
   }
 
   .cart__row--outstock .cart__product-image {
@@ -106,11 +115,13 @@
     opacity: 1;
   }
 
-  .cart__row--outstock .cart__product-info {
-    flex-grow: 1;
-    margin-top: -50px;
-    white-space: nowrap;
-    max-width: 420px;
+  .cart__product-info {
+    float: left;
+    clear: right;
+    width: calc(100% - 105px);
+    margin-top: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 
   .field--name-title {
@@ -135,7 +146,10 @@
   }
 
   .cart__out-of-stock-message {
-    margin: -100px 0 0 105px;
+    float: left;
+    width: calc(100% - 105px);
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 
   .views-field-total-price__amount {
