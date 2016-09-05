@@ -27,6 +27,7 @@ product-details:
   dependencies:
     - core/jquery
     - colorbox/colorbox
+    - core/modernizr
 
 product-teaser:
   version: 1.x
