@@ -234,10 +234,23 @@ html[xmlns] .flexslider .slides {
   overflow: hidden;
 }
 
+.touchevents .flex-control-thumbs {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
 .flex-control-thumbs li {
   width: 25%;
   float: left;
   margin: 0;
+}
+
+.touchevents .flex-control-thumbs li {
+  float: none;
+  display: inline-block;
 }
 
 .flex-control-thumbs img {
@@ -275,6 +288,12 @@ html[xmlns] .flexslider .slides {
 
 .optionset-product-detail-images .flex-control-thumbs {
   margin: 25px 35px;
+}
+
+@media screen and (max-width: 860px) {
+  .optionset-product-detail-images .flex-control-thumbs {
+    margin: 0;
+  }
 }
 
 .optionset-product-detail-images .flex-control-thumbs li {
