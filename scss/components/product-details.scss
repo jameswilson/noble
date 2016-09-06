@@ -27,6 +27,7 @@ $small-width: 750px;
 
 .product-details__media {
   box-sizing: border-box;
+  overflow: hidden;
 
   @media screen and (min-width: $small-width) {
     float: left;
@@ -75,6 +76,7 @@ $small-width: 750px;
     float: left;
   }
 
+
   .fieldgroup.attribute--color {
     float: none;
     margin-bottom: 15px;
@@ -82,6 +84,14 @@ $small-width: 750px;
 
   .add-to-cart-button {
     margin: 0 .5em;
+  }
+
+  .button--sizing-chart {
+    border: 1px solid $semi-light-blue;
+    background: none;
+    color: $blue;
+    border-left: 0;
+    padding: .3em 10px;
   }
 
   .out-of-stock {
@@ -118,6 +128,10 @@ $small-width: 750px;
   .field--name-field-fit {
     display: inline;
   }
+
+  .field--name-field-fit-guide {
+    display: inline;
+  }
 }
 
 .product-details__media-buttons {
@@ -136,6 +150,11 @@ $small-width: 750px;
 
 .product-details__media-button__text {
   vertical-align: middle;
+}
+
+.product-details__images img {
+  display: block;
+  margin: 0 auto;
 }
 
 .product-details__row-title-wrapper {
@@ -231,14 +250,11 @@ $small-width: 750px;
     font-size: 21px;
     line-height: 33px;
     padding: 5px 30px;
+    display: list-item;
 
     @media screen and (min-width:660px) {
       float: left;
       width: 50%;
-    }
-
-    a {
-      display: list-item;
     }
   }
 }

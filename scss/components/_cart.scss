@@ -1,19 +1,22 @@
 .cart {
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 950px) {
     overflow-x: scroll;
     overflow-y: visible;
   }
 
   table {
-    border-bottom: 1px solid $light-light-blue;
     border-collapse: collapse;
     border-spacing: 0;
-    min-width: 800px;
+    min-width: 960px;
+
+    // reduce the min-width in a smaller layout.
+    .noble-sidebarfirst__content & {
+      min-width: 680px;
+    }
   }
 
   th {
-    border-bottom: 1px solid $light-light-blue;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -25,11 +28,15 @@
   }
 
   .cart__row {
-    border-bottom: 1px solid $light-light-blue;
+    border-top: 1px solid $light-light-blue;
   }
 
   .cart__row--outstock {
     background: $light-red;
+  }
+
+  .views-field-edit-attributes {
+    min-width: 280px;
   }
 
   .table-heading-attribute-color,
@@ -46,18 +53,23 @@
 
     select {
       background-color: transparent;
-      background-position: center bottom 20px;
+      background-position: center bottom 35px;
       background-size: 20px auto;
       border-bottom: 0;
       border-top: 0;
       margin-bottom: -1px;
       margin-top: -1px;
-      min-height: 130px;
-      padding-left: 30px;
-      padding-top: 0;
+      min-height: 152px;
+      padding: 0 20px;
       text-align: center;
       text-align-last: center;
       width: 100%;
+    }
+
+    @include firefox-only {
+      select {
+        padding-top: 50px;
+      }
     }
 
     label {
@@ -71,14 +83,15 @@
 
   // scss-lint:disable QualifyingElement
   td.views-field-purchased-entity {
-    align-items: center;
-    display: flex;
-    justify-content: left;
     min-height: 130px;
+    max-width: 530px;
   }
+
 
   .cart__product-image {
     margin: 10px;
+    float: left;
+    width: 85px;
   }
 
   .cart__row--outstock .cart__product-image {
@@ -102,6 +115,15 @@
     opacity: 1;
   }
 
+  .cart__product-info {
+    float: left;
+    clear: right;
+    width: calc(100% - 105px);
+    margin-top: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
   .field--name-title {
     font-size: 18px;
     font-weight: bold;
@@ -110,9 +132,24 @@
     margin-top: 5px;
   }
 
+  .cart__row--outstock .field--name-title {
+    display: inline-block;
+  }
+
   .field--name-sku {
     font-size: 15px;
     line-height: 27px;
+  }
+
+  .cart__row--outstock .field--name-sku {
+    display: inline-block;
+  }
+
+  .cart__out-of-stock-message {
+    float: left;
+    width: calc(100% - 105px);
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 
   .views-field-total-price__amount {
@@ -121,6 +158,7 @@
 
   .views-field-edit-quantity {
     text-align: center;
+    border-right: 1px solid $light-light-blue;
 
     .form-number {
       background: $white;
@@ -140,5 +178,22 @@
   .form-actions {
     margin-top: 25px;
     text-align: right;
+  }
+
+  .cart__total-price-row {
+    background-color: $light-graphite;
+    color: $white;
+    font-weight: bold;
+  }
+
+  .cart__total-price-row-label {
+    padding: 10px 15px;
+    text-align: right;
+    border-right: 1px solid $white;
+  }
+
+  .cart__total-price-row-amount {
+    padding: 10px 15px;
+    text-align: center;
   }
 }

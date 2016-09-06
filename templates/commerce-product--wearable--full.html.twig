@@ -36,18 +36,17 @@
       <div class="product-details__add-to-cart">
         {{ product.variations }}
       </div>
-      <div class="product-details__size-chart">
-        {{ product.product_size_chart }}
-      </div>
       <div class="product-details__fit">
-        {{ product.field_fit }} | {% trans %}Fit guide {% endtrans %}
-      </div>
-      <div class="product-details__fit-guide">
-        {{ product.product_fit_guide }}
+        {{ product.field_fit }} | {{ product.product_fit_guide }}
       </div>
     <div class="product-details__the-details">
       <h2 class="product-details__subtitle">{% trans %}Product Details{% endtrans %}</h2>
         {{ product.body }}
+    </div>
+    <div class="product-details__fabric-and-insulation">
+      <h2 class="product-details__subtitle">{% trans %}Fabric & Insulation{% endtrans %}</h2>
+      {{ product.field_fabric }}
+      {{ product.field_insulation }}
     </div>
     <div class="share-widget">
       <h3 class="share-widget__label">{% trans %}Share Product{% endtrans %}</h3>
@@ -65,17 +64,14 @@
       {% if product.field_product_lifestyle_images.0 %}
       <a class="product-details__media-button js-product-details__media-button--lifestyle" href="#"><span class="product-details__media-button__icon icon icon--small icon-grid"></span><span class="product-details__media-button__text">Lifestyle</span></a>
       {% endif %}
-      {% if product.product_rating %}
-      <a class="product-details__media-button js-product-details__media-button--rating colorbox" href="{{ product.product_rating.url}}">{{ product.product_rating.label }}</a>
-      {% endif %}
       {%  if product.variation_field_reverse_image.0 %}
-      <a class="product-details__media-button js-product-details__media-button--images-reverse" data-current-view="front" href=""><span class="product-details__media-button__icon icon icon--small icon-forward"></span><span class="product-details__media-button__text">Back View</span></a>
+      <a class="product-details__media-button js-product-details__media-button--images-reverse" data-current-view="front" href=""><span class="product-details__media-button__icon icon icon--small icon-forward"></span><span class="product-details__media-button__text">Reverse</span></a>
       {% endif %}
       {%  if product.product_360_iframe.url %}
       <a class="product-details__media-button js-product-details__media-button--images-360" href="{{ product.product_360_iframe.url }}"><span class="product-details__media-button__icon icon icon--small icon-refresh"></span><span class="product-details__media-button__text">360° View</span></a>
       {% endif %}
     </div>
-    <div class="js-product-details__images-reverse">
+    <div class="js-product-details__images-reverse product-details__images">
       <div class="js-product-details__images-front">
         {{ product.variation_field_front_image }}
       </div>
@@ -87,9 +83,8 @@
       {{ product.variation_field_images }}
     </div>
     <div class="js-product-details__images">
-      {{ product.field_product_images }}
+      {{ product.fashion_model_images }}
     </div>
-
     <div class="js-product-details__video hidden">
       {{ product.field_product_video.0 }}
     </div>

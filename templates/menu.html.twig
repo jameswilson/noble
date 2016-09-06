@@ -43,7 +43,11 @@
         {% set item_classes = item_classes|merge(['menu__item--has-children']) %}
       {% endif %}
       <li{{ item.attributes.addClass(item_classes) }}>
-        {{ link(item.title, item.url) }}
+        {% if item.no_link %}
+          <span {{ item.no_link_attributes }}>{{ item.title|raw }}</span>
+        {% else %}
+          {{ link(item.title, item.url) }}
+        {% endif %}
       {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
         {% endif %}

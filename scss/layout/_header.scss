@@ -4,7 +4,7 @@
   padding: 10px;
 
   @include media(desktop-nav) {
-    padding: 45px 0 60px;
+    padding: 45px 0;
   }
 
   .menu {
@@ -25,6 +25,7 @@
     padding: 0 .2em;
     position: relative;
 
+    .no-link,
     a {
       display: inline-block;
       line-height: 22px;
@@ -32,6 +33,14 @@
       // Always appear on top of the sub-items.
       position: relative;
       z-index: 10;
+    }
+  }
+
+  .no-link {
+    color: $blue;
+
+    &:hover {
+      cursor: default;
     }
   }
 }

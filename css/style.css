@@ -294,6 +294,13 @@ select {
   padding: .3em 31px .3em 10px;
 }
 
+@-moz-document url-prefix() {
+  select {
+    padding-top: .375em;
+    padding-bottom: .375em;
+  }
+}
+
 [type="checkbox"] {
   margin-right: 5px;
 }
@@ -421,7 +428,7 @@ select {
 
 @media (min-width: 911px) {
   .l-header {
-    padding: 45px 0 60px;
+    padding: 45px 0;
   }
 }
 
@@ -444,12 +451,21 @@ select {
   position: relative;
 }
 
+.l-header .menu__item .no-link,
 .l-header .menu__item a {
   display: inline-block;
   line-height: 22px;
   padding: .4em .8em;
   position: relative;
   z-index: 10;
+}
+
+.l-header .no-link {
+  color: #1b3e6a;
+}
+
+.l-header .no-link:hover {
+  cursor: default;
 }
 
 .l-header .menu__sublevel {
@@ -706,6 +722,10 @@ select {
   text-transform: uppercase;
 }
 
+.footer__logo img {
+  display: block;
+}
+
 @media all and (min-width: 560px) {
   .block--footer-copyright {
     float: left;
@@ -798,7 +818,6 @@ select {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 5;
@@ -809,6 +828,7 @@ select {
 
 @media (max-width: 910px) {
   .has-mobile-nav .mobile-nav__background {
+    width: 100vw;
     opacity: 1;
     pointer-events: auto;
   }
@@ -1436,6 +1456,56 @@ select {
   margin: 0;
 }
 
+.cboxIframe {
+  max-width: 707px;
+}
+
+#cboxTitle {
+  left: 10px;
+  right: 10px;
+  width: initial;
+}
+
+@media screen and (min-width: 650px) {
+  #cboxTitle {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+#cboxPrevious {
+  background: url("../images/icon-previous.svg") no-repeat 50% 50%;
+}
+
+#cboxNext {
+  background: url("../images/icon-next.svg") no-repeat 50% 50%;
+}
+
+#cboxClose {
+  background: url("../images/icon-close.svg") no-repeat 50% 50%;
+}
+
+#cboxPrevious,
+#cboxClose,
+#cboxNext {
+  opacity: 1;
+  transition: opacity .2s ease-out;
+}
+
+#cboxPrevious:hover,
+#cboxClose:hover,
+#cboxNext:hover {
+  background-position: 50% 50%;
+  opacity: .8;
+}
+
+#cboxCurrent {
+  bottom: 1px;
+  color: #666;
+  font-size: 15px;
+  left: 56px;
+}
+
 .input-group {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1447,6 +1517,21 @@ select {
 
 .input-group__submit {
   margin-left: -1px;
+  line-height: 1.1;
+  padding: 0 0 0 -5px;
+}
+
+.input-group__submit .form-submit {
+  line-height: 1.5;
+  margin-left: -5px;
+}
+
+.input-group__item {
+  width: 50%;
+}
+
+.input-group__item select {
+  width: 100%;
 }
 
 .subhead {
@@ -1512,7 +1597,7 @@ select {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .cart {
     overflow-x: scroll;
     overflow-y: visible;
@@ -1520,14 +1605,16 @@ select {
 }
 
 .cart table {
-  border-bottom: 1px solid #d1d8e1;
   border-collapse: collapse;
   border-spacing: 0;
-  min-width: 800px;
+  min-width: 960px;
+}
+
+.noble-sidebarfirst__content .cart table {
+  min-width: 680px;
 }
 
 .cart th {
-  border-bottom: 1px solid #d1d8e1;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1538,11 +1625,15 @@ select {
 }
 
 .cart .cart__row {
-  border-bottom: 1px solid #d1d8e1;
+  border-top: 1px solid #d1d8e1;
 }
 
 .cart .cart__row--outstock {
   background: #ffe5e5;
+}
+
+.cart .views-field-edit-attributes {
+  min-width: 280px;
 }
 
 .cart .table-heading-attribute-color,
@@ -1558,19 +1649,24 @@ select {
 
 .cart .attribute-widgets select {
   background-color: transparent;
-  background-position: center bottom 20px;
+  background-position: center bottom 35px;
   background-size: 20px auto;
   border-bottom: 0;
   border-top: 0;
   margin-bottom: -1px;
   margin-top: -1px;
-  min-height: 130px;
-  padding-left: 30px;
-  padding-top: 0;
+  min-height: 152px;
+  padding: 0 20px;
   text-align: center;
   -moz-text-align-last: center;
        text-align-last: center;
   width: 100%;
+}
+
+@-moz-document url-prefix() {
+  .cart .attribute-widgets select {
+    padding-top: 50px;
+  }
 }
 
 .cart .attribute-widgets label {
@@ -1588,20 +1684,14 @@ select {
 }
 
 .cart td.views-field-purchased-entity {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   min-height: 130px;
+  max-width: 530px;
 }
 
 .cart .cart__product-image {
   margin: 10px;
+  float: left;
+  width: 85px;
 }
 
 .cart .cart__row--outstock .cart__product-image {
@@ -1625,6 +1715,15 @@ select {
   opacity: 1;
 }
 
+.cart .cart__product-info {
+  float: left;
+  clear: right;
+  width: calc(100% - 105px);
+  margin-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
 .cart .field--name-title {
   font-size: 18px;
   font-weight: bold;
@@ -1633,9 +1732,24 @@ select {
   margin-top: 5px;
 }
 
+.cart .cart__row--outstock .field--name-title {
+  display: inline-block;
+}
+
 .cart .field--name-sku {
   font-size: 15px;
   line-height: 27px;
+}
+
+.cart .cart__row--outstock .field--name-sku {
+  display: inline-block;
+}
+
+.cart .cart__out-of-stock-message {
+  float: left;
+  width: calc(100% - 105px);
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 .cart .views-field-total-price__amount {
@@ -1644,6 +1758,7 @@ select {
 
 .cart .views-field-edit-quantity {
   text-align: center;
+  border-right: 1px solid #d1d8e1;
 }
 
 .cart .views-field-edit-quantity .form-number {
@@ -1663,6 +1778,23 @@ select {
 .cart .form-actions {
   margin-top: 25px;
   text-align: right;
+}
+
+.cart .cart__total-price-row {
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+}
+
+.cart .cart__total-price-row-label {
+  padding: 10px 15px;
+  text-align: right;
+  border-right: 1px solid #fff;
+}
+
+.cart .cart__total-price-row-amount {
+  padding: 10px 15px;
+  text-align: center;
 }
 
 .block--search {
@@ -2192,6 +2324,9 @@ ul.entity-moderation-form {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -2215,6 +2350,130 @@ ul.entity-moderation-form {
 
 .product-catalog .pager {
   width: 100%;
+}
+
+.gsc-wrapper {
+  max-width: 640px;
+  margin-top: 15px;
+}
+
+.gsc-above-wrapper-area {
+  padding: 10px 0 15px;
+}
+
+.gsc-above-wrapper-area .gsc-result-info {
+  font-size: 15px;
+  padding-left: 0;
+}
+
+.gcsc-branding {
+  display: none;
+}
+
+.gsc-control-cse {
+  margin: 0;
+}
+
+.gsc-control-cse,
+.gsc-control-cse .gsc-table-result {
+  font-family: "Maven Pro", sans-serif !important;
+  font-size: 16px !important;
+}
+
+.gsc-control-cse .gsc-table-result {
+  max-width: 580px;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+  font-size: 15px;
+  margin: 0 .4em 0 0;
+  text-align: center;
+  padding: .3em .4em;
+}
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+  font-size: 23px;
+  line-height: 25px;
+  color: #333;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus {
+  border-color: #d1d8e1;
+  height: auto !important;
+}
+
+.gsib_a {
+  padding-bottom: 4px !important;
+}
+
+.gsst_a {
+  padding-top: 8px !important;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+  width: 13px !important;
+  height: 13px !important;
+  padding: 10px 27px !important;
+  margin-top: 3px !important;
+  border-radius: 0 !important;
+}
+
+.gs-webResult div.gs-visibleUrl-long {
+  display: none !important;
+}
+
+.gs-webResult .gsc-table-result,
+.gs-webResult .gsc-thumbnail-inside,
+.gs-webResult .gsc-url-top {
+  padding-left: 0 !important;
+}
+
+.gs-result .gs-title,
+.gs-result .gs-title * {
+  color: #333;
+  font-size: 20px !important;
+  font-weight: bold;
+  font-family: "Maven Pro", sans-serif;
+  height: auto !important;
+  text-decoration: none !important;
+}
+
+.gs-result .gs-title:hover,
+.gs-result .gs-title *:hover {
+  text-decoration: underline !important;
+}
+
+.gs-result .gs-title {
+  margin: 10px 0;
+}
+
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+  font-size: 15px;
+}
+
+.gs-webResult .gs-snippet b {
+  color: #333;
+}
+
+.gsc-adBlock {
+  display: none !important;
+}
+
+.gsc-table-cell-snippet-close,
+.gs-promotion-text-cell {
+  vertical-align: middle;
+}
+
+.gs-image-box.gs-web-image-box.gs-web-image-box-portrait {
+  width: 70px;
+  height: 60px;
 }
 
 .delete-line-item {

@@ -25,3 +25,50 @@
 #cboxLoadedContent {
   margin: 0;
 }
+
+.cboxIframe {
+  max-width: 707px;
+}
+
+ // Ensure captions aren't pushed outside image into frame.
+#cboxTitle {
+  left: 10px;
+  right: 10px;
+  width: initial;
+
+  @media screen and (min-width: 650px) {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+#cboxPrevious {
+  background: url('../images/icon-previous.svg') no-repeat 50% 50%;
+}
+
+#cboxNext {
+  background: url('../images/icon-next.svg') no-repeat 50% 50%;
+}
+
+#cboxClose {
+  background: url('../images/icon-close.svg') no-repeat 50% 50%;
+}
+
+#cboxPrevious,
+#cboxClose,
+#cboxNext {
+  opacity: 1;
+  transition: opacity .2s ease-out;
+
+  &:hover {
+    background-position: 50% 50%;
+    opacity: .8;
+  }
+}
+
+#cboxCurrent {
+  bottom: 1px;
+  color: $base-font-color;
+  font-size: 15px;
+  left: 56px;
+}

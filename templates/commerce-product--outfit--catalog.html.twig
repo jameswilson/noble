@@ -23,10 +23,9 @@
 <article{{ attributes.addClass('product-teaser') }}>
   <div class="product-teaser__images">
     <div class="product-teaser__images__front">
-      {{ product.variation_field_front_image }}
+      {{ product.field_product_images }}
     </div>
   </div>
-  <h2 class="product-teaser__title">{{ product.title }}</h2>
-  <div class="product-teaser__price">{{ product.variation_price }}</div>
-  <div class="product-teaser__colors">{{ product.variations }}</div>
+  <h2 class="product-teaser__title"><a href="{{ product_url }}">{{ product.title }}</a></h2>
+  <a href="{{ product_url }}" class="product-teaser__view-button">View</a>
 </article>

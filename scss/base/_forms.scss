@@ -8,7 +8,13 @@ select {
   color: $blue;
   line-height: 1.5em;
   padding: .3em 31px .3em 10px;
+
+  @include firefox-only {
+    padding-top: .375em;
+    padding-bottom: .375em;
+  }
 }
+
 
 [type="checkbox"] {
   margin-right: 5px;

@@ -41,7 +41,6 @@
   -webkit-backface-visibility: hidden;
 }
 .flexslider .slides img {
-  width: 100%;
   display: block;
 }
 .flexslider .slides:after {
@@ -82,19 +81,18 @@ html[xmlns] .flexslider .slides {
   zoom: 1;
 }
 .flexslider .slides img {
+  margin: 0 auto;
   height: auto;
   -moz-user-select: none;
 }
 .flex-viewport {
   max-height: 2000px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 }
 .loading .flex-viewport {
   max-height: 300px;
+}
+.flex-viewport.is-hidden {
+  height: 0!important;
 }
 .carousel li {
   margin-right: 5px;
@@ -219,20 +217,39 @@ html[xmlns] .flexslider .slides {
   margin: 5px 0 0;
   position: static;
   overflow: hidden;
+
+  .touchevents & {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 .flex-control-thumbs li {
   width: 25%;
   float: left;
   margin: 0;
+
+  .touchevents & {
+    float: none;
+    display: inline-block;
+  }
 }
 .flex-control-thumbs img {
   width: 100%;
   height: auto;
   display: block;
   cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .flex-control-thumbs .flex-active {
   cursor: default;
+  &:hover {
+    opacity: 1;
+  }
 }
 /* ====================================================================================================================
  * RESPONSIVE
@@ -252,6 +269,10 @@ html[xmlns] .flexslider .slides {
 .optionset-product-detail-images {
   .flex-control-thumbs {
     margin: 25px 35px;
+
+    @media screen and (max-width: 860px) {
+      margin: 0;
+    }
   }
   .flex-control-thumbs li {
     box-sizing: border-box;

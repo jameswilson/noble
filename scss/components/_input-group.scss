@@ -5,4 +5,19 @@
 
 .input-group__submit {
   margin-left: -1px;
+  line-height: 1.1; // Fix for out of stock alignment on outfits teasers.
+  padding: 0 0 0 -5px; // Fix for out of stock alignment on outfits teasers.
+
+  .form-submit {
+    line-height: 1.5; // Undo the out of stock alignment on outfits teasers.
+    margin-left: -5px; // Undo the out of stock alignment on outfits teasers.
+  }
+}
+
+.input-group__item {
+  width: 50%;
+
+  select {
+    width: 100%;
+  }
 }

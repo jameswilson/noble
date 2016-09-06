@@ -46,7 +46,6 @@
 }
 
 .flexslider .slides img {
-  width: 100%;
   display: block;
 }
 
@@ -90,17 +89,21 @@ html[xmlns] .flexslider .slides {
 }
 
 .flexslider .slides img {
+  margin: 0 auto;
   height: auto;
   -moz-user-select: none;
 }
 
 .flex-viewport {
   max-height: 2000px;
-  transition: all 1s ease;
 }
 
 .loading .flex-viewport {
   max-height: 300px;
+}
+
+.flex-viewport.is-hidden {
+  height: 0 !important;
 }
 
 .carousel li {
@@ -231,10 +234,23 @@ html[xmlns] .flexslider .slides {
   overflow: hidden;
 }
 
+.touchevents .flex-control-thumbs {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
 .flex-control-thumbs li {
   width: 25%;
   float: left;
   margin: 0;
+}
+
+.touchevents .flex-control-thumbs li {
+  float: none;
+  display: inline-block;
 }
 
 .flex-control-thumbs img {
@@ -244,8 +260,16 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
 }
 
+.flex-control-thumbs img:hover {
+  opacity: 0.8;
+}
+
 .flex-control-thumbs .flex-active {
   cursor: default;
+}
+
+.flex-control-thumbs .flex-active:hover {
+  opacity: 1;
 }
 
 /* ====================================================================================================================
@@ -264,6 +288,12 @@ html[xmlns] .flexslider .slides {
 
 .optionset-product-detail-images .flex-control-thumbs {
   margin: 25px 35px;
+}
+
+@media screen and (max-width: 860px) {
+  .optionset-product-detail-images .flex-control-thumbs {
+    margin: 0;
+  }
 }
 
 .optionset-product-detail-images .flex-control-thumbs li {

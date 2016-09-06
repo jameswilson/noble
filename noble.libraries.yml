@@ -27,6 +27,7 @@ product-details:
   dependencies:
     - core/jquery
     - colorbox/colorbox
+    - core/modernizr
 
 product-teaser:
   version: 1.x
@@ -34,6 +35,11 @@ product-teaser:
     theme:
       css/product-teaser.css: {}
       css/product-attributes.css: {}
+
+facet:
+  version: 1.x
+  css:
+    theme:
       css/facet.css: {}
 
 outfit-detail:

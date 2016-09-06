@@ -16,22 +16,25 @@
   margin: 5px 0;
 }
 
-.product-teaser__image {
-  padding: 20px 20px 0;
+.product-teaser__images, // Used on catalogs
+.product-teaser__image { // Used on outfits
+  padding: 0;
+
+  // Ensure the bottom alignment of small product images like mittens and caps
+  // look ok next to larger images on outfits and catalog pages.
+  min-height: 240px;
+  display: flex;
+  align-items: center;
 }
 
 .product-teaser__colors {
   margin-top: 15px;
 }
 
-.product-teaser__info a {
-  @include hide-text();
-  background: url('../images/icon-info--blue.svg') no-repeat;
-  background-size: 100% auto;
+.product-teaser__view-button {
+  border: 1px solid $semi-light-blue;
   display: block;
-  height: 25px;
-  position: absolute;
-  right: 30px;
-  top: 0;
-  width: 25px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 5px 10px;
 }

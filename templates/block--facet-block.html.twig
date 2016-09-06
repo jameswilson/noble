@@ -1,6 +1,6 @@
 {# There is a bug in the facets module where it still prints empty blocks despite the config setting. #}
 {% if content %}
-
+  {{ attach_library('noble/facet') }}
   {% block wrapper %}
     <div{{ attributes|without('id').addClass('facet') }}>
   {% endblock %}
