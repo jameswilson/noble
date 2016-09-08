@@ -53,7 +53,6 @@
 
   var feed = '/stores-feed';
   var variation = getParameterByName('variation');
-  console.log(variation);
   if (variation.length > 0) {
     feed += '?variation=' + variation;
   }
