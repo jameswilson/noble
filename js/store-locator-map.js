@@ -25,7 +25,6 @@
     var markers = L.markerClusterGroup();
     var dataLayer = L.geoJson(data, {
       pointToLayer: function(feature, latlng) {
-        console.log(latlng, feature);
         return L.marker(latlng, {
           icon: icon
         });
