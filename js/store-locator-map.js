@@ -48,7 +48,7 @@
     if (!results) { return ''; }
     if (!results[2]) { return ''; }
     return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
+  }
 
   var feed = '/stores-feed';
   var variation = getParameterByName('variation');
