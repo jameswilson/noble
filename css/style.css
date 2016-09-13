@@ -2354,6 +2354,44 @@ ul.entity-moderation-form {
   text-align: center;
 }
 
+.block--formblock-user-register {
+  border: 1px solid #d1d8e1;
+  padding: 20px 30px;
+}
+
+.block--formblock-user-register .block__title {
+  display: none;
+}
+
+.block--formblock-user-register .fieldset-legend {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.block--formblock-user-register fieldset {
+  border: 0;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.block--formblock-user-register .form-text,
+.block--formblock-user-register .form-email,
+.block--formblock-user-register .form-select,
+.block--formblock-user-register .form-tel {
+  width: 100%;
+  border: 1px solid #bac5d2;
+  box-sizing: border-box;
+  padding: .3em .8em;
+}
+
+.block--formblock-user-register .form-item {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 500px) {
   .product-catalog {
     display: -webkit-flex;
