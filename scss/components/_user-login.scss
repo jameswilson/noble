@@ -1,0 +1,37 @@
+.block--user-login-block {
+  background: $light-gray;
+  box-sizing: border-box;
+  padding: 20px 30px;
+}
+
+.block__title--user-login-block {
+  font-size: 18px;
+  margin-top: 0;
+  font-weight: bold;
+  color: $light-graphite;
+}
+
+.block--user-login-block .form-item {
+  margin-bottom: 10px;
+}
+
+.block--user-login-block .form-text,
+.block--user-login-block .form-email {
+  border: 0;
+  box-sizing: border-box;
+  padding: .3em .8em;
+  width: 100%;
+}
+
+.block--user-login-block .button {
+  font-size: 18px;
+  width: 100%;
+  margin: 20px 0 10px;
+}
+
+.block--user-login-block ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
