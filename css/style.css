@@ -2393,6 +2393,62 @@ ul.entity-moderation-form {
   margin-bottom: 20px;
 }
 
+.block--formblock-user-register .field--name-field-name {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.block--formblock-user-register .field--name-field-surname {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.block--formblock-user-register .form-item-pass-pass1 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.block--formblock-user-register .form-item-pass-pass2 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
+  box-sizing: border-box;
+  float: left;
+  width: 75%;
+  padding-right: 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line2 {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding-left: 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-mobile-0-value {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-phone-0-value {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
+
 .block--formblock-user-register::before {
   content: 'OR';
   background: #666;
