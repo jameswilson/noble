@@ -548,6 +548,10 @@ select {
   }
 }
 
+.l-hero-area {
+  margin-bottom: 20px;
+}
+
 .l-colophon {
   background: #efefef;
   margin-top: 100px;
