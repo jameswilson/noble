@@ -2229,13 +2229,6 @@ select {
   white-space: nowrap;
 }
 
-.menu-item--b2c-outfit-builder:link, .menu-item--b2c-outfit-builder:visited, .menu-item--b2c-outfit-builder.is-active {
-  background: #1b3e6a;
-  border-radius: 3px;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
 .menu-item--b2c-outfit-builder::after {
   background-image: url("../images/icon-outfit-builder.svg");
   background-position: 50% 50%;
