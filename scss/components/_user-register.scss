@@ -1,6 +1,7 @@
 .block--formblock-user-register {
   border: 1px solid $light-light-blue;
   padding: 20px 30px;
+  position: relative;
   .block__title {
     display: none;
   }
@@ -29,4 +30,20 @@
   .form-item {
     margin-bottom: 20px;
   }
+}
+
+.block--formblock-user-register::before {
+  content: 'OR';
+  background: $light-graphite;
+  color: $white;
+  display: block;
+  font-size: 19px;
+  line-height: 3em;
+  text-align: center;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  position: absolute;
+  left: -2.4em;
+  top: 4.5em;
 }

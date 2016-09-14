@@ -2357,6 +2357,7 @@ ul.entity-moderation-form {
 .block--formblock-user-register {
   border: 1px solid #d1d8e1;
   padding: 20px 30px;
+  position: relative;
 }
 
 .block--formblock-user-register .block__title {
@@ -2390,6 +2391,22 @@ ul.entity-moderation-form {
 
 .block--formblock-user-register .form-item {
   margin-bottom: 20px;
+}
+
+.block--formblock-user-register::before {
+  content: 'OR';
+  background: #666;
+  color: #fff;
+  display: block;
+  font-size: 19px;
+  line-height: 3em;
+  text-align: center;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  position: absolute;
+  left: -2.4em;
+  top: 4.5em;
 }
 
 @media screen and (min-width: 500px) {
