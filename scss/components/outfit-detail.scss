@@ -45,6 +45,10 @@
 }
 
 .outfit-detail__actions {
+  .outfit-details {
+    margin: .5em 0;
+    display: inline-block;
+  }
   .button--sizing-chart {
     border: 1px solid $semi-light-blue;
     background: none;
