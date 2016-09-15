@@ -1975,7 +1975,6 @@ select {
 
 .block--menu-cart-block,
 .block--welcomedealertopbar,
-.block--welcomeviptopbar,
 .block--storelocatorlink {
   font-size: 14px;
   text-transform: uppercase;
@@ -2315,6 +2314,69 @@ ul.entity-moderation-form {
   list-style: none;
   margin: -1em 0 1.2em;
   padding: .3em 0;
+}
+
+.account__form-group {
+  border: 1px solid #d1d8e1;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+
+.account__form-group fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.account__form-group .form-text,
+.account__form-group .form-email,
+.account__form-group .form-select,
+.account__form-group .form-tel {
+  width: 100%;
+  border: 1px solid #bac5d2;
+  box-sizing: border-box;
+  padding: .3em .8em;
+}
+
+.account__form-group .form-item {
+  margin-bottom: 20px;
+}
+
+.account__form-group .form-item-pass-pass1 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.account__form-group .form-item-pass-pass2 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.account__form-group .form-item-name {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.account__form-group .form-item-surname {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.account__form-title {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 500px) {

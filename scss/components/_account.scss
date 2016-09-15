@@ -1,0 +1,56 @@
+.account__form-group {
+  border: 1px solid $light-light-blue;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .form-text,
+  .form-email,
+  .form-select,
+  .form-tel {
+    width: 100%;
+    border: 1px solid $semi-light-blue;
+    box-sizing: border-box;
+    padding: .3em .8em;
+  }
+  .form-item {
+    margin-bottom: 20px;
+  }
+  .form-item-pass-pass1 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .form-item-pass-pass2 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .form-item-name {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .form-item-surname {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+}
+
+.account__form-title {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: $light-graphite;
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,9 @@
+{% extends "block.html.twig" %}
+
+{% block wrapper %}
+<div{{ attributes|without('id').addClass('account__form-group')  }}>
+{% endblock %}
+
+{% block title %}
+<h2{{ title_attributes.addClass('account__form-title') }}><span>{{ label }}</span></h2>
+{% endblock %}
