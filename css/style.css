@@ -1093,6 +1093,11 @@ select {
   text-transform: uppercase;
 }
 
+.menu--about {
+  background: #efefef;
+  padding: 10px;
+}
+
 .menu--about .menu__item {
   list-style: none;
   margin: 0;
