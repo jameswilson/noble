@@ -2421,6 +2421,10 @@ ul.entity-moderation-form {
   padding-left: 5px;
 }
 
+.block--formblock-user-register .field--name-field-address {
+  overflow: hidden;
+}
+
 .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
   box-sizing: border-box;
   float: left;
@@ -2433,6 +2437,34 @@ ul.entity-moderation-form {
   float: left;
   width: 25%;
   padding-left: 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-country-code {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  margin: 0;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-locality {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-postal-code {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-administrative-area {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 5px;
 }
 
 .block--formblock-user-register .form-item-entity-shipping-address-field-mobile-0-value {

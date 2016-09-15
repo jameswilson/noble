@@ -54,6 +54,9 @@
     width: 50%;
     padding-left: 5px;
   }
+  .field--name-field-address {
+    overflow: hidden;
+  }
   .form-item-entity-shipping-address-field-address-0-address-line1 {
     box-sizing: border-box;
     float: left;
@@ -65,6 +68,30 @@
     float: left;
     width: 25%;
     padding-left: 5px;
+  }
+  .form-item-entity-shipping-address-field-address-0-country-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    margin: 0;
+  }
+  .form-item-entity-shipping-address-field-address-0-locality {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .form-item-entity-shipping-address-field-address-0-postal-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .form-item-entity-shipping-address-field-address-0-administrative-area {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
   }
   .form-item-entity-shipping-address-field-mobile-0-value {
     box-sizing: border-box;
