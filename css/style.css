@@ -2393,108 +2393,130 @@ ul.entity-moderation-form {
   margin-bottom: 20px;
 }
 
-.block--formblock-user-register .field--name-field-name {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-right: 5px;
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register .field--name-field-name {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .field--name-field-surname {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-pass-pass1 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-pass-pass2 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .field--name-field-address {
+    overflow: hidden;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-address-line1,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
+    box-sizing: border-box;
+    float: left;
+    width: 75%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-address-line2,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line2 {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-country-code,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-country-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    margin: 0;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-state,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-state {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-city,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-city {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-locality,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-locality {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-postal-code,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-postal-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-zip,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-zip {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-administrative-area,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-administrative-area {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-field-mobile-0-value,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-mobile-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-field-phone-0-value,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-phone-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
 }
 
-.block--formblock-user-register .field--name-field-surname {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-left: 5px;
-}
-
-.block--formblock-user-register .form-item-pass-pass1 {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-right: 5px;
-}
-
-.block--formblock-user-register .form-item-pass-pass2 {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-left: 5px;
-}
-
-.block--formblock-user-register .field--name-field-address {
-  overflow: hidden;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
-  box-sizing: border-box;
-  float: left;
-  width: 75%;
-  padding-right: 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line2 {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  padding-left: 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-country-code {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  margin: 0;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-locality {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  padding: 0 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-postal-code {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  padding: 0 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-address-0-administrative-area {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  padding: 0 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-mobile-0-value {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-right: 5px;
-}
-
-.block--formblock-user-register .form-item-entity-shipping-address-field-phone-0-value {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-left: 5px;
-}
-
-.block--formblock-user-register::before {
-  content: 'OR';
-  background: #666;
-  color: #fff;
-  display: block;
-  font-size: 19px;
-  line-height: 3em;
-  text-align: center;
-  height: 3em;
-  width: 3em;
-  border-radius: 50%;
-  position: absolute;
-  left: -2.4em;
-  top: 4.5em;
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register::before {
+    content: 'OR';
+    background: #666;
+    color: #fff;
+    display: block;
+    font-size: 19px;
+    line-height: 3em;
+    text-align: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.4em;
+    top: 4.5em;
+  }
 }
 
 @media screen and (min-width: 500px) {
