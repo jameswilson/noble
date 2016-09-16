@@ -1,0 +1,10 @@
+{% extends "block.html.twig" %}
+
+{% block wrapper %}
+{{ attach_library('noble/facet') }}
+<div{{ attributes|without('id').addClass('')  }}>
+{% endblock %}
+
+{% block title %}
+<h2{{ title_attributes.addClass('facet__title') }}><span>{{ label }}</span></h2>
+{% endblock %}

@@ -1546,6 +1546,17 @@ select {
   margin-bottom: 0;
 }
 
+.form-item-newsletter {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-item-newsletter .form-checkbox {
+  margin-top: 0.5em;
+  margin-right: 10px;
+}
+
 .skip-to-content {
   background: #1b3e6a;
   color: #fff;
