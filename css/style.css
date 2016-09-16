@@ -2490,14 +2490,14 @@ ul.entity-moderation-form {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding-right: 5px;
+    padding-left: 5px;
   }
   .block--formblock-user-register .form-item-entity-billing-field-phone-0-value,
   .block--formblock-user-register .form-item-entity-shipping-address-field-phone-0-value {
     box-sizing: border-box;
     float: left;
     width: 50%;
-    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
