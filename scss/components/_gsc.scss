@@ -1,4 +1,7 @@
 // Overrides for Google Custom Search
+ // scss-lint:disable ImportantRule
+ // scss-lint:disable SelectorFormat
+ // scss-lint:disable QualifyingElement
 .gsc-wrapper {
   max-width: 640px;
   margin-top: 15px;
@@ -19,14 +22,12 @@
 
 .gsc-control-cse {
   margin: 0;
+  font-family: $maven-pro !important;
+  font-size: 16px !important;
 
-  &,
   .gsc-table-result {
     font-family: $maven-pro !important;
     font-size: 16px !important;
-  }
-
-  .gsc-table-result {
     max-width: 580px;
   }
 }
@@ -37,9 +38,6 @@
   text-align: center;
   padding: .3em .4em;
 }
-
-
-
 
 .gsc-search-box-tools .gsc-search-box .gsc-input {
   font-size: 23px;
@@ -65,7 +63,8 @@ input.gsc-input,
   padding-top: 8px !important;
 }
 
-.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
   width: 13px !important;
   height: 13px !important;
   padding: 10px 27px !important;
@@ -94,6 +93,7 @@ input.gsc-input,
   font-family: $maven-pro;
   height: auto !important;
   text-decoration: none !important;
+
   &:hover {
     text-decoration: underline !important;
   }

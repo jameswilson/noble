@@ -272,6 +272,12 @@ function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(
     $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
     $form['actions']['out_stock']['#suffix'] = '</span>';
   }
+
+  if (isset($form['actions']['empty_size']) && $form['actions']['empty_size']) {
+    $form['actions']['empty_size']['#prefix'] = '<span class="empty-size">';
+    $form['actions']['empty_size']['#suffix'] = '</span>';
+  }
+
   if ($form['link']) {
     $form['link']['#prefix'] = '<span class="find-in-store">';
     $form['link']['#suffix'] = '</span>';

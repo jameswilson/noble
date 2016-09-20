@@ -12,6 +12,7 @@ stylesheets-remove:
   - modules/contrib/workbench_moderation/css/entity-moderation-form.css
   - libraries/flexslider/flexslider.css
   - modules/contrib/flexslider/assets/css/flexslider_img.css
+  - modules/contrib/address/css/address.form.css
 
 base theme: stable
 

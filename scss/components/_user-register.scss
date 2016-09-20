@@ -1,0 +1,158 @@
+.block--formblock-user-register {
+  border: 1px solid $light-light-blue;
+  padding: 20px 30px;
+  position: relative;
+  .block__title {
+    display: none;
+  }
+  .fieldset-legend {
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    color: $light-graphite;
+    margin-bottom: 20px;
+  }
+  fieldset {
+    border: 0;
+    margin: 0 0 30px;
+    padding: 0;
+  }
+  .form-text,
+  .form-email,
+  .form-select,
+  .form-tel {
+    width: 100%;
+    border: 1px solid $semi-light-blue;
+    box-sizing: border-box;
+    padding: .3em .8em;
+  }
+  .form-item {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 440px) {
+    .field--name-field-name {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-right: 5px;
+    }
+    .field--name-field-surname {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-left: 5px;
+    }
+    .form-item-pass-pass1 {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-right: 5px;
+    }
+    .form-item-pass-pass2 {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-left: 5px;
+    }
+    .field--name-field-address {
+      overflow: hidden;
+    }
+    .form-item-entity-billing-address-0-address-line1,
+    .form-item-entity-shipping-address-field-address-0-address-line1 {
+      box-sizing: border-box;
+      float: left;
+      width: 75%;
+      padding-right: 5px;
+    }
+    .form-item-entity-billing-address-0-address-line2,
+    .form-item-entity-shipping-address-field-address-0-address-line2 {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding-left: 5px;
+    }
+    .form-item-entity-billing-address-0-country-code,
+    .form-item-entity-shipping-address-field-address-0-country-code {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      margin: 0;
+      padding-right: 5px;
+    }
+    .form-item-entity-billing-address-0-empty-fields-container-empty-state,
+    .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-state {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    }
+    .form-item-entity-billing-address-0-empty-fields-container-empty-city,
+    .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-city {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    }
+    .form-item-entity-billing-address-0-locality,
+    .form-item-entity-shipping-address-field-address-0-locality {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    }
+    .form-item-entity-billing-address-0-postal-code,
+    .form-item-entity-shipping-address-field-address-0-postal-code {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    }
+    .form-item-entity-billing-address-0-empty-fields-container-empty-zip,
+    .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-zip {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding-left: 5px;
+    }
+    .form-item-entity-billing-address-0-administrative-area,
+    .form-item-entity-shipping-address-field-address-0-administrative-area {
+      box-sizing: border-box;
+      float: left;
+      width: 25%;
+      padding: 0 5px;
+    }
+    .form-item-entity-billing-field-mobile-0-value,
+    .form-item-entity-shipping-address-field-mobile-0-value {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-left: 5px;
+    }
+    .form-item-entity-billing-field-phone-0-value,
+    .form-item-entity-shipping-address-field-phone-0-value {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-right: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register::before {
+    content: 'OR';
+    background: $light-graphite;
+    color: $white;
+    display: block;
+    font-size: 19px;
+    line-height: 3em;
+    text-align: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.4em;
+    top: 4.5em;
+  }
+}
