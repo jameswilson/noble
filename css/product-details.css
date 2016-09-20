@@ -231,6 +231,12 @@
   margin: .35em .5em;
 }
 
+.product-details__add-to-cart .empty-size {
+  color: #999;
+  display: inline-block;
+  margin: .35em .5em;
+}
+
 .product-details__add-to-cart .find-in-store {
   display: inline-block;
   margin: .35em 0 .35em .3em;
