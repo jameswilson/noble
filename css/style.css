@@ -548,6 +548,10 @@ select {
   }
 }
 
+.l-hero-area {
+  margin-bottom: 20px;
+}
+
 .l-colophon {
   background: #efefef;
   margin-top: 100px;
@@ -1091,6 +1095,11 @@ select {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.menu--about {
+  background: #efefef;
+  padding: 10px;
 }
 
 .menu--about .menu__item {
@@ -2240,13 +2249,6 @@ select {
   white-space: nowrap;
 }
 
-.menu-item--b2c-outfit-builder:link, .menu-item--b2c-outfit-builder:visited, .menu-item--b2c-outfit-builder.is-active {
-  background: #1b3e6a;
-  border-radius: 3px;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
 .menu-item--b2c-outfit-builder::after {
   background-image: url("../images/icon-outfit-builder.svg");
   background-position: 50% 50%;
@@ -2390,6 +2392,209 @@ ul.entity-moderation-form {
   margin-bottom: 20px;
 }
 
+.block--user-login-block {
+  background: #efefef;
+  box-sizing: border-box;
+  padding: 20px 30px;
+}
+
+.block__title--user-login-block {
+  font-size: 18px;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.block--user-login-block .form-item {
+  margin-bottom: 10px;
+}
+
+.block--user-login-block .form-text,
+.block--user-login-block .form-email {
+  border: 0;
+  box-sizing: border-box;
+  padding: .3em .8em;
+  width: 100%;
+}
+
+.block--user-login-block .button {
+  font-size: 18px;
+  width: 100%;
+  margin: 20px 0 10px;
+}
+
+.block--user-login-block ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.block--formblock-user-register {
+  border: 1px solid #d1d8e1;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.block--formblock-user-register .block__title {
+  display: none;
+}
+
+.block--formblock-user-register .fieldset-legend {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.block--formblock-user-register fieldset {
+  border: 0;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.block--formblock-user-register .form-text,
+.block--formblock-user-register .form-email,
+.block--formblock-user-register .form-select,
+.block--formblock-user-register .form-tel {
+  width: 100%;
+  border: 1px solid #bac5d2;
+  box-sizing: border-box;
+  padding: .3em .8em;
+}
+
+.block--formblock-user-register .form-item {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register .field--name-field-name {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .field--name-field-surname {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-pass-pass1 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-pass-pass2 {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .field--name-field-address {
+    overflow: hidden;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-address-line1,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
+    box-sizing: border-box;
+    float: left;
+    width: 75%;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-address-line2,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line2 {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-country-code,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-country-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    margin: 0;
+    padding-right: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-state,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-state {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-city,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-city {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-locality,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-locality {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-postal-code,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-postal-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-zip,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-empty-fields-container-empty-zip {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-address-0-administrative-area,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-administrative-area {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-field-mobile-0-value,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-mobile-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .block--formblock-user-register .form-item-entity-billing-field-phone-0-value,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-phone-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register::before {
+    content: 'OR';
+    background: #666;
+    color: #fff;
+    display: block;
+    font-size: 19px;
+    line-height: 3em;
+    text-align: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.4em;
+    top: 4.5em;
+  }
+}
+
 @media screen and (min-width: 500px) {
   .product-catalog {
     display: -webkit-flex;
@@ -2446,15 +2651,13 @@ ul.entity-moderation-form {
 
 .gsc-control-cse {
   margin: 0;
-}
-
-.gsc-control-cse,
-.gsc-control-cse .gsc-table-result {
   font-family: "Maven Pro", sans-serif !important;
   font-size: 16px !important;
 }
 
 .gsc-control-cse .gsc-table-result {
+  font-family: "Maven Pro", sans-serif !important;
+  font-size: 16px !important;
   max-width: 580px;
 }
 
@@ -2489,7 +2692,8 @@ input.gsc-input,
   padding-top: 8px !important;
 }
 
-.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
   width: 13px !important;
   height: 13px !important;
   padding: 10px 27px !important;

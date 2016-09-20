@@ -40,6 +40,11 @@
   margin: 0 0 10px;
 }
 
+.outfit-detail__actions .outfit-details {
+  margin: .5em 0;
+  display: inline-block;
+}
+
 .outfit-detail__actions .button--sizing-chart {
   border: 1px solid #bac5d2;
   background: none;

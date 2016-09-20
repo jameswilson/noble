@@ -1,15 +1,5 @@
 .menu-item--b2c-outfit-builder {
   white-space: nowrap;
-
-  &:link,
-  &:visited,
-  &.is-active {
-    background: $blue;
-    border-radius: 3px;
-    color: $white;
-    -webkit-font-smoothing: antialiased;
-  }
-
   &::after {
     background-image: url('../images/icon-outfit-builder.svg');
     background-position: 50% 50%;
