@@ -2465,6 +2465,10 @@ ul.entity-moderation-form {
   padding: .3em .8em;
 }
 
+.block--formblock-user-register .form-select {
+  height: 2.19em;
+}
+
 .block--formblock-user-register .form-item {
   margin-bottom: 20px;
 }
