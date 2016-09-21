@@ -2369,14 +2369,14 @@ ul.entity-moderation-form {
   padding-left: 5px;
 }
 
-.account__form-group .form-item-name {
+.account__form-group .form-item-field-name-0-value {
   box-sizing: border-box;
   float: left;
   width: 50%;
   padding-right: 5px;
 }
 
-.account__form-group .form-item-surname {
+.account__form-group .form-item-field-surname-0-value {
   box-sizing: border-box;
   float: left;
   width: 50%;
