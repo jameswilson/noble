@@ -31,7 +31,12 @@
 @media screen and (min-width: 650px) {
   .retailer-selection-row__products {
     padding: 10px 30px;
+    width: 0%;
   }
+}
+
+.retailer-selection-row__products .product {
+  display: inline-block;
 }
 
 .retailer-selection-row__link a {

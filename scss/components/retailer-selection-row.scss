@@ -26,6 +26,11 @@
 
   @media screen and (min-width: 650px) {
     padding: 10px 30px;
+    width: 0%;
+  }
+
+  .product {
+    display: inline-block;
   }
 }
 
