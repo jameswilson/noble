@@ -266,7 +266,7 @@ function noble_preprocess_menu(array &$variables) {
  *
  * Adds some classy markup so these elements can be themed.
  */
-function noble_form_commerce_line_item_product_variation_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+function noble_form_commerce_line_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $form['actions']['submit']['#attributes'] = array('class' => array('add-to-cart-button'));
   if (isset($form['actions']['out_stock']) && $form['actions']['out_stock']) {
     $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
