@@ -9,7 +9,7 @@ $(document).ready(function($) {
     $this = $(this);
 
     // Make all top-level menu items expandable.
-    $('.menu__toplevel > .menu__item', $this).attr('aria-expanded', 'false')
+    $('.menu__toplevel > .menu__item.menu__item--has-children', $this).attr('aria-expanded', 'false')
       .find(' > a')
         .after('<button class="menu__toggle"><span class="menu__toggle-horizontal"></span><span class="menu__toggle-vertical"></span></button>');
 
