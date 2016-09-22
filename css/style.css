@@ -435,7 +435,7 @@ select {
 }
 
 .l-header .menu {
-  margin-top: 1.1em;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -528,25 +528,26 @@ select {
   }
 }
 
+@media screen and (min-width: 1040px) {
+  .block--branding {
+    float: left;
+    width: 31.5%;
+  }
+  .l-header .menu {
+    float: right;
+    width: 54%;
+  }
+}
+
 @media screen and (min-width: 810px) {
   .block--branding {
+    box-sizing: border-box;
     float: left;
     width: 30%;
   }
   .l-header .menu {
     float: right;
     width: 70%;
-  }
-}
-
-@media screen and (min-width: 1040px) {
-  .block--branding {
-    float: left;
-    width: 45%;
-  }
-  .l-header .menu {
-    float: right;
-    width: 54%;
   }
 }
 
