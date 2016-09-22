@@ -1374,6 +1374,11 @@ select {
   }
 }
 
+.share-widget__actions span:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
 .pager {
   margin-top: 31px;
 }
