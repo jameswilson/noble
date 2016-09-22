@@ -91,6 +91,7 @@ $small-width: 750px;
     background: none;
     color: $blue;
     border-left: 0;
+    box-sizing: border-box;
     height: 2.19em;
     padding: .3em 10px;
   }
