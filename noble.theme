@@ -260,31 +260,3 @@ function noble_preprocess_menu(array &$variables) {
     $variables['items'][$key]['attributes']->addClass($class);
   }
 }
-
-/**
- * Implements hook_form_FORM_ID_alter() for commerce_line_item_product_variation_add_to_cart_form().
- *
- * Adds some classy markup so these elements can be themed.
- */
-function noble_form_commerce_line_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $form['actions']['submit']['#attributes'] = array('class' => array('add-to-cart-button'));
-  if (isset($form['actions']['out_stock']) && $form['actions']['out_stock']) {
-    $form['actions']['out_stock']['#prefix'] = '<span class="out-of-stock">';
-    $form['actions']['out_stock']['#suffix'] = '</span>';
-  }
-
-  if (isset($form['actions']['empty_size']) && $form['actions']['empty_size']) {
-    $form['actions']['empty_size']['#prefix'] = '<span class="empty-size">';
-    $form['actions']['empty_size']['#suffix'] = '</span>';
-  }
-
-  if ($form['link']) {
-    $form['link']['#prefix'] = '<span class="find-in-store">';
-    $form['link']['#suffix'] = '</span>';
-  }
-
-  if($color = $form['purchased_entity']['widget'][0]['attributes']['attribute_color']) {
-    $color['#title_display'] = 'invisible';
-    $form['purchased_entity']['widget'][0]['attributes']['attribute_color'] = $color;
-  }
-}

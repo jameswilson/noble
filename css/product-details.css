@@ -226,9 +226,19 @@
 }
 
 .product-details__add-to-cart .out-of-stock {
-  color: #999;
-  display: inline-block;
-  margin: .35em .5em;
+  color: #c40000;
+  display: block;
+  margin: .35em 0;
+}
+
+.product-details__add-to-cart .out-of-stock a {
+  float: none;
+  color: #c40000;
+  text-decoration: underline;
+}
+
+.product-details__add-to-cart .out-of-stock a:hover, .product-details__add-to-cart .out-of-stock a:focus {
+  text-decoration: none;
 }
 
 .product-details__add-to-cart .empty-size {
