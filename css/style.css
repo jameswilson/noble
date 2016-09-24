@@ -852,7 +852,8 @@ select {
   text-align: center;
 }
 
-.menu--mainnavigation-mobile .menu__item a:not(.menu-item--b2c-outfit-builder) {
+.menu--mainnavigation-mobile .menu__item a:not(.menu-item--b2c-outfit-builder),
+.menu--mainnavigation-mobile .menu__item .no-link {
   color: #1b3e6a;
   font-size: 20px;
   line-height: 28px;
