@@ -9,8 +9,9 @@ $(document).ready(function($) {
     $this = $(this);
 
     // Make all top-level menu items expandable.
+    $('.menu__toplevel > .menu__item.menu__item--has-children', $this).attr('aria-expanded', 'false')
       .find(' > a, > .no-link')
-        .after('<button class="menu__toggle"><span class="menu__toggle-horizontal"></span><span class="menu__toggle-vertical"></span></button>'));
+        .after('<button class="menu__toggle"><span class="menu__toggle-horizontal"></span><span class="menu__toggle-vertical"></span></button>');
 
     // Ensure active menu items deep in a menu tree get expanded by default.
     $('.is-active', $this)
