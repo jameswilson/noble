@@ -1,5 +1,147 @@
-.facet {
-  margin-bottom: 50px;
+.field--name-field-swatch {
+  background: #efefef url("../images/noswatch.jpg") no-repeat 50% 50%;
+  display: inline-block;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+.field--name-field-swatch:hover {
+  cursor: pointer;
+}
+
+.field--name-field-swatch img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.product--rendered-attribute .form-radio {
+  display: block;
+  width: 0;
+  height: 0;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.form-radio.attribute--color label,
+.product-details__add-to-cart label,
+.product--rendered-attribute ~ label {
+  opacity: 1;
+  transition: opacity .2s ease-out;
+  border: 0;
+  cursor: pointer;
+}
+
+.form-radio.attribute--color input:active ~ label,
+.form-radio.attribute--color input:focus ~ label,
+.form-radio.attribute--color input:disabled ~ label,
+.product-details__add-to-cart .form-radio:active ~ label,
+.product-details__add-to-cart .form-radio:focus ~ label,
+.product-details__add-to-cart .form-radio:disabled ~ label,
+.product--rendered-attribute input:active ~ label,
+.product--rendered-attribute input:focus ~ label,
+.product--rendered-attribute input:disabled ~ label {
+  border: 0;
+  outline-offset: -2px;
+  outline: #4d90fe auto 5px;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.form-radio.attribute--color label:hover,
+.form-radio.attribute--color input:active ~ label,
+.form-radio.attribute--color input:disabled ~ label,
+.product-details__add-to-cart label:hover,
+.product-details__add-to-cart .form-radio:active ~ label,
+.product-details__add-to-cart .form-radio:focus ~ label,
+.product-details__add-to-cart .form-radio:disabled ~ label,
+.product--rendered-attribute label:hover,
+.product--rendered-attribute input:active ~ label,
+.product--rendered-attribute input:focus ~ label,
+.product--rendered-attribute input:disabled ~ label {
+  opacity: .8;
+  transition: opacity .3 ease-out;
+}
+
+.form-radio.attribute--color input:checked ~ label,
+.product-details__add-to-cart .form-radio:checked ~ label,
+.product--rendered-attribute input:checked ~ label,
+.product--rendered-attribute__selected ~ label {
+  border: 0;
+  cursor: default;
+  opacity: 1;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color {
+  position: relative;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color label,
+.form-item-purchased-entity-0-attributes-attribute-color label div {
+  display: block;
+  line-height: 16px;
+  vertical-align: top;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress .throbber {
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-color .ajax-progress .message {
+  display: none;
+}
+
+.fieldgroup.attribute--color {
+  position: relative;
+}
+
+.fieldgroup.attribute--color .ajax-progress {
+  position: absolute;
+}
+
+.fieldgroup.attribute--color .ajax-progress .message {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  pointer-events: none;
+}
+
+.form-radio.attribute--color {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  pointer-events: none;
+}
+
+.form-radio.attribute--color label {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .facet {
+    margin-bottom: 50px;
+  }
+}
+
+[aria-expanded=false] .facet {
+  display: none;
 }
 
 .facet ul {
@@ -12,10 +154,59 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
-  margin: 0 0 20px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  .facet__title {
+    margin: 0 0 20px;
+  }
 }
 
 .facet-item {
   line-height: 40px;
+}
+
+.facet__collapsible-title {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .facet__collapsible-title {
+    display: block;
+    background-color: #1b3e6a;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.facet__collapsible-title .menu__toggle {
+  height: 21px;
+  width: 16px;
+  padding: 4px;
+  top: 4px;
+  right: 4px;
+}
+
+.facet__collapsible-title .menu__toggle-horizontal {
+  background-color: #fff;
+  left: 5px;
+  top: 12px;
+  width: 16px;
+}
+
+.facet__collapsible-title .menu__toggle-vertical {
+  background-color: #fff;
+  left: 12px;
+  top: 5px;
+  height: 16px;
+}
+
+[aria-expanded="true"] .facet__collapsible-title .menu__toggle-vertical {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform .3s ease-out .1s, background .3s ease-out;
+  transition: transform .3s ease-out .1s, background .3s ease-out;
 }
