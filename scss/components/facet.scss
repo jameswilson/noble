@@ -10,8 +10,11 @@
     margin-bottom: 50px;
   }
 
+
   [aria-expanded=false] & {
-    display: none;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   ul {
