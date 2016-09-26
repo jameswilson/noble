@@ -1,7 +1,9 @@
 (function($) {
 
 $(window).ready(function() {
-  $('.rotating-banner').flexslider();
+  $('.rotating-banner').flexslider({
+    directionNav: false
+  });
 });
 
 })(jQuery);
