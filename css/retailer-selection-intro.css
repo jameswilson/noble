@@ -8,7 +8,6 @@
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: -50px 0 45px;
 }
 
 @media screen and (max-width: 650px) {
