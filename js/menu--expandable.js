@@ -9,8 +9,8 @@ $(document).ready(function($) {
     $this = $(this);
 
     // Make all top-level menu items expandable.
-    $('.menu__toplevel > .menu__item', $this).attr('aria-expanded', 'false')
-      .find(' > a')
+    $('.menu__toplevel > .menu__item.menu__item--has-children', $this).attr('aria-expanded', 'false')
+      .find(' > a, > .no-link')
         .after('<button class="menu__toggle"><span class="menu__toggle-horizontal"></span><span class="menu__toggle-vertical"></span></button>');
 
     // Ensure active menu items deep in a menu tree get expanded by default.
@@ -18,7 +18,7 @@ $(document).ready(function($) {
       .parents('.menu__item').attr('aria-expanded', 'true');
 
     // Toggle expand/collapsed state with button trigger and ARIA attribute.
-    $('.menu__toggle', $this).click(function() {
+    $('.menu__toggle, .no-link', $this).click(function() {
       if ($(this).closest('.menu__item').attr('aria-expanded') === 'true') {
         $(this).closest('.menu__item').attr('aria-expanded', 'false');
       } else {

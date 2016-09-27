@@ -6,7 +6,7 @@
     zoom: drupalSettings.storeLocatorMap.zoom
   });
   // Add basemap tiles and attribution.
-  var baseLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  var baseLayer = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
   });
   // Add basemap to map.
@@ -44,7 +44,7 @@
     if (!url) { url = window.location.href; }
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
+      results = regex.exec(url);
     if (!results) { return ''; }
     if (!results[2]) { return ''; }
     return decodeURIComponent(results[2].replace(/\+/g, " "));

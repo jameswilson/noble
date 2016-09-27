@@ -86,18 +86,29 @@ $small-width: 750px;
     margin: 0 .5em;
   }
 
-  .button--sizing-chart {
+  .sizing-chart {
     border: 1px solid $semi-light-blue;
     background: none;
     color: $blue;
     border-left: 0;
+    box-sizing: border-box;
+    height: 2.19em;
     padding: .3em 10px;
   }
 
   .out-of-stock {
-    color: $med-gray;
-    display: inline-block;
-    margin: .35em .5em;
+    color: $red;
+    display: block;
+    margin: .35em 0;
+    a {
+      float: none;
+      color: $red;
+      text-decoration: underline;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
   }
 
   .empty-size {

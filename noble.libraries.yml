@@ -41,6 +41,8 @@ facet:
   css:
     theme:
       css/facet.css: {}
+  js:
+    js/mobile-collapsible-facets.js: {}
 
 outfit-detail:
   version: 1.x

@@ -290,6 +290,7 @@ select {
   border-radius: 0;
   box-sizing: border-box;
   color: #1b3e6a;
+  height: 2.19em;
   line-height: 1.5em;
   padding: .3em 31px .3em 10px;
 }
@@ -310,6 +311,7 @@ select {
   border: 1px solid #1b3e6a;
   color: #fff;
   margin: 0;
+  height: 2.19em;
   padding: .3em 1em;
 }
 
@@ -433,7 +435,7 @@ select {
 }
 
 .l-header .menu {
-  margin-top: 1.1em;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -526,25 +528,26 @@ select {
   }
 }
 
+@media screen and (min-width: 1040px) {
+  .block--branding {
+    float: left;
+    width: 31.5%;
+  }
+  .l-header .menu {
+    float: right;
+    width: 54%;
+  }
+}
+
 @media screen and (min-width: 810px) {
   .block--branding {
+    box-sizing: border-box;
     float: left;
     width: 30%;
   }
   .l-header .menu {
     float: right;
     width: 70%;
-  }
-}
-
-@media screen and (min-width: 1040px) {
-  .block--branding {
-    float: left;
-    width: 45%;
-  }
-  .l-header .menu {
-    float: right;
-    width: 54%;
   }
 }
 
@@ -849,7 +852,8 @@ select {
   text-align: center;
 }
 
-.menu--mainnavigation-mobile .menu__item a:not(.menu-item--b2c-outfit-builder) {
+.menu--mainnavigation-mobile .menu__item a:not(.menu-item--b2c-outfit-builder),
+.menu--mainnavigation-mobile .menu__item .no-link {
   color: #1b3e6a;
   font-size: 20px;
   line-height: 28px;
@@ -1370,6 +1374,11 @@ select {
   .share-widget__actions {
     float: right;
   }
+}
+
+.share-widget__actions span:hover {
+  opacity: .8;
+  cursor: pointer;
 }
 
 .pager {

@@ -15,7 +15,7 @@
 .recommendations-cart__products {
   border-right: 1px solid #c9c9c9;
   padding: 10px 15px 10px 0;
-  width: 250px;
+  max-width: 500px;
 }
 
 .recommendations-cart__details {
@@ -44,6 +44,7 @@
   border: 1px solid #1b3e6a;
   color: #fff;
   margin: 0;
+  height: 2.19em;
   padding: .3em 1em;
 }
 

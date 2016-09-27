@@ -67,7 +67,8 @@
     text-align: center;
   }
 
-  .menu__item a:not(.menu-item--b2c-outfit-builder) {
+  .menu__item a:not(.menu-item--b2c-outfit-builder),
+  .menu__item .no-link  {
     color: $blue;
     font-size: 20px;
     line-height: 28px;
