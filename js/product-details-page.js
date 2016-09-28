@@ -33,8 +33,17 @@
 
       $('.js-product-details__media-button--video', context).bind('click', function (e) {
         e.preventDefault();
-        $.colorbox({html: $('.js-product-details__video').html()});
-        $.colorbox.resize();
+        $.colorbox({
+          html: $('.js-product-details__video').html(),
+          className: 'colorbox--video',
+          opacity: 0.65,
+          innerWidth: '960px',
+          maxWidth: '99%',
+          onComplete: function() {
+            $(".colorbox--video").fitVids();
+            $.colorbox.resize();
+          }
+        });
       });
 
       // Resize colorbox when the viewport changes.
