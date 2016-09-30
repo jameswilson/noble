@@ -2526,15 +2526,15 @@ ul.entity-moderation-form {
   .block--formblock-user-register .field--name-field-address {
     overflow: hidden;
   }
-  .block--formblock-user-register .form-item-entity-billing-address-0-address-line1,
-  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line1 {
+  .block--formblock-user-register .form-item-entity-billing-address-0-address,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address {
     box-sizing: border-box;
     float: left;
     width: 75%;
     padding-right: 5px;
   }
-  .block--formblock-user-register .form-item-entity-billing-address-0-address-line2,
-  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-line2 {
+  .block--formblock-user-register .form-item-entity-billing-address-0-address-2,
+  .block--formblock-user-register .form-item-entity-shipping-address-field-address-0-address-2 {
     box-sizing: border-box;
     float: left;
     width: 25%;
