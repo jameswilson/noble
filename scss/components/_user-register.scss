@@ -61,15 +61,17 @@
     .field--name-field-address {
       overflow: hidden;
     }
-    .form-item-entity-billing-address-0-address,
-    .form-item-entity-shipping-address-field-address-0-address {
+    .form-item.form-item-entity-billing-address-0-address,
+    .form-item.form-item-entity-shipping-address-field-address-0-address-line1,
+    .form-item.form-item-entity-shipping-address-field-address-0-address {
       box-sizing: border-box;
       float: left;
       width: 75%;
       padding-right: 5px;
     }
-    .form-item-entity-billing-address-0-address-2,
-    .form-item-entity-shipping-address-field-address-0-address-2 {
+    .form-item.form-item-entity-billing-address-0-address-2,
+    .form-item.form-item-entity-shipping-address-field-address-0-address-line2,
+    .form-item.form-item-entity-shipping-address-field-address-0-address-2 {
       box-sizing: border-box;
       float: left;
       width: 25%;
