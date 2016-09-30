@@ -1524,6 +1524,22 @@ select {
   left: 56px;
 }
 
+.colorbox--video #cboxWrapper,
+.colorbox--video #cboxContent {
+  background: none !important;
+}
+
+.colorbox--video #cboxContent {
+  padding: 0 !important;
+  margin-right: 25px !important;
+}
+
+.colorbox--video #cboxClose {
+  background-image: url("../images/icon-close--white.svg");
+  top: 0;
+  right: -25px;
+}
+
 .input-group {
   display: -webkit-flex;
   display: -ms-flexbox;

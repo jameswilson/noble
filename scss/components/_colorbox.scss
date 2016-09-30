@@ -72,3 +72,19 @@
   font-size: 15px;
   left: 56px;
 }
+
+.colorbox--video  {
+  #cboxWrapper,
+  #cboxContent {
+    background: none !important;
+  }
+  #cboxContent {
+    padding: 0 !important;
+    margin-right: 25px !important;
+  }
+  #cboxClose {
+    background-image: url('../images/icon-close--white.svg');
+    top: 0;
+    right: -25px;
+  }
+}
