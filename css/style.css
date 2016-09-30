@@ -1797,7 +1797,7 @@ select {
   box-sizing: border-box;
 }
 
-.cart .views-field-total-price__amount {
+.cart .views-field-total-price__number {
   text-align: center;
 }
 
@@ -2785,7 +2785,7 @@ input.gsc-search-button-v2 {
   height: 60px;
 }
 
-.delete-line-item {
+.delete-order-item {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -2796,6 +2796,6 @@ input.gsc-search-button-v2 {
   width: 23px;
 }
 
-.delete-line-item:hover {
+.delete-order-item:hover {
   opacity: .8;
 }
