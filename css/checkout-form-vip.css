@@ -1,0 +1,178 @@
+.checkout-form-vip__shipping {
+  background: #efefef;
+  box-sizing: border-box;
+  padding: 20px 30px;
+}
+
+.checkout-form-vip__shipping h4 {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.checkout-form-vip__title::before {
+  content: '';
+  background: url("../images/icon-shield--light-grey.svg") center center no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  width: 20px;
+  vertical-align: -6px;
+}
+
+.checkout-form-vip__shipping .field__label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.checkout-form-vip__shipping p {
+  margin-top: 0;
+}
+
+.checkout-form-vip__payment {
+  border: 1px solid #d1d8e1;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.checkout-form-vip__payment::after {
+  content: '';
+  display: table;
+  width: 100%;
+}
+
+.checkout-form-vip__payment .fieldset-legend {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.checkout-form-vip__payment fieldset {
+  border: 0;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.checkout-form-vip__payment .form-text,
+.checkout-form-vip__payment .form-email,
+.checkout-form-vip__payment .form-select,
+.checkout-form-vip__payment .form-tel {
+  width: 100%;
+  border: 1px solid #bac5d2;
+  box-sizing: border-box;
+  padding: .3em .8em;
+}
+
+.checkout-form-vip__payment .form-select {
+  height: 2.19em;
+}
+
+.checkout-form-vip__payment .form-item {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 440px) {
+  .checkout-form-vip__payment .form-item.form-item-payment-add-payment-method-payment-details-number {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .credit-card-form__expiration {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-payment-details-security-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .checkout-form-vip__payment .form-item.form-item-payment-add-payment-method-billing-information-address-0-address {
+    box-sizing: border-box;
+    float: left;
+    width: 75%;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-address-2 {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-country-code {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-country-code label {
+    display: none;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-state {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-city {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-zip {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-field-phone-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+  }
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-field-mobile-0-value {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .checkout-form-vip__payment::before {
+    content: '';
+    background: #666 url("../images/icon-shield--white.svg") center center no-repeat;
+    background-size: 25px auto;
+    display: block;
+    font-size: 19px;
+    line-height: 3em;
+    text-align: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.4em;
+    top: 4.5em;
+  }
+}
+
+.checkout-form-vip__actions {
+  float: right;
+  clear: right;
+  margin-top: 20px;
+}
