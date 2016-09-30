@@ -13,6 +13,17 @@
   margin-bottom: 20px;
 }
 
+.checkout-form-vip__title::before {
+  content: '';
+  background: url("../images/icon-shield--light-grey.svg") center center no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  width: 20px;
+  vertical-align: -6px;
+}
+
 .checkout-form-vip__shipping .field__label {
   font-weight: bold;
   margin-top: 10px;
@@ -26,7 +37,12 @@
   border: 1px solid #d1d8e1;
   padding: 20px 30px;
   position: relative;
-  overflow: hidden;
+}
+
+.checkout-form-vip__payment::after {
+  content: '';
+  display: table;
+  width: 100%;
 }
 
 .checkout-form-vip__payment .fieldset-legend {
@@ -139,9 +155,9 @@
 
 @media screen and (min-width: 440px) {
   .checkout-form-vip__payment::before {
-    content: 'OR';
-    background: #666;
-    color: #fff;
+    content: '';
+    background: #666 url("../images/icon-shield--white.svg") center center no-repeat;
+    background-size: 25px auto;
     display: block;
     font-size: 19px;
     line-height: 3em;

@@ -14,7 +14,7 @@
 {{ attach_library('noble/noble-sidebarfirst-layout') }}
 
 <div class="noble-sidebarfirst clearfix">
-  <h3>{% trans %} Secure Checkout {% endtrans %}</h3>
+  <h3 class="checkout-form-vip__title">{% trans %} Secure Checkout {% endtrans %}</h3>
   {{ form|without('order_summary', 'actions') }}
   <div class="checkout-form-vip__actions">
     {{ form.actions }}
