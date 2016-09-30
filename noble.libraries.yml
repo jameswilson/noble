@@ -17,6 +17,12 @@ noble-sidebarfirst-layout:
     theme:
       css/noble-sidebarfirst.css: {}
 
+checkout-form-vip:
+  version: 1.x
+  css:
+    theme:
+      css/checkout-form-vip.css: {}
+
 product-details:
   version: 1.x
   js:

@@ -9,16 +9,14 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-checkout-form clearfix">
-  <div class="layout-region layout-region-checkout-cart">
-    <h3>{% trans %} Your Shopping Bag {% endtrans %}</h3>
-    {{ form.order_summary }}
-  </div>
-  <div class="layout-region layout-region-checkout-details">
-    <h3>{% trans %} Secure Checkout {% endtrans %}</h3>
-    {{ form|without('order_summary', 'actions') }}
-  </div>
-  <div class="layout-region layout-region-checkout-footer">
+<h3>{% trans %} Your Shopping Bag {% endtrans %}</h3>
+{{ form.order_summary }}
+{{ attach_library('noble/noble-sidebarfirst-layout') }}
+
+<div class="noble-sidebarfirst clearfix">
+  <h3>{% trans %} Secure Checkout {% endtrans %}</h3>
+  {{ form|without('order_summary', 'actions') }}
+  <div class="checkout-form-vip__actions">
     {{ form.actions }}
   </div>
 </div>
