@@ -34,6 +34,18 @@
     margin-bottom: 20px;
   }
   @media screen and (min-width: 440px) {
+    .form-item-field-company-0-value {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-right: 5px;
+    }
+    .form-item-field-coupon-wrapper {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+      padding-left: 5px;
+    }
     .field--name-field-name {
       box-sizing: border-box;
       float: left;
