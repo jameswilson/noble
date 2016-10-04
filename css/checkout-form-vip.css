@@ -98,13 +98,15 @@
     width: 25%;
     padding-left: 5px;
   }
-  .checkout-form-vip__payment .form-item.form-item-payment-add-payment-method-billing-information-address-0-address {
+  .checkout-form-vip__payment .form-item.form-item-payment-add-payment-method-billing-information-address-0-address,
+  .checkout-form-vip__payment .form-item.form-item-payment-add-payment-method-billing-information-address-0-address-line1 {
     box-sizing: border-box;
     float: left;
     width: 75%;
     padding-right: 5px;
   }
-  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-address-2 {
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-address-2,
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-address-line2 {
     box-sizing: border-box;
     float: left;
     width: 25%;
@@ -126,14 +128,17 @@
     padding-left: 5px;
     padding-right: 5px;
   }
-  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-city {
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-city,
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-locality,
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-9-locality {
     box-sizing: border-box;
     float: left;
     width: 25%;
     padding-left: 5px;
     padding-right: 5px;
   }
-  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-zip {
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-zip,
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-postal-code {
     box-sizing: border-box;
     float: left;
     width: 25%;
