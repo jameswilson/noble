@@ -10,10 +10,9 @@
  */
 #}
 <h3>{% trans %} Your Shopping Bag {% endtrans %}</h3>
-{{ form.order_summary }}
 {{ attach_library('noble/noble-sidebarfirst-layout') }}
-
 <div class="noble-sidebarfirst clearfix">
+  {{ form.order_summary }}
   <h3 class="checkout-form-vip__title">{% trans %} Secure Checkout {% endtrans %}</h3>
   {{ form|without('order_summary', 'actions') }}
   <div class="checkout-form-vip__actions">
