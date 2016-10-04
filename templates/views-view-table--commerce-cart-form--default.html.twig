@@ -129,6 +129,22 @@ sticky ? 'sticky-enabled',
         </tr>
     {% endfor %}
     <tr class="cart__total-price-row">
+      <td colspan="2"></td>
+      <td class="cart__total-price-row-label">{% trans %}SUBTOTAL:{% endtrans %}</td>
+      <td class="cart__total-price-row-amount">{{ sub_total_amount }}</td>
+      <td></td>
+    </tr>
+
+    {% for adjustment in total_adjustments %}
+      <tr class="cart__total-price-row">
+        <td colspan="2"></td>
+        <td class="cart__total-price-row-label">{{ adjustment.label }}:</td>
+        <td class="cart__total-price-row-amount">{{ adjustment.price }}</td>
+        <td></td>
+      </tr>
+    {% endfor %}
+
+    <tr class="cart__total-price-row">
         <td colspan="2">
 
         </td>
