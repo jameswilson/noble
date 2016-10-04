@@ -1,0 +1,30 @@
+@import
+'../util/colors',
+'../util/variables',
+'../util/mixins';
+
+.vip-congrats {
+  text-align: center;
+}
+
+.vip-congrats__title {
+  background: url('../images/icon-check.svg') top center no-repeat;
+  background-size: 60px auto;
+  padding-top: 65px;
+  @media screen and (max-width:911px) {
+    margin-top: 20px;
+  }
+}
+
+.vip-congrats__message {
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vip-congrats .button {
+  @media screen and (max-width:375px) {
+    display: block;
+    height: auto;
+  }
+}

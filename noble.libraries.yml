@@ -23,6 +23,12 @@ checkout-form-vip:
     theme:
       css/checkout-form-vip.css: {}
 
+vip-congrats:
+  version: 1.x
+  css:
+    theme:
+      css/vip-congrats.css: {}
+
 product-details:
   version: 1.x
   js:
