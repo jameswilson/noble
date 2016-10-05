@@ -2,6 +2,9 @@
   background: $light-gray;
   box-sizing: border-box;
   padding: 20px 30px;
+  @media screen and (max-width: 441px) {
+    margin-top: 10px;
+  }
 }
 
 .block__title--user-login-block {

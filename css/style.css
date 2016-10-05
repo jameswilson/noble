@@ -2355,9 +2355,14 @@ ul.entity-moderation-form {
 }
 
 .account__form-group {
-  border: 1px solid #d1d8e1;
   padding: 20px 30px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 440px) {
+  .account__form-group {
+    border: 1px solid #d1d8e1;
+  }
 }
 
 .account__form-group fieldset {
@@ -2423,6 +2428,12 @@ ul.entity-moderation-form {
   padding: 20px 30px;
 }
 
+@media screen and (max-width: 441px) {
+  .block--user-login-block {
+    margin-top: 10px;
+  }
+}
+
 .block__title--user-login-block {
   font-size: 18px;
   margin-top: 0;
@@ -2456,9 +2467,14 @@ ul.entity-moderation-form {
 }
 
 .block--formblock-user-register {
-  border: 1px solid #d1d8e1;
   padding: 20px 30px;
   position: relative;
+}
+
+@media screen and (min-width: 440px) {
+  .block--formblock-user-register {
+    border: 1px solid #d1d8e1;
+  }
 }
 
 .block--formblock-user-register .block__title {

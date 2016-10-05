@@ -1,5 +1,7 @@
 .block--formblock-user-register {
-  border: 1px solid $light-light-blue;
+  @media screen and (min-width: 440px) {
+    border: 1px solid $light-light-blue;
+  }
   padding: 20px 30px;
   position: relative;
   .block__title {
