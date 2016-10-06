@@ -130,7 +130,8 @@
   }
   .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-empty-fields-container-empty-city,
   .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-locality,
-  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-9-locality {
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-9-locality,
+  .checkout-form-vip__payment .form-item-payment-add-payment-method-billing-information-address-0-administrative-area {
     box-sizing: border-box;
     float: left;
     width: 25%;
