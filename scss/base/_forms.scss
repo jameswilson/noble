@@ -20,3 +20,16 @@ select {
 [type="checkbox"] {
   margin-right: 5px;
 }
+
+.form-text,
+.form-email,
+.form-select,
+.form-tel {
+  max-width: 100%;
+  border: 1px solid $semi-light-blue;
+  box-sizing: border-box;
+  padding: .3em .8em;
+}
+.form-item {
+  margin-bottom: 20px;
+}
