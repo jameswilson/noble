@@ -319,6 +319,12 @@ select {
   opacity: .8em;
 }
 
+.button--danger {
+  color: #c40000;
+  background: 0;
+  border-color: transparent;
+}
+
 .messages {
   background: no-repeat 10px 19px;
   border: 1px solid;
