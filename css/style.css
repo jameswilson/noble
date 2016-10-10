@@ -1665,8 +1665,23 @@ select {
   text-transform: uppercase;
 }
 
-.cart th.views-field-purchased-entity {
+.cart th.views-field-purchased-entity,
+.cart th.views-field-product-history,
+.cart th.views-field-order-id,
+.cart th.views-field-created {
   text-align: left;
+}
+
+.cart td.views-field-product-history,
+.cart td.views-field-order-id,
+.cart td.views-field-created {
+  padding: 0.1em 0;
+}
+
+.cart .views-field-product-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cart .cart__row {
