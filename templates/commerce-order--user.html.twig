@@ -17,26 +17,30 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }}>
+{{ attach_library('noble/noble-sidebarfirst-layout') }}
+{{ attach_library('noble/checkout-form-vip') }}
+<div class="sidebarfirst-layout">
+  <div class="noble-sidebarfirst__sidebar">
+    <div class="checkout-form-vip__shipping">
 
-  Order ID:
-  {{ order.order_number }}
+      {{ order.billing_profile }}
 
-  {{ order.billing_profile }}
+      {{ order.mail }}
 
-  {{ order.mail }}
+      {{ order.placed }}
 
-  {{ order.placed }}
+      {{ order.ip_address }}
 
-  {{ order.ip_address }}
+      <div class="field__label">Taxes</div>
+      {{ order.adjustments }}
 
-  {{ order.order_items }}
+      {{ order.total_price }}
+    </div>
+  </div>
 
-  TAXES
-  {{ order.adjustments }}
-
-
-  {{ order.total_price }}
-
+  <div class="noble-sidebarfirst__content">
+    <h1>Order ID: {{ order.order_number }}</h1>
+    {{ order.order_items }}
+  </div>
 
 </div>

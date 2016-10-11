@@ -1877,6 +1877,10 @@ select {
   text-align: center;
 }
 
+.cart--left-aligned th {
+  text-align: left;
+}
+
 .block--search {
   position: absolute;
   right: 20px;
