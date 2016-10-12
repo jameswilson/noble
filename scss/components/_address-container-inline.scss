@@ -1,0 +1,11 @@
+.address-container-inline .form-wrapper {
+  display: flex;
+}
+
+.address-container-inline .form-item {
+  padding: 0 5px;
+}
+
+.address-container-inline .form-item:first-child {
+  padding-left: 0;
+}

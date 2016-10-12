@@ -308,7 +308,6 @@ select {
 
 .form-text,
 .form-email,
-.form-select,
 .form-tel {
   max-width: 100%;
   border: 1px solid #bac5d2;
@@ -318,6 +317,40 @@ select {
 
 .form-item {
   margin-bottom: 20px;
+}
+
+.form-item label {
+  display: block;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+legend {
+  padding: 0;
+  display: table;
+}
+
+.fieldset-legend {
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+fieldset,
+fieldset.form-item {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
 }
 
 .button {
@@ -2393,6 +2426,20 @@ ul.entity-moderation-form {
   padding: .3em 0;
 }
 
+.address-container-inline .form-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.address-container-inline .form-item {
+  padding: 0 5px;
+}
+
+.address-container-inline .form-item:first-child {
+  padding-left: 0;
+}
+
 .account__form-group {
   padding: 20px 30px;
   margin-bottom: 30px;
@@ -2614,7 +2661,7 @@ ul.entity-moderation-form {
     box-sizing: border-box;
     float: left;
     width: 25%;
-    margin: 0;
+    margin: 0 0 20px;
     padding-right: 5px;
   }
   .block--formblock-user-register .form-item-entity-billing-address-0-empty-fields-container-empty-state,
