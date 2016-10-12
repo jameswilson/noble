@@ -2563,6 +2563,10 @@ ul.entity-moderation-form {
   }
 }
 
+.block--formblock-user-register .address-container-inline .form-wrapper {
+  display: block;
+}
+
 .block--formblock-user-register .block__title {
   display: none;
 }

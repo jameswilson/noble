@@ -4,6 +4,9 @@
   }
   padding: 20px 30px;
   position: relative;
+  .address-container-inline .form-wrapper {
+    display: block;
+  }
   .block__title {
     display: none;
   }
