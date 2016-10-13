@@ -619,8 +619,14 @@ body:not(:-moz-handler-blocked) fieldset {
   box-sizing: border-box;
   float: left;
   margin: 20px 0;
-  padding: 30px 70px;
   width: 100%;
+  padding: 20px;
+}
+
+@media screen and (min-width: 440px) {
+  .block--sitewidecontactform {
+    padding: 30px 70px;
+  }
 }
 
 .block__title--sitewidecontactform {
