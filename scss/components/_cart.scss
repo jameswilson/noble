@@ -81,12 +81,6 @@
       width: 100%;
     }
 
-    @include firefox-only {
-      select {
-        padding-top: 50px;
-      }
-    }
-
     label {
       @include visually-hidden();
     }

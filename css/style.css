@@ -619,8 +619,14 @@ body:not(:-moz-handler-blocked) fieldset {
   box-sizing: border-box;
   float: left;
   margin: 20px 0;
-  padding: 30px 70px;
   width: 100%;
+  padding: 20px;
+}
+
+@media screen and (min-width: 440px) {
+  .block--sitewidecontactform {
+    padding: 30px 70px;
+  }
 }
 
 .block__title--sitewidecontactform {
@@ -1774,12 +1780,6 @@ body:not(:-moz-handler-blocked) fieldset {
   -moz-text-align-last: center;
        text-align-last: center;
   width: 100%;
-}
-
-@-moz-document url-prefix() {
-  .cart .attribute-widgets select {
-    padding-top: 50px;
-  }
 }
 
 .cart .attribute-widgets label {
