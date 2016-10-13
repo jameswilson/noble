@@ -1776,12 +1776,6 @@ body:not(:-moz-handler-blocked) fieldset {
   width: 100%;
 }
 
-@-moz-document url-prefix() {
-  .cart .attribute-widgets select {
-    padding-top: 50px;
-  }
-}
-
 .cart .attribute-widgets label {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
