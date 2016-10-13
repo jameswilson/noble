@@ -31,8 +31,15 @@
 
       {{ order.ip_address }}
 
-      <div class="field__label">Taxes</div>
-      {{ order.adjustments }}
+      {% if order.adjustment_tax %}
+        <div class="field__label">Taxes</div>
+        {{ order.adjustment_tax }}
+      {% endif %}
+
+      {% if order.adjustment_shipping %}
+        <div class="field__label">Shipping</div>
+        {{ order.adjustment_shipping }}
+      {% endif %}
 
       {{ order.total_price }}
     </div>
