@@ -1,6 +1,6 @@
-# Sport Obermeyer Drupal 8 theme
+# Noble Drupal 9 base theme
 
-A custom Drupal 8 theme developed from scratch based on the Drupal core *stable*
+A custom Drupal 9 base theme developed from scratch based on the Drupal core *stable*
 theme, and adopting modern front-end development best practices including:
 
 *   Npm manages front-end packages & dependencies.

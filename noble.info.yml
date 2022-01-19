@@ -1,8 +1,8 @@
-name: Obermeyer
+name: Noble
 type: theme
-description: Custom Drupal 8 theme for Obermeyer.com
-package: Sport Obermeyer
-core: 8.x
+description: Custom Drupal 9 base theme
+package: BSP
+core_version_requirement: ^8.8 || ^9
 libraries:
   - noble/global-styling
 libraries-extend:

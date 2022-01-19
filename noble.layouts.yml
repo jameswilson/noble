@@ -1,6 +1,6 @@
 noble_sidebarfirst:
   label: Sidebar First
-  category: Obermeyer
+  category: BSP
   path: plugins/layouts/noble_sidebarfirst
   template: noble-sidebarfirst
   icon: noble-sidebarfirst.png

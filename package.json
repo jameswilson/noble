@@ -1,7 +1,7 @@
 {
   "name": "noble",
   "version": "1.0.0",
-  "description": "Custom Drupal 8 theme for Obermeyer.com",
+  "description": "Custom Drupal 9 base theme for Bluespark",
   "devDependencies": {
     "breakpoint-sass": "^2.7.0",
     "drupal-sass-breakpoints": "jameswilson/drupal-sass-breakpoints#94cc289",
